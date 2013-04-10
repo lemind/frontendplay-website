@@ -1,0 +1,22 @@
+
+@mixin fontFace( $name, $filename, $weight: false, $style: false) 
+{
+  @font-face 
+  {
+    font-family: quote($name);
+    
+    src: font-url("#{$filename}.eot");
+    src: font-url("#{$filename}?#iefix") format("embedded-opentype"),
+		 font-url("#{$filename}.woff") format("woff"),
+		 font-url("#{$filename}.ttf") format("truetype");
+
+    @if $weight
+    {
+      font-weight: $weight;
+    }
+    @if $style 
+    {
+      font-style: $style;
+    }
+  }
+}
