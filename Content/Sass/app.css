@@ -412,6 +412,14 @@ table {
   border-spacing: 0;
 }
 
+/* line 4, Config/_placeholders.scss */
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 @font-face {
   font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-Light-final.eot');
@@ -471,4 +479,22 @@ table {
 /* line 3, Partials/_base.scss */
 body {
   font-family: 'SegoeUI';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #818181;
+}
+
+/* line 11, Partials/_base.scss */
+a {
+  color: #1dad82;
+  text-decoration: underline;
+}
+/* line 17, Partials/_base.scss */
+a:hover {
+  color: #168161;
+}
+/* line 21, Partials/_base.scss */
+a:visited {
+  color: #8ad9c2;
 }
