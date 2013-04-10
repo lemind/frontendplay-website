@@ -13,8 +13,11 @@ module.exports = function(grunt)
     // concatenate files
     concat: {
       build: {
-        src: [],
-        dest: ''
+        src: [
+          'Content/Scripts/Vendor/jquery/jquery.js',
+          'Content/Scripts/Vendor/jquery/jquery-migrate.js',
+        ],
+        dest: 'Content/Scripts/app.js'
       }
     },
 
@@ -25,8 +28,8 @@ module.exports = function(grunt)
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: '',
-        dest: ''
+        src: 'Content/Scripts/app.js',
+        dest: 'Release/app.js'
       }
     },
 
@@ -35,13 +38,24 @@ module.exports = function(grunt)
     compass: {
       build: {
         options: {
-          sassDir: '',
-          cssDir: '',
-          imagesDir: '',
-          fontDir: '',
-          javascriptsDir: '',
+          sassDir: 'Content/Sass',
+          cssDir: 'Content/Sass',
+          imagesDir: 'Content/Images',
+          fontDir: 'Content/Fonts',
+          javascriptsDir: 'Content/Scripts',
           outputStyle: 'expanded',
           environment: 'development'
+        }
+      },
+      release: {
+        options: {
+          sassDir: 'Content/Sass',
+          cssDir: 'Release',
+          imagesDir: 'Content/Images',
+          fontDir: 'Content/Fonts',
+          javascriptsDir: 'Content/Scripts',
+          outputStyle: 'compressed',
+          environment: 'production'
         }
       }
     },
@@ -74,6 +88,14 @@ module.exports = function(grunt)
 
     // watch file changes to automate tasks
     watch: {
+      js: {
+        files: [ '<%= concat.build.src %>' ],
+        tasks: [ 'concat' ]
+      },
+      sass: {
+        files: [ '<%= compass.build.options.sassDir %>/**/*.scss' ],
+        tasks: [ 'compass:build' ]
+      }
     }
   });
 
@@ -92,6 +114,6 @@ module.exports = function(grunt)
   grunt.registerTask('build', [ 'concat', 'compass:build' ]);
 
   // distribution task
-  grunt.registerTask('dist', [ 'concat', 'uglify', 'compass:dist' ]);
+  grunt.registerTask('release', [ 'concat', 'uglify', 'compass:release' ]);
 
 };
