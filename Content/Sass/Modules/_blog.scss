@@ -1,0 +1,10 @@
+
+#blog
+{
+  padding: 20px;
+  
+  @media #{$small} 
+  {
+    padding: $gutterWidth + 10 $gutterWidth;
+  } 
+}

@@ -608,6 +608,7 @@ html {
 body {
   font-family: 'SegoeUI';
   font-size: 14px;
+  line-height: 24px;
   color: #818181;
   background: #f4f4f4;
   -webkit-text-size-adjust: none;
@@ -617,7 +618,7 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 25, Base/_base.scss */
+/* line 26, Base/_base.scss */
 body:before {
   content: "";
   display: block;
@@ -635,30 +636,30 @@ body:before {
   left: -500px;
 }
 
-/* line 39, Base/_base.scss */
+/* line 40, Base/_base.scss */
 img {
   display: inline-block;
 }
 
-/* line 47, Base/_base.scss */
+/* line 48, Base/_base.scss */
 a {
   color: #1dad82;
   text-decoration: underline;
   outline: 1px dotted transparent;
 }
-/* line 54, Base/_base.scss */
+/* line 55, Base/_base.scss */
 a:link, a:hover, a:visited {
   outline: 1px dotted transparent;
 }
-/* line 58, Base/_base.scss */
+/* line 59, Base/_base.scss */
 a:hover {
   color: #168161;
 }
-/* line 62, Base/_base.scss */
+/* line 63, Base/_base.scss */
 a:visited {
   color: #8ad9c2;
 }
-/* line 66, Base/_base.scss */
+/* line 67, Base/_base.scss */
 a:focus {
   outline-color: #8ad9c2;
 }
@@ -692,6 +693,10 @@ a:focus {
 #play > header span {
   float: left;
 }
+/* line 38, Modules/_layout.scss */
+#play #content {
+  background: white;
+}
 @media only screen and (min-width: 48em) {
   /* line 4, Modules/_layout.scss */
   #play {
@@ -699,7 +704,7 @@ a:focus {
     padding-top: 70px;
     width: 760px;
   }
-  /* line 44, Modules/_layout.scss */
+  /* line 49, Modules/_layout.scss */
   #play > header {
     padding: 0 50px;
     height: 230px;
@@ -710,5 +715,16 @@ a:focus {
   /* line 4, Modules/_layout.scss */
   #play {
     left: -10%;
+  }
+}
+
+/* line 3, Modules/_blog.scss */
+#blog {
+  padding: 20px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 3, Modules/_blog.scss */
+  #blog {
+    padding: 60px 50px;
   }
 }

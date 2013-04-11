@@ -34,6 +34,11 @@
     }
   }
   
+  #content
+  {
+    background: white;
+  }
+  
   @media #{$small} 
   {
     margin: 0 auto;
