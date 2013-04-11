@@ -693,8 +693,14 @@ a:focus {
 #play > header span {
   float: left;
 }
-/* line 38, Modules/_layout.scss */
-#play #content {
+/* line 39, Modules/_layout.scss */
+#play > footer {
+  height: 60px;
+  line-height: 60px;
+  background: #e7e7e7;
+}
+/* line 47, Modules/_layout.scss */
+#play #area {
   background: white;
 }
 @media only screen and (min-width: 48em) {
@@ -704,11 +710,16 @@ a:focus {
     padding-top: 70px;
     width: 760px;
   }
-  /* line 49, Modules/_layout.scss */
+  /* line 58, Modules/_layout.scss */
   #play > header {
     padding: 0 50px;
     height: 230px;
     line-height: 230px;
+  }
+  /* line 65, Modules/_layout.scss */
+  #play > footer {
+    height: 200px;
+    line-height: 200px;
   }
 }
 @media only screen and (min-width: 80em) {

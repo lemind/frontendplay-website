@@ -34,7 +34,16 @@
     }
   }
   
-  #content
+  // site footer
+  > footer
+  {
+    height: 60px;
+    line-height: 60px;
+    background: darken($lightColor, 5%);
+  }
+  
+  // content area
+  #area
   {
     background: white;
   }
@@ -50,6 +59,12 @@
       padding: 0 $gutterWidth;
       height: 230px;
       line-height: 230px;
+    }
+    
+    > footer
+    {
+      height: 200px;
+      line-height: 200px;
     }
   }
   
