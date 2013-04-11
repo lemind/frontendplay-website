@@ -1,0 +1,44 @@
+
+html
+{
+  height: 100%;
+}
+
+body
+{
+  font-family: 'SegoeUI';
+  font-size: 14px;
+  color: $textColor;
+  background: $lightColor;
+  
+  @include box-sizing(border-box);
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none; 
+  
+  height: 100%;
+  width: 100%;
+}
+
+
+a
+{
+  color: $mainColor;
+  text-decoration: underline;
+  @extend %shortTransition;
+  
+  &:hover
+  {
+    color: darken($mainColor, 10%);
+  }
+  &:visited
+  {
+    color: desaturate(lighten($mainColor, 30%), 20%);
+  }
+}
+
+
+#play
+{
+  position: relative;
+}
