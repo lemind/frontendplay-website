@@ -1,0 +1,35 @@
+
+
+.button, a.button
+{
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  background: $primaryColor;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(black, 0.2);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0 25px;
+  @include border-radius(3px);
+  @include box-shadow(inset 0 -3px 0 rgba(black, 0.1));
+  
+  &:hover
+  {
+    background: darken($primaryColor, 5%);
+  }
+}
+
+
+.lightButton, a.lightButton
+{
+  @extend .button;
+  background: darken($lightColor, 15%);
+  
+  &:hover
+  {
+    background: darken($lightColor, 20%);
+  }
+}
