@@ -2,5 +2,12 @@
 
 %shortTransition
 {
-  @include transition(all 0.3s ease-in-out);
+  @include transition(all 0.3s ease-in-out); 
+}
+
+
+%antialiased 
+{ 
+  -webkit-font-smoothing: antialiased; 
+  font-smoothing: antialiased;
 }

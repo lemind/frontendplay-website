@@ -44,7 +44,10 @@ module.exports = function(grunt)
           fontDir: 'Content/Fonts',
           javascriptsDir: 'Content/Scripts',
           outputStyle: 'expanded',
-          environment: 'development'
+          environment: 'development',
+          require: [
+            'zurb-foundation'
+          ]
         }
       },
       release: {
@@ -55,7 +58,10 @@ module.exports = function(grunt)
           fontDir: 'Content/Fonts',
           javascriptsDir: 'Content/Scripts',
           outputStyle: 'compressed',
-          environment: 'production'
+          environment: 'production',
+          require: [
+            'zurb-foundation'
+          ]
         }
       }
     },
