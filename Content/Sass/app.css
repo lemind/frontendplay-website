@@ -476,25 +476,47 @@ a {
   font-style: italic;
 }
 
-/* line 3, Partials/_base.scss */
+/* line 31, Base/_typography.scss */
+h1 {
+  margin: 0;
+}
+
+/* line 3, Base/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 8, Base/_base.scss */
 body {
   font-family: 'SegoeUI';
+  font-size: 14px;
+  color: #818181;
+  background: #f4f4f4;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #818181;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+  width: 100%;
 }
 
-/* line 11, Partials/_base.scss */
+/* line 25, Base/_base.scss */
 a {
   color: #1dad82;
   text-decoration: underline;
 }
-/* line 17, Partials/_base.scss */
+/* line 31, Base/_base.scss */
 a:hover {
   color: #168161;
 }
-/* line 21, Partials/_base.scss */
+/* line 35, Base/_base.scss */
 a:visited {
   color: #8ad9c2;
+}
+
+/* line 42, Base/_base.scss */
+#play {
+  position: relative;
 }
