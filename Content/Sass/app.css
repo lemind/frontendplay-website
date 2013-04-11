@@ -663,21 +663,51 @@ a:focus {
   outline-color: #8ad9c2;
 }
 
-/* line 74, Base/_base.scss */
+/* line 4, Modules/_layout.scss */
 #play {
   position: relative;
-  width: 760px;
+  width: 100%;
   max-width: 100%;
 }
+/* line 11, Modules/_layout.scss */
+#play > header {
+  height: 80px;
+  line-height: 80px;
+  background: #18191a;
+  padding: 0 20px;
+}
+/* line 18, Modules/_layout.scss */
+#play > header h1 {
+  color: #f9f9f9;
+  font-weight: 300;
+  font-size: 24px;
+  height: 100%;
+}
+/* line 26, Modules/_layout.scss */
+#play > header img {
+  height: 46px;
+  margin: 0 0 -15px 15px;
+}
+/* line 32, Modules/_layout.scss */
+#play > header span {
+  float: left;
+}
 @media only screen and (min-width: 48em) {
-  /* line 74, Base/_base.scss */
+  /* line 4, Modules/_layout.scss */
   #play {
     margin: 0 auto;
     padding-top: 70px;
+    width: 760px;
+  }
+  /* line 44, Modules/_layout.scss */
+  #play > header {
+    padding: 0 50px;
+    height: 230px;
+    line-height: 230px;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 74, Base/_base.scss */
+  /* line 4, Modules/_layout.scss */
   #play {
     left: -10%;
   }

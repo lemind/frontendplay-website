@@ -67,22 +67,3 @@ a
     outline-color: desaturate(lighten($primaryColor, 30%), 20%);
   }
 }
-
-
-// this is our main container
-#play
-{
-  position: relative;
-  width: 760px;
-  max-width: 100%;
-
-  @media #{$small} 
-  {
-    margin: 0 auto;
-    padding-top: 70px;
-  }
-  @media #{$medium} 
-  {
-    left: -10%;
-  }
-}

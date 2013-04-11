@@ -1,0 +1,55 @@
+
+// this is our main container
+#play
+{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  
+  // site header
+  > header
+  {
+    height: 80px;
+    line-height: 80px;
+    background: $darkColor;
+    padding: 0 20px;
+    
+    h1
+    {
+      color: lighten($lightColor, 2%);
+      font-weight: 300;
+      font-size: 24px;
+      height: 100%;
+    } 
+    
+    img
+    {
+      height: 46px; // downscale for high-res displays
+      margin: 0 0 -15px 15px;
+    } 
+    
+    span 
+    {
+      float: left;
+    }
+  }
+  
+  @media #{$small} 
+  {
+    margin: 0 auto;
+    padding-top: 70px;
+    width: $siteWidth;
+    
+    > header
+    {
+      padding: 0 $gutterWidth;
+      height: 230px;
+      line-height: 230px;
+    }
+  }
+  
+  @media #{$medium} 
+  {
+    left: -10%;
+  }
+}
