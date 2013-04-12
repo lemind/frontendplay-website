@@ -41,31 +41,3 @@ img
 { 
   display: inline-block; 
 }
-
-
-// default link style
-// mainly used for paragraphs
-a
-{
-  color: $primaryColor;
-  text-decoration: underline;
-  outline: 1px dotted transparent;
-  @extend %shortTransition;
-  
-  &:link, &:hover, &:visited
-  {
-    outline: 1px dotted transparent;
-  }
-  &:hover
-  {
-    color: darken($primaryColor, 10%);
-  }
-  &:visited
-  {
-    color: desaturate(lighten($primaryColor, 30%), 20%);
-  }
-  &:focus
-  {
-    outline-color: desaturate(lighten($primaryColor, 30%), 20%);
-  }
-}

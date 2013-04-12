@@ -11,6 +11,22 @@ article
   h2, h3
   {
     color: $headlineTextColor;
+    
+    a
+    {
+      color: $headlineTextColor;
+      text-decoration: none;
+      
+      &:visited
+      {
+        color: $headlineTextColor;
+      }
+      
+      &:hover, &:visited:hover
+      {
+        color: $primaryColor;
+      } 
+    }
   }
   
   h2

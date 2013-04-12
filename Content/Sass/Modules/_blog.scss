@@ -19,6 +19,45 @@
     display: block;
   }
   
+  .navigation
+  {
+    margin-left: -20px;
+    margin-top: 70px;
+    @extend %clearfix;
+    
+    a
+    {
+      display: inline-block;
+      height: 54px;
+      line-height: 54px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: lighten($lightColor, 2%);
+      padding: 0 25px;
+      float: left;
+      margin-right: 10px;
+      color: $headlineTextColor;
+      font-weight: 500;
+      
+      &:hover
+      {
+        background: darken($lightColor, 3%);
+        //color: white;
+      }
+    }
+    
+    i
+    {
+      font-size: 20px;
+      float: left;
+      
+      &.entypo-left-open
+      {
+        margin-right: 20px;
+      }
+    }
+  }
+  
   @media #{$small} 
   {
     padding: $gutterWidth + 10 $gutterWidth;
@@ -33,13 +72,12 @@
       border: 1px solid $lightColor;
       text-align: center;
       line-height: 1;
-      color: lighten($textColor, 20%);
+      color: lighten($textColor, 10%);
       
       .month
       {
         display: block;
         margin-top: 5px;
-        font-weight: 500;
         font-size: 12px;
         
         &:before
@@ -52,6 +90,11 @@
       {
         font-size: 20px;
       }
+    }
+    
+    .navigation
+    {
+      margin-left: -$gutterWidth;
     }
   }
 }
