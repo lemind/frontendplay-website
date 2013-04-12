@@ -8,7 +8,8 @@
     src: font-url("#{$filename}.eot");
     src: font-url("#{$filename}.eot?#iefix") format("embedded-opentype"),
 		 font-url("#{$filename}.woff") format("woff"),
-		 font-url("#{$filename}.ttf") format("truetype");
+		 font-url("#{$filename}.ttf") format("truetype"),
+		 font-url('#{$filename}svg#fix') format('svg');
 
     @if $weight
     {

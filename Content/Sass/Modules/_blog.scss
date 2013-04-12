@@ -13,8 +13,45 @@
     }
   }
   
+  time
+  {
+    color: $primaryColor;
+    display: block;
+  }
+  
   @media #{$small} 
   {
     padding: $gutterWidth + 10 $gutterWidth;
+    
+    time
+    {
+      position: absolute;
+      left: -80px;
+      top: 5px;
+      width: 60px;
+      height: 45px;
+      border: 1px solid $lightColor;
+      text-align: center;
+      line-height: 1;
+      color: lighten($textColor, 20%);
+      
+      .month
+      {
+        display: block;
+        margin-top: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        
+        &:before
+        {
+          display: none;
+        }
+      }
+      
+      .day
+      {
+        font-size: 20px;
+      }
+    }
   }
 }

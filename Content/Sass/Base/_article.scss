@@ -3,6 +3,11 @@ article
 {
   position: relative;
   
+  > div
+  {
+    position: relative;
+  }
+  
   h2, h3
   {
     color: $headlineTextColor;
@@ -24,7 +29,7 @@ article
   
   @media #{$small} 
   {
-    padding-left: 100px;
+    padding-left: 80px;
     
     h2
     {

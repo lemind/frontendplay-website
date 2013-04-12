@@ -18,7 +18,7 @@
   
   &:hover
   {
-    background: darken($primaryColor, 5%);
+    background: lighten($primaryColor, 5%);
   }
 }
 
@@ -30,6 +30,6 @@
   
   &:hover
   {
-    background: darken($lightColor, 20%);
+    background: darken($lightColor, 10%);
   }
 }
