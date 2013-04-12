@@ -11,3 +11,18 @@
   -webkit-font-smoothing: antialiased; 
   font-smoothing: antialiased;
 }
+
+
+%clearfix
+{
+  *zoom:1;
+  &:before, &:after 
+  { 
+    content: " "; 
+    display: table; 
+  }
+  &:after 
+  { 
+    clear: both; 
+  }
+}

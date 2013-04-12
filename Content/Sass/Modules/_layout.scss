@@ -9,15 +9,15 @@
   // site header
   > header
   {
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
     background: $darkColor;
     padding: 0 20px;
+    @extend %clearfix;
     
     h1
     {
       color: lighten($lightColor, 2%);
-      font-weight: 300;
       font-size: 24px;
       height: 100%;
     } 
@@ -31,6 +31,14 @@
     span 
     {
       float: left;
+    }
+    
+    h2 
+    {
+      color: $darkTextColor;
+      font-size: 18px;
+      position: absolute;
+      left: -9999px;
     }
   }
   
@@ -59,6 +67,18 @@
       padding: 0 $gutterWidth;
       height: 230px;
       line-height: 230px;
+      
+      h1 
+      {
+        float: left;
+      }
+      h2 
+      {
+        float: left;
+        margin-left: 20px;
+        position: static;
+        left: auto;
+      }
     }
     
     > footer

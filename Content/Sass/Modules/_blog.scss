@@ -3,8 +3,18 @@
 {
   padding: 20px;
   
+  article
+  {
+    margin-top: 70px;
+    
+    &:first-child
+    {
+      margin-top: 0;
+    }
+  }
+  
   @media #{$small} 
   {
     padding: $gutterWidth + 10 $gutterWidth;
-  } 
+  }
 }

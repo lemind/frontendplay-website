@@ -1,0 +1,35 @@
+
+article
+{
+  position: relative;
+  
+  h2, h3
+  {
+    color: $headlineTextColor;
+  }
+  
+  h2
+  {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 10px; 
+    border-bottom: 1px solid $lightColor;
+    padding-bottom: 20px;
+  }
+  
+  .button, .lightButton
+  {
+    margin-top: 20px;
+  }
+  
+  @media #{$small} 
+  {
+    padding-left: 100px;
+    
+    h2
+    {
+      font-size: 24px;
+      border-bottom: none;
+    }
+  }
+}

@@ -420,6 +420,20 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+/* line 17, Config/_placeholders.scss */
+#play > header {
+  *zoom: 1;
+}
+/* line 20, Config/_placeholders.scss */
+#play > header:before, #play > header:after {
+  content: " ";
+  display: table;
+}
+/* line 25, Config/_placeholders.scss */
+#play > header:after {
+  clear: both;
+}
+
 /* line 4, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
 *,
 *:before,
@@ -595,8 +609,9 @@ select {
 }
 
 /* line 31, Base/_typography.scss */
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-weight: 300;
 }
 
 /* line 3, Base/_base.scss */
@@ -607,7 +622,7 @@ html {
 
 /* line 9, Base/_base.scss */
 body {
-  font-family: 'SegoeUI';
+  font-family: 'SegoeUI', 'Segoe UI', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #818181;
@@ -701,6 +716,38 @@ a:focus {
   background: #c1c1c1;
 }
 
+/* line 3, Base/_article.scss */
+article {
+  position: relative;
+}
+/* line 7, Base/_article.scss */
+article h2, article h3 {
+  color: #3a3a3a;
+}
+/* line 12, Base/_article.scss */
+article h2 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 20px;
+}
+/* line 21, Base/_article.scss */
+article .button, article .lightButton, article .lightButton {
+  margin-top: 20px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 3, Base/_article.scss */
+  article {
+    padding-left: 100px;
+  }
+  /* line 30, Base/_article.scss */
+  article h2 {
+    font-size: 24px;
+    border-bottom: none;
+  }
+}
+
 /* line 4, Modules/_layout.scss */
 #play {
   position: relative;
@@ -709,15 +756,14 @@ a:focus {
 }
 /* line 11, Modules/_layout.scss */
 #play > header {
-  height: 80px;
-  line-height: 80px;
+  height: 100px;
+  line-height: 100px;
   background: #18191a;
   padding: 0 20px;
 }
-/* line 18, Modules/_layout.scss */
+/* line 19, Modules/_layout.scss */
 #play > header h1 {
   color: #f9f9f9;
-  font-weight: 300;
   font-size: 24px;
   height: 100%;
 }
@@ -730,13 +776,20 @@ a:focus {
 #play > header span {
   float: left;
 }
-/* line 39, Modules/_layout.scss */
+/* line 37, Modules/_layout.scss */
+#play > header h2 {
+  color: #5f5f5f;
+  font-size: 18px;
+  position: absolute;
+  left: -9999px;
+}
+/* line 47, Modules/_layout.scss */
 #play > footer {
   height: 60px;
   line-height: 60px;
   background: #e7e7e7;
 }
-/* line 47, Modules/_layout.scss */
+/* line 55, Modules/_layout.scss */
 #play #area {
   background: white;
 }
@@ -747,13 +800,24 @@ a:focus {
     padding-top: 70px;
     width: 760px;
   }
-  /* line 58, Modules/_layout.scss */
+  /* line 66, Modules/_layout.scss */
   #play > header {
     padding: 0 50px;
     height: 230px;
     line-height: 230px;
   }
-  /* line 65, Modules/_layout.scss */
+  /* line 72, Modules/_layout.scss */
+  #play > header h1 {
+    float: left;
+  }
+  /* line 76, Modules/_layout.scss */
+  #play > header h2 {
+    float: left;
+    margin-left: 20px;
+    position: static;
+    left: auto;
+  }
+  /* line 85, Modules/_layout.scss */
   #play > footer {
     height: 200px;
     line-height: 200px;
@@ -769,6 +833,14 @@ a:focus {
 /* line 3, Modules/_blog.scss */
 #blog {
   padding: 20px;
+}
+/* line 7, Modules/_blog.scss */
+#blog article {
+  margin-top: 70px;
+}
+/* line 11, Modules/_blog.scss */
+#blog article:first-child {
+  margin-top: 0;
 }
 @media only screen and (min-width: 48em) {
   /* line 3, Modules/_blog.scss */
