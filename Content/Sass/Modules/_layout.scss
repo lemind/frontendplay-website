@@ -93,3 +93,38 @@
     left: -10%;
   }
 }
+
+
+// back to top link
+#backtotop
+{
+  display: none;
+  
+  @media #{$small}
+  {
+    display: block;
+    position: absolute;
+    left: -115px;
+    bottom: 150px;
+    background: white;
+    width: 170px;
+    height: 50px;
+    color: $primaryColor;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    i:before
+    {
+      font-size: 20px;
+      line-height: 50px;
+      padding-left: 25px;
+      display: inline-block;
+    }
+    
+    &:hover
+    {
+      left: 0;
+    }
+  }
+}
