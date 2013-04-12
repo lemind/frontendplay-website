@@ -2350,21 +2350,22 @@ article .button, article .lightButton, article .lightButton {
   float: left;
   color: #3a3a3a;
   font-weight: 500;
+  font-size: 13px;
 }
-/* line 41, Modules/_blog.scss */
+/* line 42, Modules/_blog.scss */
 #blog .navigation a:hover {
   background: #ececec;
 }
-/* line 46, Modules/_blog.scss */
+/* line 47, Modules/_blog.scss */
 #blog .navigation a:first-child {
   margin-right: 10px;
 }
-/* line 52, Modules/_blog.scss */
+/* line 53, Modules/_blog.scss */
 #blog .navigation i {
   font-size: 20px;
   float: left;
 }
-/* line 57, Modules/_blog.scss */
+/* line 58, Modules/_blog.scss */
 #blog .navigation i.entypo-left-open {
   margin-right: 20px;
 }
@@ -2373,7 +2374,7 @@ article .button, article .lightButton, article .lightButton {
   #blog {
     padding: 60px 50px;
   }
-  /* line 68, Modules/_blog.scss */
+  /* line 69, Modules/_blog.scss */
   #blog time {
     position: absolute;
     left: -80px;
@@ -2385,21 +2386,21 @@ article .button, article .lightButton, article .lightButton {
     line-height: 1;
     color: #9b9b9b;
   }
-  /* line 80, Modules/_blog.scss */
+  /* line 81, Modules/_blog.scss */
   #blog time .month {
     display: block;
     margin-top: 5px;
     font-size: 12px;
   }
-  /* line 86, Modules/_blog.scss */
+  /* line 87, Modules/_blog.scss */
   #blog time .month:before {
     display: none;
   }
-  /* line 92, Modules/_blog.scss */
+  /* line 93, Modules/_blog.scss */
   #blog time .day {
     font-size: 20px;
   }
-  /* line 98, Modules/_blog.scss */
+  /* line 99, Modules/_blog.scss */
   #blog .navigation {
     margin-left: -50px;
   }
