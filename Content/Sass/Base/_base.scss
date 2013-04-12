@@ -22,16 +22,19 @@ body
   
   overflow-x: hidden;
   
-  // adds the triangle background
-  &:before
+  @media #{$small} 
   {
-    $size: 500px;
-    
-    @include css-triangle($size, darken($lightColor, 2%), right);
-    @include rotate(45deg);
-    position: absolute;
-    top: -$size;
-    left: -$size;
+    // adds the triangle background
+    &:before
+    {
+      $size: 500px;
+      
+      @include css-triangle($size, darken($lightColor, 2%), right);
+      @include rotate(45deg);
+      position: absolute;
+      top: -$size;
+      left: -$size;
+    }
   }
 }
 

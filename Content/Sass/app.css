@@ -2092,25 +2092,27 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-/* line 27, Base/_base.scss */
-body:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 500px;
-  border-color: transparent #efefef transparent transparent;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: -500px;
-  left: -500px;
+@media only screen and (min-width: 48em) {
+  /* line 29, Base/_base.scss */
+  body:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 500px;
+    border-color: transparent #efefef transparent transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -500px;
+    left: -500px;
+  }
 }
 
-/* line 41, Base/_base.scss */
+/* line 44, Base/_base.scss */
 img {
   display: inline-block;
 }
@@ -2314,20 +2316,23 @@ article .button, article .lightButton, article .lightButton {
   background: #f9f9f9;
   padding: 0 25px;
   float: left;
-  margin-right: 10px;
   color: #3a3a3a;
   font-weight: 500;
 }
-/* line 43, Modules/_blog.scss */
+/* line 42, Modules/_blog.scss */
 #blog .navigation a:hover {
   background: #ececec;
 }
-/* line 50, Modules/_blog.scss */
+/* line 47, Modules/_blog.scss */
+#blog .navigation a:first-child {
+  margin-right: 10px;
+}
+/* line 53, Modules/_blog.scss */
 #blog .navigation i {
   font-size: 20px;
   float: left;
 }
-/* line 55, Modules/_blog.scss */
+/* line 58, Modules/_blog.scss */
 #blog .navigation i.entypo-left-open {
   margin-right: 20px;
 }
@@ -2336,7 +2341,7 @@ article .button, article .lightButton, article .lightButton {
   #blog {
     padding: 60px 50px;
   }
-  /* line 66, Modules/_blog.scss */
+  /* line 69, Modules/_blog.scss */
   #blog time {
     position: absolute;
     left: -80px;
@@ -2348,21 +2353,21 @@ article .button, article .lightButton, article .lightButton {
     line-height: 1;
     color: #9b9b9b;
   }
-  /* line 78, Modules/_blog.scss */
+  /* line 81, Modules/_blog.scss */
   #blog time .month {
     display: block;
     margin-top: 5px;
     font-size: 12px;
   }
-  /* line 84, Modules/_blog.scss */
+  /* line 87, Modules/_blog.scss */
   #blog time .month:before {
     display: none;
   }
-  /* line 90, Modules/_blog.scss */
+  /* line 93, Modules/_blog.scss */
   #blog time .day {
     font-size: 20px;
   }
-  /* line 96, Modules/_blog.scss */
+  /* line 99, Modules/_blog.scss */
   #blog .navigation {
     margin-left: -50px;
   }

@@ -35,14 +35,17 @@
       background: lighten($lightColor, 2%);
       padding: 0 25px;
       float: left;
-      margin-right: 10px;
       color: $headlineTextColor;
       font-weight: 500;
       
       &:hover
       {
         background: darken($lightColor, 3%);
-        //color: white;
+      }
+      
+      &:first-child
+      {
+        margin-right: 10px;
       }
     }
     
