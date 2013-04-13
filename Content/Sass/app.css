@@ -1855,7 +1855,7 @@ a, #play > header img {
 }
 
 /* line 34, Config/_placeholders.scss */
-#play > header a:link, #play > header a:hover, #play > header a:visited, #play > header a:focus {
+#play > header a:link, #play > footer .twitter:link, #play > header a:hover, #play > footer .twitter:hover, #play > header a:visited, #play > footer .twitter:visited, #play > header a:focus, #play > footer .twitter:focus {
   outline: 1px dotted transparent;
 }
 
@@ -2220,35 +2220,36 @@ img {
   line-height: 100px;
   background: #18191a;
   padding: 0 20px;
+  overflow: hidden;
 }
-/* line 68, Modules/_base.scss */
+/* line 69, Modules/_base.scss */
 #play > header h1 {
   font-size: 24px;
   height: 100%;
 }
-/* line 74, Modules/_base.scss */
+/* line 75, Modules/_base.scss */
 #play > header img {
   height: 46px;
   margin: 0 0 -15px 15px;
 }
-/* line 81, Modules/_base.scss */
+/* line 82, Modules/_base.scss */
 #play > header span {
   float: left;
 }
-/* line 86, Modules/_base.scss */
+/* line 87, Modules/_base.scss */
 #play > header h2 {
   color: #5f5f5f;
   font-size: 18px;
   position: absolute;
   left: -9999px;
 }
-/* line 94, Modules/_base.scss */
+/* line 95, Modules/_base.scss */
 #play > header a {
   color: #f9f9f9;
   display: inline-block;
   height: 100%;
 }
-/* line 103, Modules/_base.scss */
+/* line 104, Modules/_base.scss */
 #play > header a:hover img {
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
@@ -2256,23 +2257,81 @@ img {
   -o-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 112, Modules/_base.scss */
+/* line 113, Modules/_base.scss */
 #play > footer {
-  height: 60px;
-  line-height: 60px;
-  background: #e7e7e7;
+  background: #f9f9f9;
+  position: relative;
 }
-/* line 120, Modules/_base.scss */
+/* line 118, Modules/_base.scss */
+#play > footer .bottom {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  color: #cecece;
+  font-size: 13px;
+  border-top: 1px solid #efefef;
+}
+/* line 128, Modules/_base.scss */
+#play > footer .bottom a {
+  text-decoration: none;
+}
+/* line 134, Modules/_base.scss */
+#play > footer div {
+  padding: 0 20px;
+}
+/* line 139, Modules/_base.scss */
+#play > footer .stories {
+  padding: 100px 20px 30px 20px;
+}
+/* line 143, Modules/_base.scss */
+#play > footer .stories h4 {
+  color: #3a3a3a;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* line 150, Modules/_base.scss */
+#play > footer .stories a {
+  display: block;
+  text-decoration: none;
+  font-size: 13px;
+  color: #818181;
+  margin-top: 5px;
+}
+/* line 158, Modules/_base.scss */
+#play > footer .stories a:first-child {
+  margin-top: 0;
+}
+/* line 163, Modules/_base.scss */
+#play > footer .stories a:hover {
+  color: #1dad82;
+}
+/* line 169, Modules/_base.scss */
+#play > footer .stories i {
+  margin-right: 10px;
+  color: #1dad82;
+}
+/* line 176, Modules/_base.scss */
+#play > footer .twitter {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -30px;
+  font-size: 60px;
+  text-decoration: none;
+  color: #1dad82;
+}
+/* line 190, Modules/_base.scss */
 #play #area {
   background: white;
 }
-/* line 126, Modules/_base.scss */
+/* line 196, Modules/_base.scss */
 #play > nav {
   background: #0c0c0d;
   height: 50px;
   line-height: 50px;
 }
-/* line 132, Modules/_base.scss */
+/* line 202, Modules/_base.scss */
 #play > nav a {
   display: inline-block;
   height: 100%;
@@ -2282,7 +2341,7 @@ img {
   float: left;
   border-bottom: 3px solid transparent;
 }
-/* line 142, Modules/_base.scss */
+/* line 212, Modules/_base.scss */
 #play > nav a:hover {
   border-bottom-color: #1dad82;
 }
@@ -2293,31 +2352,47 @@ img {
     padding-top: 70px;
     width: 760px;
   }
-  /* line 156, Modules/_base.scss */
+  /* line 226, Modules/_base.scss */
   #play > header {
     padding: 0 50px;
-    height: 230px;
-    line-height: 230px;
+    height: 200px;
+    line-height: 220px;
   }
-  /* line 162, Modules/_base.scss */
+  /* line 232, Modules/_base.scss */
   #play > header h1 {
     float: left;
   }
-  /* line 166, Modules/_base.scss */
+  /* line 236, Modules/_base.scss */
   #play > header h2 {
     float: left;
     margin-left: 20px;
     position: static;
     left: auto;
   }
-  /* line 175, Modules/_base.scss */
+  /* line 245, Modules/_base.scss */
   #play > nav {
     padding: 0 30px;
   }
-  /* line 180, Modules/_base.scss */
-  #play > footer {
-    height: 200px;
-    line-height: 200px;
+  /* line 252, Modules/_base.scss */
+  #play > footer div {
+    padding: 0 50px;
+  }
+  /* line 257, Modules/_base.scss */
+  #play > footer .bottom {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+  }
+  /* line 264, Modules/_base.scss */
+  #play > footer .stories {
+    padding: 30px 50px;
+  }
+  /* line 269, Modules/_base.scss */
+  #play > footer .twitter {
+    left: auto;
+    right: 50px;
+    top: 65px;
+    margin-left: 0;
   }
 }
 @media only screen and (min-width: 80em) {
@@ -2327,12 +2402,12 @@ img {
   }
 }
 
-/* line 195, Modules/_base.scss */
+/* line 287, Modules/_base.scss */
 #backtotop {
   display: none;
 }
 @media only screen and (min-width: 48em) {
-  /* line 195, Modules/_base.scss */
+  /* line 287, Modules/_base.scss */
   #backtotop {
     display: block;
     position: absolute;
@@ -2346,14 +2421,14 @@ img {
     text-decoration: none;
     text-transform: uppercase;
   }
-  /* line 213, Modules/_base.scss */
+  /* line 305, Modules/_base.scss */
   #backtotop i:before {
     font-size: 20px;
     line-height: 50px;
     padding-left: 25px;
     display: inline-block;
   }
-  /* line 221, Modules/_base.scss */
+  /* line 313, Modules/_base.scss */
   #backtotop:hover {
     left: 0;
   }

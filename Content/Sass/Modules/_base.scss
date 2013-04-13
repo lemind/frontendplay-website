@@ -62,6 +62,7 @@ img
     line-height: 100px;
     background: $darkColor;
     padding: 0 20px;
+    overflow: hidden;
     @extend %clearfix;
     
     h1
@@ -110,9 +111,78 @@ img
   // site footer
   > footer
   {
-    height: 60px;
-    line-height: 60px;
-    background: darken($lightColor, 5%);
+    background: lighten($lightColor, 2%);
+    position: relative;
+    
+    .bottom
+    {
+      height: 40px;
+      line-height: 40px;
+      width: 100%;
+      text-align: center;
+      color: lighten($textColor, 30%);
+      font-size: 13px;
+      border-top: 1px solid darken($lightColor, 2%);
+      
+      a
+      {
+        text-decoration: none;
+      }
+    }
+    
+    div
+    {
+      padding: 0 20px;
+    }
+    
+    .stories
+    {
+      padding: 100px 20px 30px 20px;
+      
+      h4
+      {
+        color: $headlineTextColor;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      a
+      {
+        display: block;
+        text-decoration: none;
+        font-size: 13px;
+        color: $textColor;
+        margin-top: 5px;
+        
+        &:first-child
+        {
+          margin-top: 0;
+        }
+        
+        &:hover
+        {
+          color: $primaryColor;
+        }
+      }
+      
+      i
+      {
+        margin-right: 10px;
+        color: $primaryColor;
+      }
+    }
+    
+    .twitter
+    {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      margin-left: -30px;
+      font-size: 60px;
+      text-decoration: none;
+      color: $primaryColor;
+      @extend %resetLink;
+    }
   }
   
   // content area
@@ -127,7 +197,7 @@ img
     background: darken($darkColor, 5%);
     height: 50px;
     line-height: 50px;
-    
+
     a
     {
       display: inline-block;
@@ -155,8 +225,8 @@ img
     > header
     {
       padding: 0 $gutterWidth;
-      height: 230px;
-      line-height: 230px;
+      height: 200px;
+      line-height: 220px;
       
       h1 
       {
@@ -178,8 +248,30 @@ img
     
     > footer
     {
-      height: 200px;
-      line-height: 200px;
+      div
+      {
+        padding: 0 50px;
+      }
+      
+      .bottom
+      {
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+      }
+      
+      .stories
+      {
+        padding: 30px 50px;
+      }
+      
+      .twitter
+      {
+        left: auto;
+        right: 50px;
+        top: 65px;
+        margin-left: 0;
+      }
     }
   }
   
