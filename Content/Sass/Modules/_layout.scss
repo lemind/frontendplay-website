@@ -17,16 +17,16 @@
     
     h1
     {
-      color: lighten($lightColor, 2%);
       font-size: 24px;
       height: 100%;
-    } 
+    }
     
     img
     {
       height: 46px; // downscale for high-res displays
       margin: 0 0 -15px 15px;
-    } 
+      @extend %shortTransition;
+    }
     
     span 
     {
@@ -39,6 +39,20 @@
       font-size: 18px;
       position: absolute;
       left: -9999px;
+    }
+    
+    a
+    {
+      color: lighten($lightColor, 2%);
+      @extend %resetLink;
+      
+      &:hover
+      {
+        img
+        {
+          @include scale(1.2);
+        }
+      }
     }
   }
   

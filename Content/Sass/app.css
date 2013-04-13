@@ -1833,7 +1833,7 @@ table {
 }
 
 /* line 4, Config/_placeholders.scss */
-a {
+a, #play > header img {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1852,6 +1852,11 @@ a {
 /* line 25, Config/_placeholders.scss */
 #play > header:after, #blog .navigation:after {
   clear: both;
+}
+
+/* line 34, Config/_placeholders.scss */
+#play > header a:link, #play > header a:hover, #play > header a:visited, #play > header a:focus {
+  outline: 1px dotted transparent;
 }
 
 /* line 4, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
@@ -2218,11 +2223,10 @@ article .button, article .lightButton, article .lightButton {
 }
 /* line 19, Modules/_layout.scss */
 #play > header h1 {
-  color: #f9f9f9;
   font-size: 24px;
   height: 100%;
 }
-/* line 26, Modules/_layout.scss */
+/* line 25, Modules/_layout.scss */
 #play > header img {
   height: 46px;
   margin: 0 0 -15px 15px;
@@ -2238,13 +2242,25 @@ article .button, article .lightButton, article .lightButton {
   position: absolute;
   left: -9999px;
 }
-/* line 47, Modules/_layout.scss */
+/* line 45, Modules/_layout.scss */
+#play > header a {
+  color: #f9f9f9;
+}
+/* line 52, Modules/_layout.scss */
+#play > header a:hover img {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+/* line 61, Modules/_layout.scss */
 #play > footer {
   height: 60px;
   line-height: 60px;
   background: #e7e7e7;
 }
-/* line 55, Modules/_layout.scss */
+/* line 69, Modules/_layout.scss */
 #play #area {
   background: white;
 }
@@ -2255,24 +2271,24 @@ article .button, article .lightButton, article .lightButton {
     padding-top: 70px;
     width: 760px;
   }
-  /* line 66, Modules/_layout.scss */
+  /* line 80, Modules/_layout.scss */
   #play > header {
     padding: 0 50px;
     height: 230px;
     line-height: 230px;
   }
-  /* line 72, Modules/_layout.scss */
+  /* line 86, Modules/_layout.scss */
   #play > header h1 {
     float: left;
   }
-  /* line 76, Modules/_layout.scss */
+  /* line 90, Modules/_layout.scss */
   #play > header h2 {
     float: left;
     margin-left: 20px;
     position: static;
     left: auto;
   }
-  /* line 85, Modules/_layout.scss */
+  /* line 99, Modules/_layout.scss */
   #play > footer {
     height: 200px;
     line-height: 200px;
@@ -2285,12 +2301,12 @@ article .button, article .lightButton, article .lightButton {
   }
 }
 
-/* line 100, Modules/_layout.scss */
+/* line 114, Modules/_layout.scss */
 #backtotop {
   display: none;
 }
 @media only screen and (min-width: 48em) {
-  /* line 100, Modules/_layout.scss */
+  /* line 114, Modules/_layout.scss */
   #backtotop {
     display: block;
     position: absolute;
@@ -2304,14 +2320,14 @@ article .button, article .lightButton, article .lightButton {
     text-decoration: none;
     text-transform: uppercase;
   }
-  /* line 118, Modules/_layout.scss */
+  /* line 132, Modules/_layout.scss */
   #backtotop i:before {
     font-size: 20px;
     line-height: 50px;
     padding-left: 25px;
     display: inline-block;
   }
-  /* line 126, Modules/_layout.scss */
+  /* line 140, Modules/_layout.scss */
   #backtotop:hover {
     left: 0;
   }

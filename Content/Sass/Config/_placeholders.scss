@@ -26,3 +26,12 @@
     clear: both; 
   }
 }
+
+
+%resetLink
+{
+  &:link, &:hover, &:visited, &:focus
+  {
+    outline: 1px dotted transparent;
+  }
+}
