@@ -1,0 +1,225 @@
+
+
+
+html
+{
+  height: 100%;
+  background: $lightColor;
+}
+
+body
+{
+  font-family: 'SegoeUI', 'Segoe UI', Arial, sans-serif; 
+  font-size: 14px;
+  line-height: 24px;
+  color: $textColor;
+  background: $lightColor;
+
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none; 
+  
+  min-height: 100%;
+  width: 100%;
+  
+  overflow-x: hidden;
+  
+  @media #{$small} 
+  {
+    // adds the triangle background
+    &:before
+    {
+      $size: 500px;
+      
+      @include css-triangle($size, darken($lightColor, 2%), right);
+      @include rotate(45deg);
+      position: absolute;
+      top: -$size;
+      left: -$size;
+    }
+  }
+}
+
+
+// Get rid of gap under images by making them display: inline-block; by default
+img 
+{ 
+  display: inline-block; 
+}
+
+
+// this is our main container
+#play
+{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  
+  // site header
+  > header
+  {
+    height: 100px;
+    line-height: 100px;
+    background: $darkColor;
+    padding: 0 20px;
+    @extend %clearfix;
+    
+    h1
+    {
+      font-size: 24px;
+      height: 100%;
+    }
+    
+    img
+    {
+      height: 46px; // downscale for high-res displays
+      margin: 0 0 -15px 15px;
+      @extend %shortTransition;
+    }
+    
+    span 
+    {
+      float: left;
+    }
+    
+    h2 
+    {
+      color: $darkTextColor;
+      font-size: 18px;
+      position: absolute;
+      left: -9999px;
+    }
+    
+    a
+    {
+      color: lighten($lightColor, 2%);
+      display: inline-block;
+      height: 100%;
+      @extend %resetLink;
+      
+      &:hover
+      {
+        img
+        {
+          @include scale(1.2);
+        }
+      }
+    }
+  }
+  
+  // site footer
+  > footer
+  {
+    height: 60px;
+    line-height: 60px;
+    background: darken($lightColor, 5%);
+  }
+  
+  // content area
+  #area
+  {
+    background: white;
+  }
+  
+  // navigation
+  > nav
+  {
+    background: darken($darkColor, 5%);
+    height: 50px;
+    line-height: 50px;
+    
+    a
+    {
+      display: inline-block;
+      height: 100%;
+      padding: 0 20px;
+      text-decoration: none;
+      color: lighten($lightColor, 2%);
+      float: left;
+      border-bottom: 3px solid transparent;
+      
+      &:hover
+      {
+        border-bottom-color: $primaryColor;
+      }
+    }
+  }
+  
+  
+  @media #{$small} 
+  {
+    margin: 0 auto;
+    padding-top: 70px;
+    width: $siteWidth;
+    
+    > header
+    {
+      padding: 0 $gutterWidth;
+      height: 230px;
+      line-height: 230px;
+      
+      h1 
+      {
+        float: left;
+      }
+      h2 
+      {
+        float: left;
+        margin-left: 20px;
+        position: static;
+        left: auto;
+      }
+    }
+    
+    > nav
+    {
+      padding: 0 30px;
+    }
+    
+    > footer
+    {
+      height: 200px;
+      line-height: 200px;
+    }
+  }
+  
+  @media #{$medium} 
+  {
+    left: -10%;
+  }
+}
+
+
+// back to top link
+#backtotop
+{
+  display: none;
+  
+  @media #{$small}
+  {
+    display: block;
+    position: absolute;
+    left: -115px;
+    bottom: 150px;
+    background: white;
+    width: 170px;
+    height: 50px;
+    color: $primaryColor;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    i:before
+    {
+      font-size: 20px;
+      line-height: 50px;
+      padding-left: 25px;
+      display: inline-block;
+    }
+    
+    &:hover
+    {
+      left: 0;
+    }
+  }
+}

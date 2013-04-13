@@ -2078,51 +2078,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-/* line 3, Base/_base.scss */
-html {
-  height: 100%;
-  background: #f4f4f4;
-}
-
-/* line 9, Base/_base.scss */
-body {
-  font-family: 'SegoeUI', 'Segoe UI', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color: #818181;
-  background: #f4f4f4;
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  text-size-adjust: none;
-  min-height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-@media only screen and (min-width: 48em) {
-  /* line 29, Base/_base.scss */
-  body:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: solid 500px;
-    border-color: transparent #efefef transparent transparent;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: -500px;
-    left: -500px;
-  }
-}
-
-/* line 44, Base/_base.scss */
-img {
-  display: inline-block;
-}
-
 /* line 4, Base/_buttons.scss */
 .button, .lightButton, a.lightButton, a.button, a.lightButton {
   display: inline-block;
@@ -2208,45 +2163,92 @@ article .button, article .lightButton, article .lightButton {
   }
 }
 
-/* line 4, Modules/_layout.scss */
+/* line 5, Modules/_base.scss */
+html {
+  height: 100%;
+  background: #f4f4f4;
+}
+
+/* line 11, Modules/_base.scss */
+body {
+  font-family: 'SegoeUI', 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #818181;
+  background: #f4f4f4;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 48em) {
+  /* line 31, Modules/_base.scss */
+  body:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 500px;
+    border-color: transparent #efefef transparent transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -500px;
+    left: -500px;
+  }
+}
+
+/* line 46, Modules/_base.scss */
+img {
+  display: inline-block;
+}
+
+/* line 53, Modules/_base.scss */
 #play {
   position: relative;
   width: 100%;
   max-width: 100%;
 }
-/* line 11, Modules/_layout.scss */
+/* line 60, Modules/_base.scss */
 #play > header {
   height: 100px;
   line-height: 100px;
   background: #18191a;
   padding: 0 20px;
 }
-/* line 19, Modules/_layout.scss */
+/* line 68, Modules/_base.scss */
 #play > header h1 {
   font-size: 24px;
   height: 100%;
 }
-/* line 25, Modules/_layout.scss */
+/* line 74, Modules/_base.scss */
 #play > header img {
   height: 46px;
   margin: 0 0 -15px 15px;
 }
-/* line 32, Modules/_layout.scss */
+/* line 81, Modules/_base.scss */
 #play > header span {
   float: left;
 }
-/* line 37, Modules/_layout.scss */
+/* line 86, Modules/_base.scss */
 #play > header h2 {
   color: #5f5f5f;
   font-size: 18px;
   position: absolute;
   left: -9999px;
 }
-/* line 45, Modules/_layout.scss */
+/* line 94, Modules/_base.scss */
 #play > header a {
   color: #f9f9f9;
+  display: inline-block;
+  height: 100%;
 }
-/* line 52, Modules/_layout.scss */
+/* line 103, Modules/_base.scss */
 #play > header a:hover img {
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
@@ -2254,59 +2256,83 @@ article .button, article .lightButton, article .lightButton {
   -o-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 61, Modules/_layout.scss */
+/* line 112, Modules/_base.scss */
 #play > footer {
   height: 60px;
   line-height: 60px;
   background: #e7e7e7;
 }
-/* line 69, Modules/_layout.scss */
+/* line 120, Modules/_base.scss */
 #play #area {
   background: white;
 }
+/* line 126, Modules/_base.scss */
+#play > nav {
+  background: #0c0c0d;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 132, Modules/_base.scss */
+#play > nav a {
+  display: inline-block;
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f9f9;
+  float: left;
+  border-bottom: 3px solid transparent;
+}
+/* line 142, Modules/_base.scss */
+#play > nav a:hover {
+  border-bottom-color: #1dad82;
+}
 @media only screen and (min-width: 48em) {
-  /* line 4, Modules/_layout.scss */
+  /* line 53, Modules/_base.scss */
   #play {
     margin: 0 auto;
     padding-top: 70px;
     width: 760px;
   }
-  /* line 80, Modules/_layout.scss */
+  /* line 156, Modules/_base.scss */
   #play > header {
     padding: 0 50px;
     height: 230px;
     line-height: 230px;
   }
-  /* line 86, Modules/_layout.scss */
+  /* line 162, Modules/_base.scss */
   #play > header h1 {
     float: left;
   }
-  /* line 90, Modules/_layout.scss */
+  /* line 166, Modules/_base.scss */
   #play > header h2 {
     float: left;
     margin-left: 20px;
     position: static;
     left: auto;
   }
-  /* line 99, Modules/_layout.scss */
+  /* line 175, Modules/_base.scss */
+  #play > nav {
+    padding: 0 30px;
+  }
+  /* line 180, Modules/_base.scss */
   #play > footer {
     height: 200px;
     line-height: 200px;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 4, Modules/_layout.scss */
+  /* line 53, Modules/_base.scss */
   #play {
     left: -10%;
   }
 }
 
-/* line 114, Modules/_layout.scss */
+/* line 195, Modules/_base.scss */
 #backtotop {
   display: none;
 }
 @media only screen and (min-width: 48em) {
-  /* line 114, Modules/_layout.scss */
+  /* line 195, Modules/_base.scss */
   #backtotop {
     display: block;
     position: absolute;
@@ -2320,14 +2346,14 @@ article .button, article .lightButton, article .lightButton {
     text-decoration: none;
     text-transform: uppercase;
   }
-  /* line 132, Modules/_layout.scss */
+  /* line 213, Modules/_base.scss */
   #backtotop i:before {
     font-size: 20px;
     line-height: 50px;
     padding-left: 25px;
     display: inline-block;
   }
-  /* line 140, Modules/_layout.scss */
+  /* line 221, Modules/_base.scss */
   #backtotop:hover {
     left: 0;
   }
