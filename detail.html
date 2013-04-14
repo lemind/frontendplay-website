@@ -42,9 +42,42 @@
         <a href="">about</a>
       </nav>
       <div id="area">
-        <div id="blogPost"></div>
+        <div id="blogPost">
+          <h1>Game Designer Launches Global Online Game on Windows Azure</h1>
+          <article>
+            <h2>Introduction</h2>
+            <p>In September 2011, I needed to mark up location data in an HTML document and it became more complicated than I initially thought it would be. I started to think about this topic again recently and explored some possibilities. In this article I will share my findings, looking at how I used microformats, datasets, microdata and RDFa Lite to mark up this data, and discussing what the best option might be.
+</p>
+            <h2>Microformats</h2>
+            <p>Quite a few years back, there were not that many choices for adding explicit metadata to the content of a web page. It was possible to add metadata to the web page itself through the meta element, which was useful in some cases, but not for cases like mine where more precise granularity was required. Microformats tried to answer some basic use cases for simple vocabularies, without addressing the semantic clash of <a href="http://micro.com">micro-communities</a>.<br><br>The microformat syntax for geolocation information is quite verbose:</p>
+            <pre><code class="language-javascript">var lonlist = document.querySelectorAll(&#39;[data-lon]&#39;);
+
+function getPoslon(city) {
+  var lon = city.dataset.lon;
+  return lon;
+};
+
+for (var i = lonlist.length - 1; i &gt;= 0; i--) {
+  console.log(getPoslon(lonlist[i]));
+};</code></pre>
+            <a href="" class="lightButton">view all stories</a>
+          </article>
+        </div>
       </div>
-      <footer></footer>
+      <footer>
+        <div class="stories">
+          <h4>Recent stories</h4>
+          <a href="">
+            <i class="entypo-right-open"></i>&nbsp;Game Designer Launches Global Online Game on Windows Azure</a>
+          <a href="">
+            <i class="entypo-right-open"></i>&nbsp;New Add-ons in the Windows Azure Store</a>
+          <a href="">
+            <i class="entypo-right-open"></i>&nbsp;Windows Azure Store: Expanded Availability</a>
+        </div>
+        <a href="https://www.twitter.com/artistandsocial" class="twitter"><i class="entypo-twitter"></i></a>
+        <div class="bottom">&copy; 2013 frontendplay, a blog by&nbsp;<a href="http://www.anaheimcore.com">anaheimcore</a>
+        </div>
+      </footer>
     </div>
     <a href="#" id="backtotop">back to top
       <i class="entypo-up-open"></i>

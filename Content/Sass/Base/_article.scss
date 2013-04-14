@@ -43,6 +43,12 @@ article
     margin-top: 20px;
   }
   
+  code, pre
+  {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  
   @media #{$small} 
   {
     padding-left: 80px;

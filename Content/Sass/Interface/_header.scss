@@ -1,0 +1,106 @@
+// site header
+#play 
+{
+  > header
+  {
+    height: 100px;
+    line-height: 100px;
+    background: $darkColor;
+    padding: 0 20px;
+    overflow: hidden;
+    @extend %clearfix;
+    
+    h1
+    {
+      font-size: 24px;
+      height: 100%;
+    }
+    
+    img
+    {
+      height: 46px; // downscale for high-res displays
+      margin: 0 0 -15px 15px;
+      @extend %shortTransition;
+    }
+    
+    span 
+    {
+      float: left;
+    }
+    
+    h2 
+    {
+      color: $darkTextColor;
+      font-size: 18px;
+      position: absolute;
+      left: -9999px;
+    }
+    
+    a
+    {
+      color: lighten($lightColor, 2%);
+      display: inline-block;
+      height: 100%;
+      @extend %resetLink;
+      
+      &:hover
+      {
+        img
+        {
+          @include scale(1.2);
+        }
+      }
+    }
+  }
+  
+  // navigation
+  > nav
+  {
+    background: darken($darkColor, 5%);
+    height: 50px;
+    line-height: 50px;
+
+    a
+    {
+      display: inline-block;
+      height: 100%;
+      padding: 0 20px;
+      text-decoration: none;
+      color: lighten($lightColor, 2%);
+      float: left;
+      border-bottom: 3px solid transparent;
+      
+      &:hover
+      {
+        border-bottom-color: $primaryColor;
+      }
+    }
+  }
+  
+  @media #{$small}
+  {
+    > header
+    {
+      padding: 0 $gutterWidth;
+      height: 200px;
+      line-height: 210px;
+      
+      h1 
+      {
+        float: left;
+      }
+      h2 
+      {
+        float: left;
+        margin-left: 20px;
+        position: static;
+        left: auto;
+      }
+    }
+    
+    > nav
+    {
+      padding: 0 30px;
+    }
+  }
+}

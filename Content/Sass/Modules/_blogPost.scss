@@ -1,0 +1,52 @@
+
+#blogPost
+{
+  > h1
+  {
+    color: white;
+    background: $primaryColor;
+    line-height: 1.2;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  article
+  {
+    padding: 20px;
+    
+    h2
+    {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      
+      &:first-child
+      {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  @media #{$small}
+  {
+    > h1
+    {
+      font-size: 22px;
+      padding: 20px $gutterWidth;
+    }
+    
+    article
+    {
+      padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+      
+      h2
+      {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
