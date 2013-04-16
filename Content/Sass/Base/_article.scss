@@ -29,15 +29,6 @@ article
     }
   }
   
-  h2
-  {
-    font-size: 20px;
-    line-height: 1.2;
-    margin-bottom: 10px; 
-    border-bottom: 1px solid $lightColor;
-    padding-bottom: 20px;
-  }
-  
   .button, .lightButton
   {
     margin-top: 20px;
@@ -45,18 +36,56 @@ article
   
   code, pre
   {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.3;
   }
+}
+
+h1
+{
+  font-size: 20px;
+  line-height: 1.2;
+  color: $headlineTextColor;
+}
+
+h2
+{
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: $headlineTextColor;
   
-  @media #{$small} 
+  &:first-child
+  {
+    margin-top: 0;
+  }
+}
+
+
+@media #{$small}
+{
+  article
   {
     padding-left: 80px;
     
-    h2
+    code, pre
     {
-      font-size: 24px;
-      border-bottom: none;
+      margin-right: -50px !important;
+      border-right: none !important;
     }
+  }
+  
+  h1
+  {
+    font-size: 24px;
+  }
+  
+  h2
+  {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
   }
 }

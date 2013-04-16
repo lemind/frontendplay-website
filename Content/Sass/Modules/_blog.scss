@@ -2,6 +2,7 @@
 #blog
 {
   padding: 20px;
+  background: white;
   
   article
   {
@@ -10,6 +11,13 @@
     &:first-child
     {
       margin-top: 0;
+    }
+    
+    h2
+    {
+      margin-bottom: 10px; 
+      border-bottom: 1px solid $lightColor;
+      padding-bottom: 20px;
     }
   }
   
@@ -64,6 +72,12 @@
   @media #{$small} 
   {
     padding: $gutterWidth + 10 $gutterWidth;
+    
+    article h2
+    {
+      font-size: 24px;
+      border-bottom: none;
+    }
     
     time
     {
