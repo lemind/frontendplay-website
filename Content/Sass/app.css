@@ -2275,7 +2275,45 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300;
 }
+/* line 79, Base/_typography.scss */
+h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
+  margin-right: 10px;
+}
 
+/* line 85, Base/_typography.scss */
+h1 {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #3a3a3a;
+}
+
+/* line 92, Base/_typography.scss */
+h2 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: #3a3a3a;
+}
+/* line 101, Base/_typography.scss */
+h2:first-child {
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 110, Base/_typography.scss */
+  h1 {
+    font-size: 24px;
+  }
+
+  /* line 115, Base/_typography.scss */
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+}
 /* line 4, Base/_buttons.scss */
 .button, .lightButton, a.lightButton, a.button, a.lightButton {
   display: inline-block;
@@ -2305,11 +2343,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 27, Base/_buttons.scss */
 .lightButton, a.lightButton {
-  background: #9fa4a6;
+  background: #dbdbdb;
 }
 /* line 32, Base/_buttons.scss */
 .lightButton:hover, a.lightButton:hover {
-  background: #92979a;
+  background: #cecece;
 }
 
 /* line 3, Base/_article.scss */
@@ -2346,51 +2384,23 @@ article code, article pre {
   font-size: 12px;
   line-height: 1.3;
 }
-
-/* line 45, Base/_article.scss */
-h1 {
-  font-size: 20px;
-  line-height: 1.2;
-  color: #3a3a3a;
+/* line 44, Base/_article.scss */
+article i.note {
+  display: block;
+  margin-top: 40px;
 }
-
-/* line 52, Base/_article.scss */
-h2 {
-  font-size: 20px;
-  line-height: 1.2;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  color: #3a3a3a;
-}
-/* line 61, Base/_article.scss */
-h2:first-child {
-  margin-top: 0;
-}
-
 @media only screen and (min-width: 48em) {
-  /* line 70, Base/_article.scss */
+  /* line 3, Base/_article.scss */
   article {
     padding-left: 80px;
   }
-  /* line 74, Base/_article.scss */
+  /* line 54, Base/_article.scss */
   article code, article pre {
     margin-right: -50px !important;
     border-right: none !important;
   }
-
-  /* line 81, Base/_article.scss */
-  h1 {
-    font-size: 24px;
-  }
-
-  /* line 86, Base/_article.scss */
-  h2 {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-  }
 }
+
 /* line 3, Base/_forms.scss */
 form {
   margin-top: 30px;

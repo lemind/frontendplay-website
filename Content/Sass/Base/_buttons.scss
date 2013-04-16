@@ -26,10 +26,10 @@
 .lightButton, a.lightButton
 {
   @extend .button;
-  background: $lightButtonColor;
+  background: darken($lightColor, 10%);
   
   &:hover
   {
-    background: darken($lightButtonColor, 5%);
+    background: darken($lightColor, 15%);
   }
 }

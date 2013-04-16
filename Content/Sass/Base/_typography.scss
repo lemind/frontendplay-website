@@ -74,4 +74,47 @@ h1, h2, h3, h4, h5, h6
 {
   margin: 0;
   font-weight: 300;
+  
+  i
+  {
+    margin-right: 10px;
+  }
+}
+
+h1
+{
+  font-size: 20px;
+  line-height: 1.2;
+  color: $headlineTextColor;
+}
+
+h2
+{
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: $headlineTextColor;
+  
+  &:first-child
+  {
+    margin-top: 0;
+  }
+}
+
+
+@media #{$small}
+{
+  h1
+  {
+    font-size: 24px;
+  }
+  
+  h2
+  {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
 }
