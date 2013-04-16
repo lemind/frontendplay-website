@@ -2388,13 +2388,14 @@ article code, article pre {
 article i.note {
   display: block;
   margin-top: 40px;
+  color: #b4b4b4;
 }
 @media only screen and (min-width: 48em) {
   /* line 3, Base/_article.scss */
   article {
     padding-left: 80px;
   }
-  /* line 54, Base/_article.scss */
+  /* line 55, Base/_article.scss */
   article code, article pre {
     margin-right: -50px !important;
     border-right: none !important;
