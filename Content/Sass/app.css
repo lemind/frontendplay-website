@@ -2053,7 +2053,7 @@ a, form input[type="text"], form input[type="email"], form textarea, #play > hea
 }
 
 /* line 34, Config/_placeholders.scss */
-#play > header a:link, #play > footer .twitter:link, #play > header a:hover, #play > footer .twitter:hover, #play > header a:visited, #play > footer .twitter:visited, #play > header a:focus, #play > footer .twitter:focus {
+#play > header a:link, #play > footer .social a:link, #play > header a:hover, #play > footer .social a:hover, #play > header a:visited, #play > footer .social a:visited, #play > header a:focus, #play > footer .social a:focus {
   outline: 1px dotted transparent;
 }
 
@@ -2343,11 +2343,11 @@ h2:first-child {
 
 /* line 27, Base/_buttons.scss */
 .lightButton, a.lightButton {
-  background: #dbdbdb;
+  background: #c6ccd0;
 }
 /* line 32, Base/_buttons.scss */
 .lightButton:hover, a.lightButton:hover {
-  background: #cecece;
+  background: #b8bfc4;
 }
 
 /* line 3, Base/_article.scss */
@@ -2434,7 +2434,7 @@ form textarea {
 /* line 36, Base/_forms.scss */
 form input[type="text"], form input[type="email"], form textarea {
   width: 100%;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #d4d8db;
   font-size: 14px;
   color: #818181;
 }
@@ -2464,7 +2464,7 @@ form input[type="text"]:focus, form input[type="email"]:focus, form textarea:foc
 /* line 2, Interface/_main.scss */
 html {
   height: 100%;
-  background: #f4f4f4;
+  background: #e2e5e7;
 }
 
 /* line 8, Interface/_main.scss */
@@ -2473,7 +2473,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #818181;
-  background: #f4f4f4;
+  background: #e2e5e7;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
@@ -2533,7 +2533,7 @@ img {
     width: 0;
     height: 0;
     border: solid 500px;
-    border-color: transparent #efefef transparent transparent;
+    border-color: transparent #dce0e2 transparent transparent;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -2596,7 +2596,7 @@ img {
 }
 /* line 43, Interface/_header.scss */
 #play > header a {
-  color: #f9f9f9;
+  color: #e8eaec;
   display: inline-block;
   height: 100%;
 }
@@ -2620,7 +2620,7 @@ img {
   height: 100%;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f9f9;
+  color: #e8eaec;
   float: left;
   border-bottom: 3px solid transparent;
 }
@@ -2656,7 +2656,7 @@ img {
 
 /* line 3, Interface/_footer.scss */
 #play > footer {
-  background: #f9f9f9;
+  background: #edeff0;
   position: relative;
 }
 /* line 8, Interface/_footer.scss */
@@ -2667,7 +2667,7 @@ img {
   text-align: center;
   color: #cecece;
   font-size: 13px;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid #dce0e2;
 }
 /* line 18, Interface/_footer.scss */
 #play > footer .bottom a {
@@ -2679,7 +2679,7 @@ img {
 }
 /* line 29, Interface/_footer.scss */
 #play > footer .stories {
-  padding: 100px 20px 30px 20px;
+  padding: 20px 20px 30px 20px;
 }
 /* line 33, Interface/_footer.scss */
 #play > footer .stories h4 {
@@ -2709,36 +2709,49 @@ img {
   color: #1dad82;
 }
 /* line 66, Interface/_footer.scss */
-#play > footer .twitter {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  margin-left: -30px;
-  font-size: 60px;
+#play > footer .social {
+  position: relative;
+  padding: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+/* line 72, Interface/_footer.scss */
+#play > footer .social a {
+  margin-left: 30px;
+  font-size: 44px;
   text-decoration: none;
+  color: #3a3a3a;
+}
+/* line 80, Interface/_footer.scss */
+#play > footer .social a:hover {
   color: #1dad82;
 }
+/* line 85, Interface/_footer.scss */
+#play > footer .social a:first-child {
+  margin-left: 0;
+}
 @media only screen and (min-width: 48em) {
-  /* line 80, Interface/_footer.scss */
+  /* line 94, Interface/_footer.scss */
   #play > footer div {
     padding: 0 50px;
   }
-  /* line 85, Interface/_footer.scss */
+  /* line 99, Interface/_footer.scss */
   #play > footer .bottom {
     height: 50px;
     line-height: 50px;
     font-size: 14px;
   }
-  /* line 92, Interface/_footer.scss */
+  /* line 106, Interface/_footer.scss */
   #play > footer .stories {
     padding: 30px 50px;
   }
-  /* line 97, Interface/_footer.scss */
-  #play > footer .twitter {
+  /* line 111, Interface/_footer.scss */
+  #play > footer .social {
+    position: absolute;
     left: auto;
     right: 50px;
-    top: 65px;
-    margin-left: 0;
+    top: 55px;
+    margin: 0;
   }
 }
 
@@ -2758,7 +2771,7 @@ img {
 /* line 17, Modules/_blog.scss */
 #blog article h2 {
   margin-bottom: 10px;
-  border-bottom: 1px solid #f4f4f4;
+  border-bottom: 1px solid #e2e5e7;
   padding-bottom: 20px;
 }
 /* line 25, Modules/_blog.scss */
@@ -2777,7 +2790,7 @@ img {
   line-height: 54px;
   text-transform: uppercase;
   text-decoration: none;
-  background: #f9f9f9;
+  background: #e8eaec;
   padding: 0 25px;
   float: left;
   color: #3a3a3a;
@@ -2786,7 +2799,7 @@ img {
 }
 /* line 50, Modules/_blog.scss */
 #blog .navigation a:hover {
-  background: #ececec;
+  background: #dadde0;
 }
 /* line 55, Modules/_blog.scss */
 #blog .navigation a:first-child {
@@ -2818,7 +2831,7 @@ img {
     top: 5px;
     width: 60px;
     height: 45px;
-    border: 1px solid #f4f4f4;
+    border: 1px solid #e2e5e7;
     text-align: center;
     line-height: 1;
     color: #9b9b9b;

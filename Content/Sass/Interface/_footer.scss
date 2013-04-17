@@ -1,7 +1,7 @@
 // site footer
 #play > footer
 {
-  background: lighten($lightColor, 2%);
+  background: lighten($lightColor, 4%);
   position: relative;
   
   .bottom
@@ -27,7 +27,7 @@
   
   .stories
   {
-    padding: 100px 20px 30px 20px;
+    padding: 20px 20px 30px 20px;
     
     h4
     {
@@ -62,16 +62,30 @@
     }
   }
   
-  .twitter
+  .social
   {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    margin-left: -30px;
-    font-size: 60px;
-    text-decoration: none;
-    color: $primaryColor;
-    @extend %resetLink;
+    position: relative;
+    padding: 0;
+    padding-top: 20px;
+    text-align: center;
+    a
+    {
+      margin-left: 30px;
+      font-size: 44px;
+      text-decoration: none;
+      color: $headlineTextColor;
+      @extend %resetLink;
+      
+      &:hover
+      {
+        color: $primaryColor;
+      }
+      
+      &:first-child
+      {
+        margin-left: 0;
+      }
+    }
   }
   
   @media #{$small}
@@ -93,12 +107,13 @@
       padding: 30px 50px;
     }
     
-    .twitter
+    .social
     {
+      position: absolute;
       left: auto;
       right: 50px;
-      top: 65px;
-      margin-left: 0;
+      top: 55px;
+      margin: 0;
     }
   }
 }
