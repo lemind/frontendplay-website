@@ -1,7 +1,7 @@
 // site footer
 #play > footer
 {
-  background: lighten($lightColor, 4%);
+  background: lighten($lightColor, 8%);
   position: relative;
   
   .bottom
@@ -10,9 +10,9 @@
     line-height: 40px;
     width: 100%;
     text-align: center;
-    color: lighten($textColor, 30%);
+    color: lighten($textColor, 20%);
     font-size: 13px;
-    border-top: 1px solid darken($lightColor, 2%);
+    border-top: 1px solid lighten($lightColor, 2%);
     
     a
     {

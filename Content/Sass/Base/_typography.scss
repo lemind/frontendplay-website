@@ -97,7 +97,7 @@ h2
   padding-bottom: 10px;
   color: $headlineTextColor;
   
-  &:first-child
+  &:first-child, time + &
   {
     margin-top: 0;
   }

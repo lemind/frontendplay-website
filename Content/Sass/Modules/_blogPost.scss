@@ -24,7 +24,7 @@
       font-size: 22px;
       padding: 20px $gutterWidth;
     }
-    
+      
     article
     {
       padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
@@ -36,11 +36,12 @@
 #blogComments
 {
   background: white;
-  margin-top: 40px;
+  margin-top: 1px;
   padding: 20px;
   
   @media #{$small}
   {
+    margin-top: 40px;
     padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
   }
 }
