@@ -2039,16 +2039,16 @@ a, form input[type="text"], form input[type="email"], form textarea, #play > hea
 }
 
 /* line 17, Config/_placeholders.scss */
-#play > header, #blog .navigation, #blogComments li {
+#play > header, #blog .navigation, #blogComments li, #archive .year > div {
   *zoom: 1;
 }
 /* line 20, Config/_placeholders.scss */
-#play > header:before, #blog .navigation:before, #blogComments li:before, #play > header:after, #blog .navigation:after, #blogComments li:after {
+#play > header:before, #blog .navigation:before, #blogComments li:before, #archive .year > div:before, #play > header:after, #blog .navigation:after, #blogComments li:after, #archive .year > div:after {
   content: " ";
   display: table;
 }
 /* line 25, Config/_placeholders.scss */
-#play > header:after, #blog .navigation:after, #blogComments li:after {
+#play > header:after, #blog .navigation:after, #blogComments li:after, #archive .year > div:after {
   clear: both;
 }
 
@@ -3011,5 +3011,153 @@ img {
   #blogComments h4 time {
     display: inline-block;
     margin-left: 10px;
+  }
+}
+
+/* line 4, Modules/_archive.scss */
+#archive {
+  background: white;
+  padding: 20px;
+}
+/* line 13, Modules/_archive.scss */
+#archive .year {
+  position: relative;
+  margin-bottom: 60px;
+}
+/* line 18, Modules/_archive.scss */
+#archive .year:last-child {
+  margin-bottom: 0;
+}
+/* line 23, Modules/_archive.scss */
+#archive .year > time {
+  font-size: 24px;
+  margin: 30px 0 30px 40px;
+  color: #1dad82;
+  display: block;
+}
+/* line 30, Modules/_archive.scss */
+#archive .year > time:first-child {
+  margin-top: 0;
+}
+/* line 36, Modules/_archive.scss */
+#archive .year i {
+  display: none;
+}
+/* line 41, Modules/_archive.scss */
+#archive .year > div {
+  min-height: 75px;
+}
+/* line 46, Modules/_archive.scss */
+#archive .year > div time {
+  width: 55px;
+  height: 55px;
+  background: #1dad82;
+  -webkit-border-radius: 55px 0 55px 55px;
+  -moz-border-radius: 55px 0 55px 55px;
+  -ms-border-radius: 55px 0 55px 55px;
+  -o-border-radius: 55px 0 55px 55px;
+  border-radius: 55px 0 55px 55px;
+  text-align: center;
+  line-height: 1;
+  color: white;
+  display: inline-block;
+  position: relative;
+}
+/* line 58, Modules/_archive.scss */
+#archive .year > div time .month {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+}
+/* line 64, Modules/_archive.scss */
+#archive .year > div time .month:before {
+  display: none;
+}
+/* line 70, Modules/_archive.scss */
+#archive .year > div time .day {
+  font-size: 20px;
+}
+/* line 75, Modules/_archive.scss */
+#archive .year > div time a {
+  color: white;
+  text-decoration: none;
+}
+/* line 84, Modules/_archive.scss */
+#archive .year .timeline {
+  border-right: 3px solid #82878a;
+  float: left;
+  width: 70px;
+  padding: 20px 0;
+  margin-right: 20px;
+}
+/* line 93, Modules/_archive.scss */
+#archive .year > div:last-child .timeline {
+  padding-bottom: 30px;
+}
+/* line 99, Modules/_archive.scss */
+#archive .bottom {
+  position: absolute;
+  bottom: -14px;
+  left: 60px;
+  font-size: 22px;
+}
+/* line 107, Modules/_archive.scss */
+#archive .top {
+  position: absolute;
+  top: 32px;
+  left: 58px;
+  font-size: 22px;
+}
+/* line 115, Modules/_archive.scss */
+#archive h3 {
+  font-size: 14px;
+  padding-top: 20px;
+}
+/* line 120, Modules/_archive.scss */
+#archive h3 a {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+/* line 125, Modules/_archive.scss */
+#archive h3 a:hover {
+  color: #1dad82;
+}
+@media only screen and (min-width: 48em) {
+  /* line 4, Modules/_archive.scss */
+  #archive {
+    padding: 60px 50px 60px 130px;
+  }
+  /* line 138, Modules/_archive.scss */
+  #archive .year .content {
+    margin-left: 20px;
+    float: left;
+  }
+  /* line 144, Modules/_archive.scss */
+  #archive .year i {
+    display: inline-block;
+  }
+  /* line 149, Modules/_archive.scss */
+  #archive .year .timeline {
+    margin-right: 67px;
+  }
+  /* line 156, Modules/_archive.scss */
+  #archive .year > div:nth-child(odd) time {
+    -webkit-border-radius: 0 60px 60px 60px;
+    -moz-border-radius: 0 60px 60px 60px;
+    -ms-border-radius: 0 60px 60px 60px;
+    -o-border-radius: 0 60px 60px 60px;
+    border-radius: 0 60px 60px 60px;
+  }
+  /* line 161, Modules/_archive.scss */
+  #archive .year > div:nth-child(odd) .timeline {
+    margin-right: 0;
+    margin-left: 67px;
+    border-right: none;
+    border-left: 3px solid #82878a;
+    padding-left: 12px;
+  }
+  /* line 170, Modules/_archive.scss */
+  #archive .year > div:nth-child(odd) .content {
+    margin-left: 20px;
   }
 }
