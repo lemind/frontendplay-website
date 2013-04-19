@@ -2039,16 +2039,16 @@ a, form input[type="text"], form input[type="email"], form textarea, #play > hea
 }
 
 /* line 17, Config/_placeholders.scss */
-#play > header, #blog .navigation {
+#play > header, #blog .navigation, #blogComments li {
   *zoom: 1;
 }
 /* line 20, Config/_placeholders.scss */
-#play > header:before, #blog .navigation:before, #play > header:after, #blog .navigation:after {
+#play > header:before, #blog .navigation:before, #blogComments li:before, #play > header:after, #blog .navigation:after, #blogComments li:after {
   content: " ";
   display: table;
 }
 /* line 25, Config/_placeholders.scss */
-#play > header:after, #blog .navigation:after {
+#play > header:after, #blog .navigation:after, #blogComments li:after {
   clear: both;
 }
 
@@ -2418,42 +2418,47 @@ form label {
   line-height: 40px;
   cursor: pointer;
 }
-/* line 22, Base/_forms.scss */
+/* line 21, Base/_forms.scss */
+form label i {
+  font-size: 12px;
+  color: #b4b4b4;
+}
+/* line 28, Base/_forms.scss */
 form input[type="text"], form input[type="email"] {
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
 }
-/* line 29, Base/_forms.scss */
+/* line 35, Base/_forms.scss */
 form textarea {
   height: 120px;
   padding: 10px 10px;
   line-height: 24px;
 }
-/* line 36, Base/_forms.scss */
+/* line 42, Base/_forms.scss */
 form input[type="text"], form input[type="email"], form textarea {
   width: 100%;
   border: 1px solid #d4d8db;
   font-size: 14px;
   color: #818181;
 }
-/* line 44, Base/_forms.scss */
+/* line 50, Base/_forms.scss */
 form input[type="text"]:focus, form input[type="email"]:focus, form textarea:focus {
   color: #3a3a3a;
   border-color: #8ad9c2;
 }
 @media only screen and (min-width: 48em) {
-  /* line 53, Base/_forms.scss */
+  /* line 59, Base/_forms.scss */
   form fieldset {
     margin-bottom: 20px;
   }
-  /* line 58, Base/_forms.scss */
+  /* line 64, Base/_forms.scss */
   form label {
     display: inline-block;
     float: left;
     width: 20%;
   }
-  /* line 65, Base/_forms.scss */
+  /* line 71, Base/_forms.scss */
   form input[type="text"], form input[type="email"], form textarea {
     float: right;
     width: 80%;
@@ -2900,15 +2905,95 @@ img {
 }
 
 /* line 43, Modules/_blogPost.scss */
+#blogNewComment {
+  background: white;
+  margin-top: 1px;
+  padding: 20px;
+}
+/* line 49, Modules/_blogPost.scss */
+#blogNewComment .button, #blogNewComment .lightButton {
+  margin-top: 20px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 43, Modules/_blogPost.scss */
+  #blogNewComment {
+    margin-top: 40px;
+    padding: 60px 50px 60px 130px;
+  }
+  /* line 59, Modules/_blogPost.scss */
+  #blogNewComment .button, #blogNewComment .lightButton {
+    margin-top: 10px;
+  }
+}
+
+/* line 67, Modules/_blogPost.scss */
 #blogComments {
   background: white;
   margin-top: 1px;
   padding: 20px;
 }
+/* line 73, Modules/_blogPost.scss */
+#blogComments ul {
+  margin: 30px 0 0;
+  padding: 0;
+}
+/* line 79, Modules/_blogPost.scss */
+#blogComments li {
+  list-style: none;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e5e7;
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 80px;
+}
+/* line 89, Modules/_blogPost.scss */
+#blogComments li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+/* line 97, Modules/_blogPost.scss */
+#blogComments img {
+  width: 40px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+/* line 105, Modules/_blogPost.scss */
+#blogComments h4 {
+  font-size: 16px;
+  color: #1dad82;
+  padding-left: 50px;
+}
+/* line 111, Modules/_blogPost.scss */
+#blogComments h4 time {
+  font-size: 14px;
+  color: #b4b4b4;
+  display: block;
+}
 @media only screen and (min-width: 48em) {
-  /* line 43, Modules/_blogPost.scss */
+  /* line 67, Modules/_blogPost.scss */
   #blogComments {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;
+  }
+  /* line 126, Modules/_blogPost.scss */
+  #blogComments li div {
+    float: left;
+    padding-left: 80px;
+  }
+  /* line 133, Modules/_blogPost.scss */
+  #blogComments img {
+    width: 60px;
+  }
+  /* line 138, Modules/_blogPost.scss */
+  #blogComments h4 {
+    font-size: 18px;
+    padding-left: 0;
+  }
+  /* line 143, Modules/_blogPost.scss */
+  #blogComments h4 time {
+    display: inline-block;
+    margin-left: 10px;
   }
 }

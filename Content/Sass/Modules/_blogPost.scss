@@ -39,15 +39,111 @@
 }
 
 
+#blogNewComment
+{
+  background: white;
+  margin-top: 1px;
+  padding: 20px;
+   
+  .button
+  {
+    margin-top: 20px;
+  }
+   
+  @media #{$small}
+  {
+    margin-top: 40px;
+    padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    
+    .button
+    {
+      margin-top: 10px;
+    }
+  }
+}
+
+
 #blogComments
 {
   background: white;
   margin-top: 1px;
   padding: 20px;
   
+  ul
+  {
+    margin: 30px 0 0;
+    padding: 0;
+  }
+  
+  li
+  {
+    list-style: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lightColor;
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 80px;
+    @extend %clearfix;
+    
+    &:last-child
+    {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }    
+  }
+  
+  img
+  {
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+  }
+
+  h4
+  {
+    font-size: 16px;
+    color: $primaryColor;
+    padding-left: 50px;
+    
+    time
+    {
+      font-size: 14px;
+      color: lighten($textColor, 20%);
+      display: block;
+    }
+  }
+  
   @media #{$small}
   {
     margin-top: 40px;
     padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    
+    li
+    {
+      div
+      {
+        float: left;
+        padding-left: 80px;
+      }
+    }
+    
+    img
+    {
+      width: 60px;
+    }
+    
+    h4
+    {
+      font-size: 18px;
+      padding-left: 0;
+      
+      time
+      {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
   }
 }
