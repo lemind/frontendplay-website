@@ -2387,7 +2387,7 @@ article code, article pre {
 /* line 44, Base/_article.scss */
 article i.note {
   display: block;
-  color: #b4b4b4;
+  color: #b7babb;
 }
 @media only screen and (min-width: 48em) {
   /* line 3, Base/_article.scss */
@@ -2421,7 +2421,7 @@ form label {
 /* line 21, Base/_forms.scss */
 form label i {
   font-size: 12px;
-  color: #b4b4b4;
+  color: #b7babb;
 }
 /* line 28, Base/_forms.scss */
 form input[type="text"], form input[type="email"] {
@@ -2440,7 +2440,7 @@ form input[type="text"], form input[type="email"], form textarea {
   width: 100%;
   border: 1px solid #d4d8db;
   font-size: 14px;
-  color: #818181;
+  color: #82878a;
 }
 /* line 50, Base/_forms.scss */
 form input[type="text"]:focus, form input[type="email"]:focus, form textarea:focus {
@@ -2476,7 +2476,7 @@ body {
   font-family: 'SegoeUI', 'Segoe UI', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #818181;
+  color: #82878a;
   background: #e2e5e7;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
@@ -2586,10 +2586,6 @@ img {
   margin: 0 0 -15px 15px;
 }
 /* line 28, Interface/_header.scss */
-#play > header span {
-  float: left;
-}
-/* line 33, Interface/_header.scss */
 #play > header h2 {
   color: #5f5f5f;
   font-size: 18px;
@@ -2598,13 +2594,14 @@ img {
   line-height: 100px;
   margin: 0;
 }
-/* line 43, Interface/_header.scss */
+/* line 38, Interface/_header.scss */
 #play > header a {
   color: #e8eaec;
-  display: inline-block;
-  height: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-decoration: none;
 }
-/* line 52, Interface/_header.scss */
+/* line 48, Interface/_header.scss */
 #play > header a:hover img {
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
@@ -2612,13 +2609,13 @@ img {
   -o-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 61, Interface/_header.scss */
+/* line 57, Interface/_header.scss */
 #play > nav {
   background: #0c0c0d;
   height: 50px;
   line-height: 50px;
 }
-/* line 67, Interface/_header.scss */
+/* line 63, Interface/_header.scss */
 #play > nav a {
   display: inline-block;
   height: 100%;
@@ -2628,23 +2625,23 @@ img {
   float: left;
   border-bottom: 3px solid transparent;
 }
-/* line 77, Interface/_header.scss */
+/* line 73, Interface/_header.scss */
 #play > nav a:hover {
   border-bottom-color: #1dad82;
 }
 @media only screen and (min-width: 48em) {
-  /* line 86, Interface/_header.scss */
+  /* line 82, Interface/_header.scss */
   #play > header {
     padding: 0 50px;
     height: 200px;
     line-height: 210px;
   }
-  /* line 92, Interface/_header.scss */
+  /* line 88, Interface/_header.scss */
   #play > header h1 {
     float: left;
     line-height: 210px;
   }
-  /* line 98, Interface/_header.scss */
+  /* line 94, Interface/_header.scss */
   #play > header h2 {
     float: left;
     margin-left: 20px;
@@ -2652,7 +2649,11 @@ img {
     left: auto;
     line-height: 210px;
   }
-  /* line 108, Interface/_header.scss */
+  /* line 103, Interface/_header.scss */
+  #play > header a {
+    height: 200px;
+  }
+  /* line 109, Interface/_header.scss */
   #play > nav {
     padding: 0 30px;
   }
@@ -2669,50 +2670,52 @@ img {
   line-height: 40px;
   width: 100%;
   text-align: center;
-  color: #b4b4b4;
-  font-size: 13px;
+  color: #82878a;
+  font-size: 12px;
   border-top: 1px solid #e8eaec;
 }
 /* line 18, Interface/_footer.scss */
 #play > footer .bottom a {
   text-decoration: none;
+  color: #82878a;
+  font-weight: 500;
 }
-/* line 24, Interface/_footer.scss */
+/* line 26, Interface/_footer.scss */
 #play > footer div {
   padding: 0 20px;
 }
-/* line 29, Interface/_footer.scss */
+/* line 31, Interface/_footer.scss */
 #play > footer .stories {
   padding: 20px 20px 30px 20px;
 }
-/* line 33, Interface/_footer.scss */
+/* line 35, Interface/_footer.scss */
 #play > footer .stories h4 {
   color: #3a3a3a;
   font-size: 18px;
   margin-bottom: 20px;
 }
-/* line 40, Interface/_footer.scss */
+/* line 42, Interface/_footer.scss */
 #play > footer .stories a {
   display: block;
   text-decoration: none;
   font-size: 13px;
-  color: #818181;
+  color: #82878a;
   margin-top: 5px;
 }
-/* line 48, Interface/_footer.scss */
+/* line 50, Interface/_footer.scss */
 #play > footer .stories a:first-child {
   margin-top: 0;
 }
-/* line 53, Interface/_footer.scss */
+/* line 55, Interface/_footer.scss */
 #play > footer .stories a:hover {
   color: #1dad82;
 }
-/* line 59, Interface/_footer.scss */
+/* line 61, Interface/_footer.scss */
 #play > footer .stories i {
   margin-right: 10px;
   color: #1dad82;
 }
-/* line 66, Interface/_footer.scss */
+/* line 68, Interface/_footer.scss */
 #play > footer .social {
   position: relative;
   padding: 0;
@@ -2720,37 +2723,37 @@ img {
   text-align: center;
   font-size: 36px;
 }
-/* line 74, Interface/_footer.scss */
+/* line 76, Interface/_footer.scss */
 #play > footer .social a {
   margin-left: 20px;
   text-decoration: none;
   color: #3a3a3a;
   font-size: inherit;
 }
-/* line 82, Interface/_footer.scss */
+/* line 84, Interface/_footer.scss */
 #play > footer .social a:hover {
   color: #1dad82;
 }
-/* line 87, Interface/_footer.scss */
+/* line 89, Interface/_footer.scss */
 #play > footer .social a:first-child {
   margin-left: 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 96, Interface/_footer.scss */
+  /* line 98, Interface/_footer.scss */
   #play > footer div {
     padding: 0 50px;
   }
-  /* line 101, Interface/_footer.scss */
+  /* line 103, Interface/_footer.scss */
   #play > footer .bottom {
     height: 50px;
     line-height: 50px;
     font-size: 14px;
   }
-  /* line 108, Interface/_footer.scss */
+  /* line 110, Interface/_footer.scss */
   #play > footer .stories {
     padding: 30px 50px;
   }
-  /* line 113, Interface/_footer.scss */
+  /* line 115, Interface/_footer.scss */
   #play > footer .social {
     position: absolute;
     left: auto;
@@ -2849,7 +2852,7 @@ img {
     border-radius: 60px 0 60px 60px;
     text-align: center;
     line-height: 1;
-    color: #818181;
+    color: #82878a;
   }
   /* line 101, Modules/_blog.scss */
   #blog time .month {
@@ -2973,7 +2976,7 @@ img {
 /* line 117, Modules/_blogPost.scss */
 #blogComments h4 time, #blogComments h4 time a {
   font-size: 14px;
-  color: #b4b4b4;
+  color: #b7babb;
   display: block;
 }
 /* line 124, Modules/_blogPost.scss */
@@ -2986,21 +2989,25 @@ img {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;
   }
-  /* line 137, Modules/_blogPost.scss */
+  /* line 135, Modules/_blogPost.scss */
+  #blogComments li {
+    border-bottom: none;
+  }
+  /* line 139, Modules/_blogPost.scss */
   #blogComments li div {
     float: left;
     padding-left: 80px;
   }
-  /* line 144, Modules/_blogPost.scss */
+  /* line 146, Modules/_blogPost.scss */
   #blogComments img {
     width: 60px;
   }
-  /* line 149, Modules/_blogPost.scss */
+  /* line 151, Modules/_blogPost.scss */
   #blogComments h4 {
     font-size: 18px;
     padding-left: 0;
   }
-  /* line 154, Modules/_blogPost.scss */
+  /* line 156, Modules/_blogPost.scss */
   #blogComments h4 time {
     display: inline-block;
     margin-left: 10px;

@@ -23,12 +23,7 @@
       margin: 0 0 -15px 15px;
       @extend %shortTransition;
     }
-    
-    span 
-    {
-      float: left;
-    }
-    
+
     h2 
     {
       color: $darkTextColor;
@@ -42,8 +37,9 @@
     a
     {
       color: lighten($lightColor, 2%);
-      display: inline-block;
-      height: 100%;
+      height: 100px;
+      line-height: 100px;
+      text-decoration: none;
       @extend %resetLink;
       
       &:hover
@@ -101,6 +97,11 @@
         position: static;
         left: auto;
         line-height: 210px;
+      }
+      
+      a
+      {
+        height: 200px;
       }
     }
     
