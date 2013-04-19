@@ -1,0 +1,12 @@
+
+#about
+{
+  padding: 20px;
+  background: white;
+  
+  @media #{$small} 
+  {
+    padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+  }
+}
+  

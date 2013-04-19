@@ -3161,3 +3161,15 @@ img {
     margin-left: 20px;
   }
 }
+
+/* line 3, Modules/_about.scss */
+#about {
+  padding: 20px;
+  background: white;
+}
+@media only screen and (min-width: 48em) {
+  /* line 3, Modules/_about.scss */
+  #about {
+    padding: 60px 50px 60px 130px;
+  }
+}
