@@ -134,6 +134,6 @@ module.exports = function(grunt)
   grunt.registerTask('build', [ 'concat', 'compass:build' ]);
 
   // distribution task
-  grunt.registerTask('release', [ 'concat', 'uglify', 'compass:release', 'copy:release' ]);
+  grunt.registerTask('release', [ 'concat', 'uglify', 'compass:release' ]);
 
 };
