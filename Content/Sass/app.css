@@ -2376,20 +2376,15 @@ article h2 a:hover, article h2 a:visited:hover, article h3 a:hover, article h3 a
   color: #1dad82;
 }
 /* line 33, Base/_article.scss */
-article time {
-  display: block;
-  margin-top: 40px;
-}
-/* line 39, Base/_article.scss */
 article .button, article .lightButton, article .lightButton {
   margin-top: 20px;
 }
-/* line 44, Base/_article.scss */
+/* line 38, Base/_article.scss */
 article code, article pre {
   font-size: 12px;
   line-height: 1.3;
 }
-/* line 50, Base/_article.scss */
+/* line 44, Base/_article.scss */
 article i.note {
   display: block;
   color: #b4b4b4;
@@ -2399,7 +2394,7 @@ article i.note {
   article {
     padding-left: 80px;
   }
-  /* line 60, Base/_article.scss */
+  /* line 54, Base/_article.scss */
   article code, article pre {
     margin-right: -50px !important;
     border-right: none !important;
@@ -2718,44 +2713,46 @@ img {
   padding: 0;
   padding-top: 20px;
   text-align: center;
+  font-size: 36px;
 }
-/* line 72, Interface/_footer.scss */
+/* line 74, Interface/_footer.scss */
 #play > footer .social a {
-  margin-left: 30px;
-  font-size: 44px;
+  margin-left: 20px;
   text-decoration: none;
   color: #3a3a3a;
+  font-size: inherit;
 }
-/* line 80, Interface/_footer.scss */
+/* line 82, Interface/_footer.scss */
 #play > footer .social a:hover {
   color: #1dad82;
 }
-/* line 85, Interface/_footer.scss */
+/* line 87, Interface/_footer.scss */
 #play > footer .social a:first-child {
   margin-left: 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 94, Interface/_footer.scss */
+  /* line 96, Interface/_footer.scss */
   #play > footer div {
     padding: 0 50px;
   }
-  /* line 99, Interface/_footer.scss */
+  /* line 101, Interface/_footer.scss */
   #play > footer .bottom {
     height: 50px;
     line-height: 50px;
     font-size: 14px;
   }
-  /* line 106, Interface/_footer.scss */
+  /* line 108, Interface/_footer.scss */
   #play > footer .stories {
     padding: 30px 50px;
   }
-  /* line 111, Interface/_footer.scss */
+  /* line 113, Interface/_footer.scss */
   #play > footer .social {
     position: absolute;
     left: auto;
     right: 50px;
-    top: 55px;
+    top: 60px;
     margin: 0;
+    font-size: 32px;
   }
 }
 
@@ -2783,11 +2780,15 @@ img {
   color: #1dad82;
   display: block;
 }
-/* line 31, Modules/_blog.scss */
+/* line 30, Modules/_blog.scss */
+#blog time .month:before {
+  margin-right: 5px;
+}
+/* line 36, Modules/_blog.scss */
 #blog .navigation {
   margin: 70px -20px 0;
 }
-/* line 36, Modules/_blog.scss */
+/* line 41, Modules/_blog.scss */
 #blog .navigation a {
   display: inline-block;
   height: 54px;
@@ -2801,20 +2802,20 @@ img {
   font-weight: 500;
   font-size: 13px;
 }
-/* line 50, Modules/_blog.scss */
+/* line 55, Modules/_blog.scss */
 #blog .navigation a:hover {
   background: #dadde0;
 }
-/* line 55, Modules/_blog.scss */
+/* line 60, Modules/_blog.scss */
 #blog .navigation a:first-child {
   margin-right: 10px;
 }
-/* line 61, Modules/_blog.scss */
+/* line 66, Modules/_blog.scss */
 #blog .navigation i {
   font-size: 20px;
   float: left;
 }
-/* line 66, Modules/_blog.scss */
+/* line 71, Modules/_blog.scss */
 #blog .navigation i.entypo-left-open {
   margin-right: 20px;
 }
@@ -2823,38 +2824,43 @@ img {
   #blog {
     padding: 60px 50px;
   }
-  /* line 77, Modules/_blog.scss */
+  /* line 82, Modules/_blog.scss */
   #blog article h2 {
     font-size: 24px;
     border-bottom: none;
   }
-  /* line 83, Modules/_blog.scss */
+  /* line 88, Modules/_blog.scss */
   #blog time {
     position: absolute;
     left: -80px;
-    top: 5px;
-    width: 60px;
-    height: 45px;
-    border: 1px solid #e2e5e7;
+    top: 6px;
+    width: 55px;
+    height: 55px;
+    background: #f8f9f9;
+    -webkit-border-radius: 60px 0 60px 60px;
+    -moz-border-radius: 60px 0 60px 60px;
+    -ms-border-radius: 60px 0 60px 60px;
+    -o-border-radius: 60px 0 60px 60px;
+    border-radius: 60px 0 60px 60px;
     text-align: center;
     line-height: 1;
-    color: #9b9b9b;
-  }
-  /* line 95, Modules/_blog.scss */
-  #blog time .month {
-    display: block;
-    margin-top: 5px;
-    font-size: 12px;
+    color: #818181;
   }
   /* line 101, Modules/_blog.scss */
+  #blog time .month {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  /* line 107, Modules/_blog.scss */
   #blog time .month:before {
     display: none;
   }
-  /* line 107, Modules/_blog.scss */
+  /* line 113, Modules/_blog.scss */
   #blog time .day {
     font-size: 20px;
   }
-  /* line 113, Modules/_blog.scss */
+  /* line 119, Modules/_blog.scss */
   #blog .navigation {
     margin-left: -50px;
   }
@@ -2876,26 +2882,31 @@ img {
 #blogPost article {
   padding: 20px;
 }
+/* line 21, Modules/_blogPost.scss */
+#blogPost time {
+  display: block;
+  margin-top: 40px;
+}
 @media only screen and (min-width: 48em) {
-  /* line 23, Modules/_blogPost.scss */
+  /* line 29, Modules/_blogPost.scss */
   #blogPost > h1 {
     font-size: 22px;
     padding: 20px 50px;
   }
-  /* line 29, Modules/_blogPost.scss */
+  /* line 35, Modules/_blogPost.scss */
   #blogPost article {
     padding: 60px 50px 60px 130px;
   }
 }
 
-/* line 37, Modules/_blogPost.scss */
+/* line 43, Modules/_blogPost.scss */
 #blogComments {
   background: white;
   margin-top: 1px;
   padding: 20px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 37, Modules/_blogPost.scss */
+  /* line 43, Modules/_blogPost.scss */
   #blogComments {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;

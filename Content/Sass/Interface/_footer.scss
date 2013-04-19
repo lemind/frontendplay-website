@@ -68,12 +68,14 @@
     padding: 0;
     padding-top: 20px;
     text-align: center;
+    font-size: 36px;
+    
     a
     {
-      margin-left: 30px;
-      font-size: 44px;
+      margin-left: 20px;
       text-decoration: none;
       color: $headlineTextColor;
+      font-size: inherit;
       @extend %resetLink;
       
       &:hover
@@ -112,8 +114,9 @@
       position: absolute;
       left: auto;
       right: 50px;
-      top: 55px;
+      top: 60px;
       margin: 0;
+      font-size: 32px;
     }
   }
 }

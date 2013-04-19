@@ -25,6 +25,11 @@
   {
     color: $primaryColor;
     display: block;
+    
+    .month:before
+    {
+      margin-right: 5px;
+    }
   }
   
   .navigation
@@ -83,18 +88,19 @@
     {
       position: absolute;
       left: -80px;
-      top: 5px;
-      width: 60px;
-      height: 45px;
-      border: 1px solid $lightColor;
+      top: 6px;
+      width: 55px;
+      height: 55px;
+      background: lighten($lightColor, 8%);
+      @include border-radius(60px 0 60px 60px);
       text-align: center;
       line-height: 1;
-      color: lighten($textColor, 10%);
+      color: $textColor;
       
       .month
       {
         display: block;
-        margin-top: 5px;
+        margin-top: 12px;
         font-size: 12px;
         
         &:before

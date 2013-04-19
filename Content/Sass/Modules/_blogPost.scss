@@ -17,6 +17,12 @@
     padding: 20px;
   }
   
+  time
+  {
+    display: block;
+    margin-top: 40px;
+  }
+  
   @media #{$small}
   {
     > h1
