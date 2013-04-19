@@ -2966,10 +2966,19 @@ img {
   padding-left: 50px;
 }
 /* line 111, Modules/_blogPost.scss */
-#blogComments h4 time {
+#blogComments h4 a {
+  color: #1dad82;
+  text-decoration: none;
+}
+/* line 117, Modules/_blogPost.scss */
+#blogComments h4 time, #blogComments h4 time a {
   font-size: 14px;
   color: #b4b4b4;
   display: block;
+}
+/* line 124, Modules/_blogPost.scss */
+#blogComments h4 time a:hover {
+  text-decoration: underline;
 }
 @media only screen and (min-width: 48em) {
   /* line 67, Modules/_blogPost.scss */
@@ -2977,21 +2986,21 @@ img {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;
   }
-  /* line 126, Modules/_blogPost.scss */
+  /* line 137, Modules/_blogPost.scss */
   #blogComments li div {
     float: left;
     padding-left: 80px;
   }
-  /* line 133, Modules/_blogPost.scss */
+  /* line 144, Modules/_blogPost.scss */
   #blogComments img {
     width: 60px;
   }
-  /* line 138, Modules/_blogPost.scss */
+  /* line 149, Modules/_blogPost.scss */
   #blogComments h4 {
     font-size: 18px;
     padding-left: 0;
   }
-  /* line 143, Modules/_blogPost.scss */
+  /* line 154, Modules/_blogPost.scss */
   #blogComments h4 time {
     display: inline-block;
     margin-left: 10px;

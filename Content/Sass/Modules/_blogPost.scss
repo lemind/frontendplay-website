@@ -107,11 +107,22 @@
     color: $primaryColor;
     padding-left: 50px;
     
-    time
+    a
+    {
+      color: $primaryColor;
+      text-decoration: none;
+    }
+    
+    time, time a
     {
       font-size: 14px;
       color: lighten($textColor, 20%);
       display: block;
+    }
+    
+    time a:hover
+    {
+      text-decoration: underline;
     }
   }
   
