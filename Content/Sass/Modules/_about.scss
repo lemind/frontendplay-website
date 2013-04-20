@@ -9,12 +9,19 @@
   img
   {
     float: left;
-    margin-top: -10px;
-    margin-left: -70px;
+    margin-left: -20px;
+    width: 125px;
   }
 
   @media #{$small} 
   {
     padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    
+    img
+    {
+      width: auto;
+      margin-left: -70px;
+      margin-top: -10px;
+    }
   }
 }

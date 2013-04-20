@@ -1809,13 +1809,19 @@ img {
 /* line 10, Modules/_about.scss */
 #about img {
   float: left;
-  margin-top: -10px;
-  margin-left: -70px;
+  margin-left: -20px;
+  width: 125px;
 }
 @media only screen and (min-width: 48em) {
   /* line 3, Modules/_about.scss */
   #about {
     padding: 60px 50px 60px 130px;
+  }
+  /* line 21, Modules/_about.scss */
+  #about img {
+    width: auto;
+    margin-left: -70px;
+    margin-top: -10px;
   }
 }
 
