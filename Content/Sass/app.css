@@ -418,6 +418,11 @@ table {
   content: "\e718";
 }
 
+/* line 295, Vendor/_entypo.scss */
+.entypo-clock:before {
+  content: "\1f554";
+}
+
 /* line 346, Vendor/_entypo.scss */
 .entypo-down-open:before {
   content: "\e75c";
