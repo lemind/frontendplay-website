@@ -3,7 +3,16 @@
 {
   padding: 20px;
   background: white;
+  @extend %clearfix;
+
   
+  img
+  {
+    float: left;
+    margin-top: -10px;
+    margin-left: -70px;
+  }
+
   @media #{$small} 
   {
     padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;

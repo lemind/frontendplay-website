@@ -674,16 +674,16 @@ a, form input[type="text"], form input[type="email"], form textarea, #play > hea
 }
 
 /* line 17, Config/_placeholders.scss */
-#play > header, #blog .navigation, #blogComments li, #archive .year > div {
+#play > header, #blog .navigation, #blogComments li, #archive .year > div, #about {
   *zoom: 1;
 }
 /* line 20, Config/_placeholders.scss */
-#play > header:before, #blog .navigation:before, #blogComments li:before, #archive .year > div:before, #play > header:after, #blog .navigation:after, #blogComments li:after, #archive .year > div:after {
+#play > header:before, #blog .navigation:before, #blogComments li:before, #archive .year > div:before, #about:before, #play > header:after, #blog .navigation:after, #blogComments li:after, #archive .year > div:after, #about:after {
   content: " ";
   display: table;
 }
 /* line 25, Config/_placeholders.scss */
-#play > header:after, #blog .navigation:after, #blogComments li:after, #archive .year > div:after {
+#play > header:after, #blog .navigation:after, #blogComments li:after, #archive .year > div:after, #about:after {
   clear: both;
 }
 
@@ -1264,19 +1264,23 @@ img {
 #play > nav a:hover {
   border-bottom-color: #1dad82;
 }
+/* line 77, Interface/_header.scss */
+#play > nav a:focus, #play > nav a:link, #play > nav a:hover, #play > nav a:visited {
+  outline-color: transparent;
+}
 @media only screen and (min-width: 48em) {
-  /* line 82, Interface/_header.scss */
+  /* line 86, Interface/_header.scss */
   #play > header {
     padding: 0 50px;
     height: 200px;
     line-height: 210px;
   }
-  /* line 88, Interface/_header.scss */
+  /* line 92, Interface/_header.scss */
   #play > header h1 {
     float: left;
     line-height: 210px;
   }
-  /* line 94, Interface/_header.scss */
+  /* line 98, Interface/_header.scss */
   #play > header h2 {
     float: left;
     margin-left: 20px;
@@ -1284,11 +1288,11 @@ img {
     left: auto;
     line-height: 210px;
   }
-  /* line 103, Interface/_header.scss */
+  /* line 107, Interface/_header.scss */
   #play > header a {
     height: 200px;
   }
-  /* line 109, Interface/_header.scss */
+  /* line 113, Interface/_header.scss */
   #play > nav {
     padding: 0 30px;
   }
@@ -1801,6 +1805,12 @@ img {
 #about {
   padding: 20px;
   background: white;
+}
+/* line 10, Modules/_about.scss */
+#about img {
+  float: left;
+  margin-top: -10px;
+  margin-left: -70px;
 }
 @media only screen and (min-width: 48em) {
   /* line 3, Modules/_about.scss */

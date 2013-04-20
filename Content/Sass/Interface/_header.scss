@@ -73,6 +73,10 @@
       {
         border-bottom-color: $primaryColor;
       }
+      &:focus, &:link, &:hover, &:visited
+      {
+        outline-color: transparent;
+      }
     }
   }
   
