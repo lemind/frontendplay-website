@@ -92,8 +92,7 @@ module.exports = function(grunt)
         files: []
       }
     },
-
-
+    
     // copy files on release
     copy: {
       release: {

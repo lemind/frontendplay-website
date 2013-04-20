@@ -1808,3 +1808,42 @@ img {
     padding: 60px 50px 60px 130px;
   }
 }
+
+/* line 3, Modules/_error.scss */
+#error {
+  padding: 20px;
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+/* line 10, Modules/_error.scss */
+#error p {
+  font-size: 24px;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding-left: 150px;
+  margin: 55px 0 60px 0;
+}
+/* line 20, Modules/_error.scss */
+#error h5 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1dad82;
+  position: absolute;
+  left: -20px;
+  top: 60px;
+}
+@media only screen and (min-width: 48em) {
+  /* line 3, Modules/_error.scss */
+  #error {
+    padding: 60px 50px 60px 130px;
+  }
+  /* line 35, Modules/_error.scss */
+  #error p {
+    font-size: 48px;
+    padding-left: 50px;
+    margin: 10px 0 0 0;
+  }
+}
