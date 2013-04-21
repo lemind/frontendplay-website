@@ -1,8 +1,4 @@
 
-// Segoe UI Light
-@include fontFace( 'SegoeUI', 'SegoeUI-Light-final', 100, normal );
-
-
 // Segoe UI SemiLight
 @include fontFace( 'SegoeUI', 'SegoeUI-SemiLight-final', 300, normal );
 
@@ -16,19 +12,16 @@
 
 
 // Segoe UI Bold
-@include fontFace( 'SegoeUI', 'SegoeUI-Bold-final', 700, normal );
+@include fontFace( 'SegoeUI', 'SegoeUI-Bold-final', 700, italic );
 
 
 // Segoe UI Italic
 @include fontFace( 'SegoeUI', 'SegoeUI-Italic-final', 400, italic );
 
 
-// Segoe UI BoldItalic
-@include fontFace( 'SegoeUI', 'SegoeUI-BoldItalic-final', 700, italic );
-
-
 // Entypo Icon Font
 @include fontFace( 'entypo', 'entypo', 400, normal );
+
 
 
 // include entypo icon font
@@ -101,6 +94,11 @@ h2
   {
     margin-top: 0;
   }
+}
+
+strong, b
+{
+  font-weight: 500 !important;
 }
 
 

@@ -817,14 +817,6 @@ select {
 
 @font-face {
   font-family: "SegoeUI";
-  src: url('/Content/Fonts/SegoeUI-Light-final.eot');
-  src: url('/Content/Fonts/SegoeUI-Light-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-Light-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-Light-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-Light-finalsvg#fix') format("svg");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-SemiLight-final.eot');
   src: url('/Content/Fonts/SegoeUI-SemiLight-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-SemiLight-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-SemiLight-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-SemiLight-finalsvg#fix') format("svg");
   font-weight: 300;
@@ -852,7 +844,7 @@ select {
   src: url('/Content/Fonts/SegoeUI-Bold-final.eot');
   src: url('/Content/Fonts/SegoeUI-Bold-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-Bold-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-Bold-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-Bold-finalsvg#fix') format("svg");
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -864,14 +856,6 @@ select {
 }
 
 @font-face {
-  font-family: "SegoeUI";
-  src: url('/Content/Fonts/SegoeUI-BoldItalic-final.eot');
-  src: url('/Content/Fonts/SegoeUI-BoldItalic-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-BoldItalic-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-BoldItalic-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-BoldItalic-finalsvg#fix') format("svg");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
   font-family: "entypo";
   src: url('/Content/Fonts/entypo.eot');
   src: url('/Content/Fonts/entypo.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/entypo.woff') format("woff"), url('/Content/Fonts/entypo.ttf') format("truetype"), url('/Content/Fonts/entyposvg#fix') format("svg");
@@ -879,7 +863,7 @@ select {
   font-style: normal;
 }
 
-/* line 36, Base/_typography.scss */
+/* line 29, Base/_typography.scss */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
   font-weight: 400 !important;
@@ -887,47 +871,47 @@ select {
   line-height: 1;
 }
 
-/* line 47, Base/_typography.scss */
+/* line 40, Base/_typography.scss */
 a {
   color: #1dad82;
   text-decoration: underline;
   outline: 1px dotted transparent;
 }
-/* line 54, Base/_typography.scss */
+/* line 47, Base/_typography.scss */
 a:link, a:hover, a:visited {
   outline: 1px dotted transparent;
 }
-/* line 58, Base/_typography.scss */
+/* line 51, Base/_typography.scss */
 a:hover {
   color: #168161;
 }
-/* line 62, Base/_typography.scss */
+/* line 55, Base/_typography.scss */
 a:visited {
   color: #8ad9c2;
 }
-/* line 66, Base/_typography.scss */
+/* line 59, Base/_typography.scss */
 a:focus {
   outline-color: #8ad9c2;
 }
 
-/* line 74, Base/_typography.scss */
+/* line 67, Base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300;
 }
-/* line 79, Base/_typography.scss */
+/* line 72, Base/_typography.scss */
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   margin-right: 10px;
 }
 
-/* line 85, Base/_typography.scss */
+/* line 78, Base/_typography.scss */
 h1 {
   font-size: 20px;
   line-height: 1.2;
   color: #3a3a3a;
 }
 
-/* line 92, Base/_typography.scss */
+/* line 85, Base/_typography.scss */
 h2 {
   font-size: 20px;
   line-height: 1.2;
@@ -936,18 +920,23 @@ h2 {
   padding-bottom: 10px;
   color: #3a3a3a;
 }
-/* line 101, Base/_typography.scss */
+/* line 94, Base/_typography.scss */
 h2:first-child, time + h2 {
   margin-top: 0;
 }
 
+/* line 100, Base/_typography.scss */
+strong, b {
+  font-weight: 500 !important;
+}
+
 @media only screen and (min-width: 48em) {
-  /* line 110, Base/_typography.scss */
+  /* line 108, Base/_typography.scss */
   h1 {
     font-size: 24px;
   }
 
-  /* line 115, Base/_typography.scss */
+  /* line 113, Base/_typography.scss */
   h2 {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -1840,7 +1829,7 @@ img {
 /* line 10, Modules/_error.scss */
 #error p {
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   line-height: 1.1;
   padding-left: 150px;
@@ -1849,7 +1838,7 @@ img {
 /* line 20, Modules/_error.scss */
 #error h5 {
   font-size: 100px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   color: #1dad82;
   position: absolute;
