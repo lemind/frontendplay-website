@@ -841,14 +841,6 @@ select {
 
 @font-face {
   font-family: "SegoeUI";
-  src: url('/Content/Fonts/SegoeUI-Bold-final.eot');
-  src: url('/Content/Fonts/SegoeUI-Bold-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-Bold-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-Bold-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-Bold-finalsvg#fix') format("svg");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-Italic-final.eot');
   src: url('/Content/Fonts/SegoeUI-Italic-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-Italic-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-Italic-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-Italic-finalsvg#fix') format("svg");
   font-weight: 400;
@@ -863,7 +855,7 @@ select {
   font-style: normal;
 }
 
-/* line 29, Base/_typography.scss */
+/* line 25, Base/_typography.scss */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
   font-weight: 400 !important;
@@ -871,47 +863,47 @@ select {
   line-height: 1;
 }
 
-/* line 40, Base/_typography.scss */
+/* line 36, Base/_typography.scss */
 a {
   color: #1dad82;
   text-decoration: underline;
   outline: 1px dotted transparent;
 }
-/* line 47, Base/_typography.scss */
+/* line 43, Base/_typography.scss */
 a:link, a:hover, a:visited {
   outline: 1px dotted transparent;
 }
-/* line 51, Base/_typography.scss */
+/* line 47, Base/_typography.scss */
 a:hover {
   color: #168161;
 }
-/* line 55, Base/_typography.scss */
+/* line 51, Base/_typography.scss */
 a:visited {
   color: #8ad9c2;
 }
-/* line 59, Base/_typography.scss */
+/* line 55, Base/_typography.scss */
 a:focus {
   outline-color: #8ad9c2;
 }
 
-/* line 67, Base/_typography.scss */
+/* line 63, Base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300;
 }
-/* line 72, Base/_typography.scss */
+/* line 68, Base/_typography.scss */
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   margin-right: 10px;
 }
 
-/* line 78, Base/_typography.scss */
+/* line 74, Base/_typography.scss */
 h1 {
   font-size: 20px;
   line-height: 1.2;
   color: #3a3a3a;
 }
 
-/* line 85, Base/_typography.scss */
+/* line 81, Base/_typography.scss */
 h2 {
   font-size: 20px;
   line-height: 1.2;
@@ -920,23 +912,23 @@ h2 {
   padding-bottom: 10px;
   color: #3a3a3a;
 }
-/* line 94, Base/_typography.scss */
+/* line 90, Base/_typography.scss */
 h2:first-child, time + h2 {
   margin-top: 0;
 }
 
-/* line 100, Base/_typography.scss */
+/* line 96, Base/_typography.scss */
 strong, b {
   font-weight: 500 !important;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 108, Base/_typography.scss */
+  /* line 104, Base/_typography.scss */
   h1 {
     font-size: 24px;
   }
 
-  /* line 113, Base/_typography.scss */
+  /* line 109, Base/_typography.scss */
   h2 {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -953,8 +945,8 @@ strong, b {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 14px;
   padding: 0 25px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
