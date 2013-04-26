@@ -8,13 +8,24 @@ namespace frontendplay.Controllers
 {
   public class HomeController : Controller
   {
-    //
-    // GET: /Home/
-
+    // GET home page
     public ActionResult Index()
     {
       return View();
     }
 
+
+    // GET about page
+    public ActionResult About()
+    {
+      return View();
+    }
+
+
+    // GET archive page
+    public ActionResult Archive()
+    {
+      return View();
+    }
   }
 }

@@ -198,8 +198,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
     <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
@@ -287,8 +285,13 @@
     <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
     <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
     <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="Content\Fonts\entypo.svg" />
+    <Content Include="Content\Images\avatar-tobias-klika-frontendplay-anaheimcore.png" />
+    <Content Include="Content\Images\frontendplay.ico" />
+    <Content Include="Content\Images\frontendplay.png" />
+    <Content Include="Content\Sass\app.css" />
+    <Content Include="Content\Scripts\app.js" />
     <Content Include="Global.asax" />
-    <Content Include="Gruntfile.js" />
     <Content Include="humans.txt" />
     <Content Include="robots.txt" />
     <Content Include="Web.config" />
@@ -314,41 +317,40 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Fonts\" />
-    <Folder Include="Content\Images\" />
-    <Folder Include="Content\Scripts\Vendor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Sass\app.scss" />
-    <Content Include="Content\Sass\Base\_all.scss" />
-    <Content Include="Content\Sass\Base\_article.scss" />
-    <Content Include="Content\Sass\Base\_buttons.scss" />
-    <Content Include="Content\Sass\Base\_forms.scss" />
-    <Content Include="Content\Sass\Base\_typography.scss" />
-    <Content Include="Content\Sass\Config\_all.scss" />
-    <Content Include="Content\Sass\Config\_colors.scss" />
-    <Content Include="Content\Sass\Config\_dimensions.scss" />
-    <Content Include="Content\Sass\Config\_placeholders.scss" />
-    <Content Include="Content\Sass\Interface\_all.scss" />
-    <Content Include="Content\Sass\Interface\_main.scss" />
-    <Content Include="Content\Sass\Mixins\_all.scss" />
-    <Content Include="Content\Sass\Mixins\_fontface.scss" />
-    <Content Include="Content\Sass\Modules\_all.scss" />
-    <Content Include="Content\Sass\Vendor\_all.scss" />
-    <Content Include="Content\Sass\Vendor\_normalize.scss" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".bowerrc" />
-    <Content Include=".buildignore" />
-    <Content Include=".editorconfig" />
-    <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\entypo.eot" />
+    <Content Include="Content\Fonts\entypo.ttf" />
+    <Content Include="Content\Fonts\entypo.woff" />
+    <Content Include="Content\Fonts\SegoeUI-Bold-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-Bold-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-BoldItalic-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-BoldItalic-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-Light-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-Light-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Archive.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

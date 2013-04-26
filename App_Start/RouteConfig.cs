@@ -15,6 +15,12 @@ namespace frontendplay
       routes.IgnoreRoute("Account/{_}");
 
       routes.MapRoute(
+          name: "Single",
+          url: "{action}",
+          defaults: new { controller = "Home", action = "Index" }
+      );
+
+      routes.MapRoute(
           name: "Default",
           url: "{controller}/{action}/{id}",
           defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
