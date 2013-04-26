@@ -25,11 +25,11 @@ namespace frontendplay.Filters
     {
       public SimpleMembershipInitializer()
       {
-        Database.SetInitializer<UsersContext>(null);
+        Database.SetInitializer<StoreContext>(null);
 
         try
         {
-          using (var context = new UsersContext())
+          using (var context = new StoreContext())
           {
             if (!context.Database.Exists())
             {
@@ -38,7 +38,7 @@ namespace frontendplay.Filters
             }
           }
 
-          WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+          //WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
         }
         catch (Exception ex)
         {
