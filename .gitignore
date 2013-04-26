@@ -101,7 +101,7 @@ Backup*/
 UpgradeLog*.XML
 
 # Private Configs
-Web.Release.config
+*.Release.config
 
 # Project specific
 
