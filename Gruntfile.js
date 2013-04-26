@@ -91,17 +91,6 @@ module.exports = function(grunt)
         files: []
       }
     },
-    
-    // copy files on release
-    copy: {
-      release: {
-        files: [
-          { src: ['Content/Images/**'], dest: 'Release/Content/Images' },
-          { src: ['Content/Fonts/**'], dest: 'Release/Content/Fonts' },
-          { src: ['*.html', '*.text'], dest: 'Release' }
-        ]
-      }
-    },
 
     // watch file changes to automate tasks
     watch: {
