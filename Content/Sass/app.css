@@ -945,28 +945,29 @@ strong, b {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   padding: 0 25px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
   -webkit-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 20, Base/_buttons.scss */
+/* line 19, Base/_buttons.scss */
 .button:hover, .lightButton:hover, a.button:hover, a.lightButton:hover {
   background: #21c392;
 }
+@media only screen and (min-width: 48em) {
+  /* line 4, Base/_buttons.scss */
+  .button, .lightButton, a.lightButton, a.button, a.lightButton {
+    font-weight: 500;
+  }
+}
 
-/* line 27, Base/_buttons.scss */
+/* line 31, Base/_buttons.scss */
 .lightButton, a.lightButton {
   background: #c6ccd0;
 }
-/* line 32, Base/_buttons.scss */
+/* line 36, Base/_buttons.scss */
 .lightButton:hover, a.lightButton:hover {
   background: #b8bfc4;
 }
@@ -1806,7 +1807,7 @@ img {
   /* line 21, Modules/_about.scss */
   #about img {
     width: auto;
-    margin-left: -70px;
+    margin-left: -130px;
     margin-top: -10px;
   }
 }
