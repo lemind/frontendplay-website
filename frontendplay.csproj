@@ -189,12 +189,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogPostController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201304261927319_Initial.cs" />
+    <Compile Include="Migrations\201304261927319_Initial.Designer.cs">
+      <DependentUpon>201304261927319_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BlogPostModel.cs" />
+    <Compile Include="Models\StoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +359,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Archive.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogPost\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogPost\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogPost\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogPost\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogPost\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201304261927319_Initial.resx">
+      <DependentUpon>201304261927319_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
