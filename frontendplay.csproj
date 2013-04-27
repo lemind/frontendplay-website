@@ -189,8 +189,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BlogPostController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +203,8 @@
     <Compile Include="Models\BlogPostModel.cs" />
     <Compile Include="Models\StoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BlogPostRepository.cs" />
+    <Compile Include="ViewModels\PostsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Antlr3.Runtime.dll" />
@@ -330,7 +331,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.md" />
@@ -355,10 +356,10 @@
     <Content Include="Content\Fonts\SegoeUI-SemiLight-final.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Blog\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Archive.cshtml" />
+    <Content Include="Views\Blog\Archive.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\BlogPost\Index.cshtml" />
@@ -380,6 +381,9 @@
       <DependentUpon>201304261927319_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Post.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -396,7 +400,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>56384</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:50122/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

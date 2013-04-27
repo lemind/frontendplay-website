@@ -1,0 +1,29 @@
+﻿@model frontendplay.ViewModels.PostsViewModel
+@{
+  ViewBag.Title = "frontendplay - stories about css, javascript, ASP.NET and PCs";
+}
+
+<div id="blog">
+@foreach (var item in Model.list)
+{
+  var url = Url.Action("Post", new { id = item.ID });
+
+  <article>
+    <h2>
+      <a href="@url"> @Html.DisplayFor(_ => item.Title)</a>
+    </h2>
+    <div>
+      <time datetime="@item.MachineDate" pubdate>
+        <span class="month entypo-clock">@item.Month</span>
+        <span class="day">@item.Day</span>
+      </time>
+      <p>@Html.DisplayFor(_ => item.ShortText)</p>
+      <a href="@url" class="button">read the story</a>
+    </div>
+  </article>
+}
+  <div class="navigation">
+    <a href="@Model.previousPosts" class="back"><i class="entypo-left-open"></i>show previous stories</a>
+    <a href="@Model.nextPosts" class="forward"><i class="entypo-right-open"></i></a>
+  </div>
+</div>

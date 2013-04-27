@@ -27,5 +27,20 @@ namespace frontendplay.Models
       get { return _date; }
       set { _date = value; }
     }
+
+    public string Month
+    {
+      get { return String.Format("{0:MMM}", PublishDate); }
+    }
+
+    public string Day
+    {
+      get { return PublishDate.Day.ToString(); }
+    }
+
+    public string MachineDate
+    {
+      get { return String.Format("{0:s}", PublishDate); }
+    }
   }
 }
