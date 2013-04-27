@@ -18,7 +18,11 @@ namespace frontendplay.Models
     [AllowHtml]
     public string Text { get; set; }
 
+    [Required]
     public string ShortText { get; set; }
+
+    [Required]
+    public string Author { get; set; }
 
     [Required]
     [DataType(DataType.Date)]
