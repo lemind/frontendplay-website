@@ -16,7 +16,7 @@ namespace frontendplay
 
       routes.MapRoute(
           name: "Post",
-          url: "story/{title}-{id}",
+          url: "story/{id}/{title}",
           defaults: new { controller = "Blog", action = "Post", title = string.Empty, id = UrlParameter.Optional }
       );
 
