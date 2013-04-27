@@ -21,7 +21,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /{post}-{id}
-    public ActionResult Post(int id = 0)
+    public ActionResult Post(string name, int id)
     {
       BlogPostModel blogpostmodel = repository.Retrieve(id);
 

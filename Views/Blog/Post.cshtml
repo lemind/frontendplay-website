@@ -9,7 +9,7 @@
   <article>
     @Html.DisplayFor(_ => Model.Text)
     <time datetime="@Model.MachineDate">@Model.FullDate</time>
-    <i class="note">written by Tobias Klika</i>
+    <i class="note">written by @Model.Author</i>
   </article>
 </div>
 <div id="blogComments">
