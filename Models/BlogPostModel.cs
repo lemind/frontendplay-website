@@ -32,6 +32,11 @@ namespace frontendplay.Models
       set { _date = value; }
     }
 
+    public string DateGroup
+    {
+      get { return String.Format("{0:y}", PublishDate); }
+    }
+
     public string Month
     {
       get { return String.Format("{0:MMM}", PublishDate); }

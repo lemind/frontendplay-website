@@ -43,7 +43,9 @@ namespace frontendplay.Controllers
     // GET: /archive
     public ActionResult Archive()
     {
-      return View(new DefaultViewModel());
+      var model = repository.Archive();
+
+      return View(model);
     }
   }
 }

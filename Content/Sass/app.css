@@ -1657,7 +1657,7 @@ img {
 /* line 23, Modules/_archive.scss */
 #archive .year > time {
   font-size: 24px;
-  margin: 30px 0 30px 40px;
+  margin: 30px 0 30px 0;
   color: #1dad82;
   display: block;
 }
