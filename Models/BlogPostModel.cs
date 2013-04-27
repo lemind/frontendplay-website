@@ -42,5 +42,10 @@ namespace frontendplay.Models
     {
       get { return String.Format("{0:s}", PublishDate); }
     }
+
+    public string FullDate
+    {
+      get { return String.Format("{0:D}", PublishDate); }
+    }
   }
 }

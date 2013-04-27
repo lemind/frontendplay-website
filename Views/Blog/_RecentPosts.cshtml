@@ -1,0 +1,12 @@
+﻿@model frontendplay.ViewModels.DefaultViewModel
+
+<div class="stories">
+  <h4>Recent stories</h4>
+  @foreach (var item in Model.recentPosts)
+  {
+  <a href="@Url.Action("Post", new { id = item.ID })">
+    <i class="entypo-right-open"></i>
+    &nbsp;@Html.DisplayFor(_ => item.Title)
+  </a>
+  }
+</div>

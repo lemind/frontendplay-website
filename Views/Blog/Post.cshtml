@@ -8,7 +8,7 @@
   <h1>@Html.DisplayFor(_ => Model.Title)</h1>
   <article>
     @Html.DisplayFor(_ => Model.Text)
-    <time datetime="@Model.MachineDate">June, 25th 2013</time>
+    <time datetime="@Model.MachineDate">@Model.FullDate</time>
     <i class="note">written by Tobias Klika</i>
   </article>
 </div>
