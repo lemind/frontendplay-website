@@ -1,7 +1,9 @@
 ﻿@model frontendplay.Models.BlogPostModel
+@using frontendplay.Utilities
 
 @{
   ViewBag.Title = Model.Title + " - frontendplay";
+  ViewBag.Description = OutputUtilities.Chop(Model.ShortText, 160);
 }
 
 <div id="blogPost">
