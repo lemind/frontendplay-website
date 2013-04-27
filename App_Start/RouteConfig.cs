@@ -21,14 +21,8 @@ namespace frontendplay
       );
 
       routes.MapRoute(
-          name: "Single",
-          url: "{action}",
-          defaults: new { controller = "Blog", action = "Index" }
-      );
-
-      routes.MapRoute(
           name: "Default",
-          url: "{controller}/{action}/{id}",
+          url: "{action}/{id}",
           defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional }
       );
     }
