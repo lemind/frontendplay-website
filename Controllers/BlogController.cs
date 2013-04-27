@@ -36,14 +36,14 @@ namespace frontendplay.Controllers
     // GET: /about
     public ActionResult About()
     {
-      return View();
+      return View(new DefaultViewModel());
     }
 
 
     // GET: /archive
     public ActionResult Archive()
     {
-      return View();
+      return View(new DefaultViewModel());
     }
   }
 }

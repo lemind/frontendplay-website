@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace frontendplay.ViewModels
 {
-  public class PostsViewModel
+  public class PostsViewModel : LayoutViewModel
   {
     public IEnumerable<BlogPostModel> list { get; set; }
 
