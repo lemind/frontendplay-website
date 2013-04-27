@@ -1,5 +1,6 @@
 ﻿using frontendplay.Models;
 using frontendplay.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -38,7 +39,7 @@ namespace frontendplay.Repositories
           .ToList()
           .OrderByDescending(m => m.PublishDate);
 
-      return posts.GroupBy(m => m.DateGroup);
+      return posts.GroupBy(m => String.Format("{0:y}", m.PublishDate));
     }
 
 
