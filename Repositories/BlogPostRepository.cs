@@ -34,12 +34,13 @@ namespace frontendplay.Repositories
     // groups all posts by month/year
     public IEnumerable<IGrouping<string, BlogPostModel>> Archive()
     {
-      IEnumerable<BlogPostModel> posts =
+      IEnumerable<IGrouping<string, BlogPostModel>> posts =
         db.BlogPostModels
           .ToList()
-          .OrderByDescending(m => m.PublishDate);
+          .OrderByDescending(m => m.PublishDate)
+          .GroupBy(m => String.Format("{0:y}", m.PublishDate));
 
-      return posts.GroupBy(m => String.Format("{0:y}", m.PublishDate));
+      return posts;
     }
 
 
