@@ -1,6 +1,10 @@
 using frontendplay.Models;
 using frontendplay.Repositories;
+using frontendplay.Utilities;
 using frontendplay.ViewModels;
+using System;
+using System.Configuration;
+using System.ServiceModel.Syndication;
 using System.Web.Mvc;
 
 namespace frontendplay.Controllers
@@ -44,6 +48,27 @@ namespace frontendplay.Controllers
     public ActionResult Archive()
     {
       return View(repository.Archive());
+    }
+
+
+    // GET: /feed
+    public ActionResult Feed()
+    {
+      var feed = new SyndicationFeed()
+      {
+        Language = "en-US",
+        Items = repository.Feed(Url),
+        Title = SyndicationContent.CreatePlaintextContent("frontendplay"),
+        Description = SyndicationContent.CreatePlaintextContent("frontendplay - stories about css, javascript, ASP.NET and PCs"),
+        Copyright = SyndicationContent.CreatePlaintextContent("Copyright (C) " + DateTime.Now.Year + " by " + ConfigurationManager.AppSettings["appCreator"]),
+        BaseUri = new Uri(Url.Action("Index", "Blog", new {}, "http")),
+        LastUpdatedTime = repository.LastUpdate()
+      };
+
+      feed.Authors.Add(new SyndicationPerson(ConfigurationManager.AppSettings["adminName"]));
+
+      return new FeedResult(new Rss20FeedFormatter(feed));
+
     }
   }
 }
