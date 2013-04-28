@@ -9,7 +9,7 @@
 <div id="blogPost">
   <h1>@Html.DisplayFor(_ => Model.Title)</h1>
   <article>
-    @Html.DisplayFor(_ => Model.Text)
+    @Html.Raw(Model.HtmlText)
     <time datetime="@Model.MachineDate">@Model.FullDate</time>
     <i class="note">written by @Model.Author</i>
   </article>

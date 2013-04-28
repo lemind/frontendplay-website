@@ -1,4 +1,5 @@
-﻿using System;
+﻿using frontendplay.Utilities;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
@@ -30,6 +31,11 @@ namespace frontendplay.Models
     {
       get { return _date; }
       set { _date = value; }
+    }
+
+    public MvcHtmlString HtmlText
+    {
+      get { return OutputUtilities.Markdown(Text); }
     }
 
     public string Month
