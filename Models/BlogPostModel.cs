@@ -1,5 +1,6 @@
 ﻿using frontendplay.Utilities;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
@@ -32,6 +33,8 @@ namespace frontendplay.Models
       get { return _date; }
       set { _date = value; }
     }
+
+    public virtual ICollection<CommentModel> Comments { get; set; }
 
     public MvcHtmlString HtmlText
     {

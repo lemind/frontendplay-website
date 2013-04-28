@@ -33,6 +33,7 @@ namespace frontendplay.Controllers
       {
         return HttpNotFound();
       }
+
       return View(blogpostmodel);
     }
 
