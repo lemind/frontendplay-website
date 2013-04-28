@@ -9,12 +9,11 @@ namespace frontendplay.Models
   public class StoreContext : DbContext
   {
     public StoreContext()
-      : base("DefaultConnection")
-    {
-
-    }
+      : base("DefaultConnection") {}
 
     public DbSet<BlogPostModel> BlogPostModels { get; set; }
+
+    public DbSet<CommentModel> CommentModels { get; set; }
 
     public DbSet<UserProfile> UserProfiles { get; set; }
   }

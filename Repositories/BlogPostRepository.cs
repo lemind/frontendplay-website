@@ -57,8 +57,7 @@ namespace frontendplay.Repositories
     }
 
 
-    // finds all posts 
-    // and convert to syndication items
+    // finds all posts and convert to syndication items
     public List<SyndicationItem> Feed(UrlHelper urlHelper)
     {
       IEnumerable<BlogPostModel> posts =
@@ -72,7 +71,7 @@ namespace frontendplay.Repositories
       {
         var itemUrl = urlHelper.Action("Post", "Blog", new { title = UrlEncoder.ToFriendlyUrl(post.Title), id = post.ID }, "http");
 
-        SyndicationItem item = new SyndicationItem(post.Title, SyndicationContent.CreateHtmlContent(post.Text), new Uri(itemUrl), itemUrl, post.PublishDate)
+        SyndicationItem item = new SyndicationItem(post.Title, SyndicationContent.CreateHtmlContent(post.HtmlText.ToString()), new Uri(itemUrl), itemUrl, post.PublishDate)
         {
           PublishDate = post.PublishDate,
           Summary = SyndicationContent.CreatePlaintextContent(post.ShortText),
