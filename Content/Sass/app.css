@@ -1022,7 +1022,7 @@ article i.note {
     padding-left: 80px;
   }
   /* line 54, Base/_article.scss */
-  article code, article pre {
+  article pre {
     margin-right: -50px !important;
     border-right: none !important;
   }
@@ -1100,7 +1100,7 @@ html {
 
 /* line 8, Interface/_main.scss */
 body {
-  font-family: 'SegoeUI', 'Segoe UI', Arial, sans-serif;
+  font-family: 'SegoeUI', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #82878a;
