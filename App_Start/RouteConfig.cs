@@ -15,6 +15,12 @@ namespace frontendplay
       routes.IgnoreRoute("Account/{_}");
 
       routes.MapRoute(
+          name: "Error",
+          url: "error/{action}",
+          defaults: new { controller = "Error", action = "NotFound" }
+      );
+
+      routes.MapRoute(
           name: "Post",
           url: "story/{id}/{title}",
           defaults: new { controller = "Blog", action = "Post", title = string.Empty, id = UrlParameter.Optional }
