@@ -24,12 +24,12 @@
   {
     <h1><i class="entypo-comment"></i>Comments</h1>
     <ul>
-      @foreach(var comment in Model.Comments)
+      @foreach(var comment in Model.Comments.OrderByDescending(m => m.CreatedDate))
       {
       <li id="comment-@comment.ID">
         <img src="@comment.Image" alt="@comment.Name" />
         <div>
-          <h4>Tobias Klika <time datetime="@comment.MachineDate"><a href="#comment-@comment.ID">@comment.FullDate</a></time></h4>
+          <h4>@comment.Name <time datetime="@comment.MachineDate"><a href="#comment-@comment.ID">@comment.FullDate</a></time></h4>
           <p>@comment.Comment</p>
         </div>
       </li>
@@ -37,25 +37,4 @@
     </ul>
   }
 </div>
-<div id="blogNewComment">
-  <h1>Leave a comment</h1>  
-  <form>
-    <fieldset>
-      <label for="comment-name">Your name</label>
-      <input id="comment-name" name="comment-name" type="text" class="text">
-    </fieldset>
-    <fieldset>
-      <label for="comment-mail">E-mail</label>
-      <input id="comment-mail" name="comment-mail" type="email" class="text">
-    </fieldset>
-    <fieldset>
-      <label for="comment-website">Website <i>(optional)</i></label>
-      <input id="comment-website" name="comment-website" type="text" class="text">
-    </fieldset>
-    <fieldset>
-      <label for="comment-comment">Comment</label>
-      <textarea id="comment-comment" name="comment-comment" class="text"></textarea>
-    </fieldset>
-    <a href="" class="button">add comment</a>
-  </form>
-</div>
+<div id="blogNewComment" data-post="/comment/@Model.ID"></div>

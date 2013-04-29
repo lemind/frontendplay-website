@@ -6,6 +6,7 @@ using System.ServiceModel.Syndication;
 using System.Web.Mvc;
 using frontendplay.Utilities;
 using System.Configuration;
+using System.Data;
 
 namespace frontendplay.Repositories
 {
@@ -31,6 +32,30 @@ namespace frontendplay.Repositories
     public BlogPostModel Retrieve(int id)
     {
       return db.BlogPostModels.FirstOrDefault<BlogPostModel>(m => m.ID == id);
+    }
+
+
+    // gets a single blog post
+    public bool AddComment(int postId, CommentModel comment)
+    {
+      try
+      {
+        BlogPostModel blogpostmodel = Retrieve(postId);
+
+        if (blogpostmodel == null)
+        {
+          throw new DataException();
+        }
+
+        blogpostmodel.Comments.Add(comment);
+        db.SaveChanges();
+
+        return true;
+      }
+      catch(DataException)
+      {
+        return false;
+      }
     }
 
 

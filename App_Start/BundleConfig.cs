@@ -9,11 +9,11 @@ namespace frontendplay
     public static void RegisterBundles(BundleCollection bundles)
     {
       bundles.Add(new ScriptBundle("~/bundles/headjavascript").Include(
-        "~/Content/Scripts/app.js"
+        "~/Content/Scripts/Vendor/html5shiv/src/html5shiv.js"
       ));
 
       bundles.Add(new ScriptBundle("~/bundles/javascript").Include(
-        
+        "~/Content/Scripts/app.js"
       ));
 
       bundles.Add(new StyleBundle("~/bundles/stylesheet").Include(
