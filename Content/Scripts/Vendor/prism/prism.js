@@ -24,7 +24,7 @@ var _ = self.Prism = {
 		// Deep clone a language definition (e.g. to extend it)
 		clone: function (o) {
 			var type = _.util.type(o);
-
+ 
 			switch (type) {
 				case 'Object':
 					var clone = {};

@@ -4,6 +4,7 @@ using frontendplay.Utilities;
 using frontendplay.ViewModels;
 using System;
 using System.Configuration;
+using System.Data;
 using System.ServiceModel.Syndication;
 using System.Web.Mvc;
 
@@ -35,6 +36,34 @@ namespace frontendplay.Controllers
       }
 
       return View(blogpostmodel);
+    }
+
+
+    // GET: /comment/{id}
+    public PartialViewResult Comment(int id)
+    { 
+      return PartialView(new CommentModel());
+    }
+
+
+    // POST: /comment/{id}
+    //[ValidateAntiForgeryToken]
+    [HttpPost]
+    public PartialViewResult Comment(CommentModel commentModel, int id)
+    {
+      if (ModelState.IsValid)
+      {
+        bool success = repository.AddComment(id, commentModel);
+
+        if (success)
+        {
+          return PartialView("CommentSuccess");
+        }
+
+        ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+      }
+
+      return PartialView(commentModel);
     }
 
 

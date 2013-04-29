@@ -27,7 +27,6 @@ namespace frontendplay.Models
     [Required]
     public string Comment { get; set; }
 
-    [Required]
     [DataType(DataType.Date)]
     public DateTime CreatedDate
     {

@@ -676,7 +676,7 @@ pre[data-line] {
 }
 
 /* line 4, Config/_placeholders.scss */
-a, form input[type="text"], form input[type="email"], form textarea, #play > header img {
+a, form input[type="text"], form input[type="email"], form input[type="url"], form textarea, #play > header img {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1051,7 +1051,7 @@ form label i {
   color: #b7babb;
 }
 /* line 28, Base/_forms.scss */
-form input[type="text"], form input[type="email"] {
+form input[type="text"], form input[type="email"], form input[type="url"] {
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
@@ -1063,30 +1063,41 @@ form textarea {
   line-height: 24px;
 }
 /* line 42, Base/_forms.scss */
-form input[type="text"], form input[type="email"], form textarea {
+form input[type="text"], form input[type="email"], form input[type="url"], form textarea {
   width: 100%;
   border: 1px solid #d4d8db;
   font-size: 14px;
   color: #82878a;
 }
 /* line 50, Base/_forms.scss */
-form input[type="text"]:focus, form input[type="email"]:focus, form textarea:focus {
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="url"]:focus, form textarea:focus {
   color: #3a3a3a;
   border-color: #8ad9c2;
 }
+/* line 57, Base/_forms.scss */
+form .validation-summary-errors {
+  background: #ff633f;
+  margin-bottom: 20px;
+  padding: 5px 0;
+}
+/* line 63, Base/_forms.scss */
+form .validation-summary-errors li {
+  color: white;
+  font-weight: 500;
+}
 @media only screen and (min-width: 48em) {
-  /* line 59, Base/_forms.scss */
+  /* line 72, Base/_forms.scss */
   form fieldset {
     margin-bottom: 20px;
   }
-  /* line 64, Base/_forms.scss */
+  /* line 77, Base/_forms.scss */
   form label {
     display: inline-block;
     float: left;
     width: 20%;
   }
-  /* line 71, Base/_forms.scss */
-  form input[type="text"], form input[type="email"], form textarea {
+  /* line 84, Base/_forms.scss */
+  form input[type="text"], form input[type="email"], form input[type="url"], form textarea {
     float: right;
     width: 80%;
   }
