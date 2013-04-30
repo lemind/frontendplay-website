@@ -26,13 +26,7 @@
     <ul>
       @foreach(var comment in Model.Comments.OrderByDescending(m => m.CreatedDate))
       {
-      <li id="comment-@comment.ID">
-        <img src="@comment.Image" alt="@comment.Name" />
-        <div>
-          <h4>@comment.Name <time datetime="@comment.MachineDate"><a href="#comment-@comment.ID">@comment.FullDate</a></time></h4>
-          <p>@comment.Comment</p>
-        </div>
-      </li>
+        @Html.Partial("_Comment", comment)
       }
     </ul>
   }

@@ -381,21 +381,6 @@
     <Content Include="Views\Blog\Archive.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\BlogPost\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\BlogPost\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\BlogPost\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\BlogPost\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\BlogPost\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\201304261927319_Initial.resx">
       <DependentUpon>201304261927319_Initial.cs</DependentUpon>
     </EmbeddedResource>
@@ -426,6 +411,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Blog\CommentSuccess.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\_Comment.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

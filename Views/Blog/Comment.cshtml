@@ -1,27 +1,29 @@
 ﻿@model frontendplay.Models.CommentModel
 
 <h1>Leave a comment</h1>  
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(false)
-    
+@using (Html.BeginForm())
+{
+  @Html.ValidationSummary(true)
+  @Html.AntiForgeryToken()
 
-    @Html.AntiForgeryToken()
-
-    <fieldset>
-      @Html.LabelFor(m => m.Name)
-      @Html.EditorFor(m => m.Name)
-    </fieldset>
-    <fieldset>
-      @Html.LabelFor(m => m.Email)
-      @Html.EditorFor(m => m.Email)
-    </fieldset>
-    <fieldset>
-      <label for="Website">Website <i>(optional)</i></label>
-      @Html.EditorFor(m => m.Website)
-    </fieldset>
-    <fieldset>
-      @Html.LabelFor(m => m.Comment)
-      @Html.TextAreaFor(m => m.Comment)
-    </fieldset>
-    <a href="" class="button">add comment</a>
+  <fieldset>
+    @Html.LabelFor(m => m.Name)
+    @Html.EditorFor(m => m.Name)
+    <i class="error"></i>
+  </fieldset>
+  <fieldset>
+    @Html.LabelFor(m => m.Email)
+    @Html.EditorFor(m => m.Email)
+    <i class="error"></i>
+  </fieldset>
+  <fieldset>
+    <label for="Website">Website <i>(optional)</i></label>
+    @Html.EditorFor(m => m.Website)
+  </fieldset>
+  <fieldset>
+    @Html.LabelFor(m => m.Comment)
+    @Html.TextAreaFor(m => m.Comment)
+    <i class="error"></i>
+  </fieldset>
+  <a href="" class="button">add comment</a>
 }
