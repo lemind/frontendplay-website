@@ -36,7 +36,12 @@ namespace frontendplay.Models
 
     public string Image
     {
-      get { return "http://www.gravatar.com/avatar/" + OutputUtilities.GetMD5Hash(Email.Trim().ToLower()).ToLower() + "?size=60"; }
+      get 
+      { 
+        var hash = OutputUtilities.GetMD5Hash(Email.Trim().ToLower()).ToLower();
+        var def = HttpUtility.UrlEncode("http://localhost:50122/Content/Images/default-avatar.png");
+        return "http://www.gravatar.com/avatar/" + hash + "?size=60&default=" + def; 
+      }
     }
 
     public string MachineDate
