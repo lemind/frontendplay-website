@@ -6,7 +6,6 @@ This is the public repository for my blog (to be released).
 * [ASP.NET MVC4](http://www.asp.net/mvc)
 * [EntityFramework](http://entityframework.codeplex.com/)
 * [MarkdownSharp](http://code.google.com/p/markdownsharp/) by stackoverflow
-* [ModelMetaDataExtensions](https://github.com/Haacked/mvc-metadata-conventions) by haacked
 * [gruntjs](https://github.com/gruntjs/grunt) by cowboy et al.
 * [compass](https://github.com/chriseppstein/compass) by chriseppstein et al.
 
