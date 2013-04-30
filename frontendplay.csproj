@@ -314,6 +314,7 @@
     <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
     <Content Include="Content\Fonts\entypo.svg" />
     <Content Include="Content\Images\avatar-tobias-klika-frontendplay-anaheimcore.png" />
+    <Content Include="Content\Images\default-avatar.png" />
     <Content Include="Content\Images\frontendplay.ico" />
     <Content Include="Content\Images\frontendplay.png" />
     <Content Include="Content\Sass\app.css" />

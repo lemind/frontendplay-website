@@ -70,25 +70,31 @@
     padding: 0;
     padding-top: 20px;
     text-align: center;
-    font-size: 36px;
-    
+
     a
     {
-      margin-left: 20px;
-      text-decoration: none;
-      color: $headlineTextColor;
-      font-size: inherit;
+      display: inline-block;
       @extend %resetLink;
-      
-      &:hover
-      {
-        color: $primaryColor;
-      }
-      
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      background: $primaryColor;
+      margin-left: 5px;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      @include border-radius(50px);
+
       &:first-child
       {
         margin-left: 0;
       }
+      
+      &.twitter { background: #00aced; }
+      &.rss { background: #ff6502; }
+      &.github { background: #211f1f; }
+      &.dribbble { background: #ea4c89; }
     }
   }
   
