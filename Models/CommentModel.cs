@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace frontendplay.Models
 {
@@ -25,6 +26,7 @@ namespace frontendplay.Models
     public string Website { get; set; }
 
     [Required]
+    [AllowHtml]
     public string Comment { get; set; }
 
     [DataType(DataType.Date)]

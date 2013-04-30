@@ -57,7 +57,7 @@ namespace frontendplay.Controllers
 
         if (success)
         {
-          return PartialView("CommentSuccess");
+          return PartialView("CommentSuccess", commentModel);
         }
 
         ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");

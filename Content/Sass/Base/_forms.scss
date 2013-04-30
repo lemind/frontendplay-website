@@ -8,6 +8,7 @@ form
     border: none;
     margin: 0;
     padding: 0;
+    position: relative;
   }
   
   label
@@ -53,17 +54,23 @@ form
     }
   }
   
-  .validation-summary-errors
+  .validation-summary-errors li
   {
-    background: $errorColor;
-    margin-bottom: 20px;
-    padding: 5px 0;
-    
-    li
-    {
-      color: white;
-      font-weight: 500;
-    }
+    color: $errorColor;
+    font-weight: 500;
+  }
+  
+  .input-validation-error + i.error
+  {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-left-color: $errorColor;
+    @include rotate(-45deg);
+    position: absolute;
+    right: -11px;
+    top: 29px;
   }
   
   @media #{$small}
@@ -84,6 +91,11 @@ form
     {
       float: right;
       width: 80%;
+    }
+    
+    .input-validation-error + i.error
+    {
+      top: -11px;
     }
   }
 }

@@ -37,9 +37,13 @@
       data: collection,
       success: function(html)
       {
+        var button = document.querySelector('#blogNewComment .button');
         id('blogNewComment').innerHTML = html;
         
-        document.querySelector('#blogNewComment .button').addEventListener('click', postComment, false);
+        if(button)
+        {
+          button.addEventListener('click', postComment, false);
+        }
       }
     });
   }
