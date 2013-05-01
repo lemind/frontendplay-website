@@ -50,10 +50,21 @@ namespace frontendplay.Controllers
 
 
     // POST: /comment/{id}
-    //[ValidateAntiForgeryToken]
+    [ValidateAntiForgeryToken]
     [HttpPost]
     public JsonResult Comment(CommentModel commentModel, int id)
     {
+      // honeypot
+      if (!String.IsNullOrEmpty(Request.Form["Body"]))
+      {
+        return Json(new CommentJsonViewModel()
+        {
+          success = false,
+          output = this.PartialViewToString("_Honeypot", new {})
+        });
+      }
+
+      // model is fine, go and save
       if (ModelState.IsValid)
       {
         bool success = repository.AddComment(id, commentModel);
@@ -68,9 +79,11 @@ namespace frontendplay.Controllers
           });
         }
 
+        // at this time something went wrong while saving
         ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
       }
 
+      // validation error
       return Json(new CommentJsonViewModel()
       {
         success = false,
