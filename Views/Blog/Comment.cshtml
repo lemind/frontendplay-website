@@ -3,7 +3,7 @@
 <h1>Leave a comment</h1>  
 @using (Html.BeginForm())
 {
-  @Html.ValidationSummary(true)
+  @Html.ValidationSummary(false)
   @Html.AntiForgeryToken()
 
   <fieldset>

@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201305012212172_RemoveShortText.Designer.cs">
       <DependentUpon>201305012212172_RemoveShortText.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305012246353_LengthValidationForComments.cs" />
+    <Compile Include="Migrations\201305012246353_LengthValidationForComments.Designer.cs">
+      <DependentUpon>201305012246353_LengthValidationForComments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BlogPostModel.cs" />
@@ -399,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305012212172_RemoveShortText.resx">
       <DependentUpon>201305012212172_RemoveShortText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305012246353_LengthValidationForComments.resx">
+      <DependentUpon>201305012246353_LengthValidationForComments.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
