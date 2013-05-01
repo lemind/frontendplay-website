@@ -5,7 +5,7 @@
   {
     height: 100px;
     line-height: 100px;
-    background: $darkColor;
+    background: darken($darkColor, 5%);
     padding: 0 20px;
     overflow: hidden;
     @extend %clearfix;
@@ -55,7 +55,7 @@
   // navigation
   > nav
   {
-    background: darken($darkColor, 5%);
+    background: $darkColor;
     height: 50px;
     line-height: 50px;
 

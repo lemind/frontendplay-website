@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -604,73 +604,29 @@ pre[data-line] {
   padding: 1em 0 1em 3em;
 }
 
-/* line 115, Vendor/_prism.scss */
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  /* Same as .prism’s padding-top */
-  background: rgba(153, 122, 102, 0.08);
-  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-/* line 135, Vendor/_prism.scss */
-.line-highlight:before,
-.line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: rgba(153, 122, 102, 0.4);
-  color: #f5f2f0;
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-/* line 152, Vendor/_prism.scss */
-.line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}
-
-/* line 159, Vendor/_prism.scss */
+/* line 116, Vendor/_prism.scss */
 .token.tab:not(:empty):before,
 .token.cr:before,
 .token.lf:before {
   color: #e0d7d1;
 }
 
-/* line 163, Vendor/_prism.scss */
+/* line 120, Vendor/_prism.scss */
 .token.tab:not(:empty):before {
-  /*content: '▸';*/
+  /*content: 'Ôû©';*/
 }
 
-/* line 167, Vendor/_prism.scss */
+/* line 124, Vendor/_prism.scss */
 .token.cr:before {
-  /*content: '␍';*/
+  /*content: 'ÔÉì';*/
 }
 
-/* line 171, Vendor/_prism.scss */
+/* line 128, Vendor/_prism.scss */
 .token.lf:before {
-  /*content: '␊';*/
+  /*content: 'ÔÉè';*/
 }
 
-/* line 174, Vendor/_prism.scss */
+/* line 131, Vendor/_prism.scss */
 .token a {
   color: inherit;
 }
@@ -1139,7 +1095,7 @@ body {
   background: #e2e5e7;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  text-size-adjust: none;
+  -ms-touch-action: double-tap-zoom;
   min-height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -1229,7 +1185,7 @@ img {
 #play > header {
   height: 100px;
   line-height: 100px;
-  background: #18191a;
+  background: #0c0c0d;
   padding: 0 20px;
   overflow: hidden;
 }
@@ -1270,7 +1226,7 @@ img {
 }
 /* line 57, Interface/_header.scss */
 #play > nav {
-  background: #0c0c0d;
+  background: #18191a;
   height: 50px;
   line-height: 50px;
 }

@@ -19,6 +19,7 @@ namespace frontendplay.Controllers
 
      
     // GET: /page/{page}
+    [OutputCache(Duration = 60 * 10, VaryByParam = "page")]
     public ActionResult Index(int page = 1)
     {
       OrderedDictionary pages = repository.Pages(entriesPerPage, page);
@@ -46,6 +47,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /{post}-{id}
+    [OutputCache(Duration = 60 * 10, VaryByParam = "id")]
     public ActionResult Post(string name, int id)
     {
       BlogPostModel blogpostmodel = repository.Retrieve(id);
@@ -110,6 +112,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /about
+    [OutputCache(Duration = 60 * 60)]
     public ActionResult About()
     {
       return View(new DefaultViewModel());
@@ -117,6 +120,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /archive
+    [OutputCache(Duration = 60 * 10)]
     public ActionResult Archive()
     {
       return View(repository.Archive());
@@ -124,6 +128,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /feed
+    [OutputCache(Duration = 60 * 10)]
     public ActionResult Feed()
     {
       var feed = new SyndicationFeed()

@@ -8,12 +8,12 @@
 
   <fieldset>
     @Html.LabelFor(m => m.Name)
-    @Html.EditorFor(m => m.Name)
+    @Html.EditorFor(m => m.Name, new { aria_required = true })
     <i class="error"></i>
   </fieldset>
   <fieldset>
     @Html.LabelFor(m => m.Email)
-    @Html.EditorFor(m => m.Email)
+    @Html.EditorFor(m => m.Email, new { aria_required = true })
     <i class="error"></i>
   </fieldset>
   <fieldset>
@@ -22,7 +22,7 @@
   </fieldset>
   <fieldset>
     @Html.LabelFor(m => m.Comment)
-    @Html.TextAreaFor(m => m.Comment)
+    @Html.TextAreaFor(m => m.Comment, new { aria_required = true })
     <i class="error"></i>
   </fieldset>
   <fieldset class="commentBody">
