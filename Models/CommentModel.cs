@@ -16,17 +16,21 @@ namespace frontendplay.Models
     public int ID { get; set; }
 
     [Required]
+    [StringLength(40, ErrorMessage = "Name cannot be longer than 40 characters.")]
     public string Name { get; set; }
 
     [Required]
+    [StringLength(80, ErrorMessage = "Email cannot be longer than 80 characters.")]
     [DataType(DataType.EmailAddress)]
     public string Email { get; set; }
 
     [DataType(DataType.Url)]
+    [StringLength(100, ErrorMessage = "Website cannot be longer than 100 characters.")]
     public string Website { get; set; }
 
     [Required]
     [AllowHtml]
+    [StringLength(2000, ErrorMessage = "Comment cannot be longer than 2000 characters.")]
     public string Comment { get; set; }
 
     [DataType(DataType.Date)]
