@@ -30,13 +30,13 @@
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="shortcut icon" type="image/ico" href="~/Content/Images/frontendplay.ico" />
   <link rel="icon" type="image/png" href="~/Content/Images/frontendplay.png" />
-  @if (!String.IsNullOrEmpty(ViewBag.relPrev))
+  @if (!String.IsNullOrEmpty(ViewBag.RelPrev))
   {
-  <link rel="prev" href="@ViewBag.relPrev">
+  <link rel="prev" href="@ViewBag.RelPrev">
   }
-  @if (!String.IsNullOrEmpty(ViewBag.relNext))
+  @if (!String.IsNullOrEmpty(ViewBag.RelNext))
   {
-  <link rel="next" href="@ViewBag.relNext">
+  <link rel="next" href="@ViewBag.RelNext">
   }
   @Styles.Render("~/bundles/stylesheet")
   @Scripts.Render("~/bundles/headjavascript")

@@ -5,7 +5,5 @@ using System.Web;
 
 namespace frontendplay.ViewModels
 {
-  public class DefaultViewModel : LayoutViewModel
-  {
-  }
+  public class DefaultViewModel : LayoutViewModel { }
 }

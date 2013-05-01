@@ -14,20 +14,8 @@ namespace frontendplay.ViewModels
 
     public int page { get; set; }
 
-    public string previousPosts
-    {
-      get
-      {
-        return "/page/" + (page + 1).ToString();
-      }
-    }
+    public string next { get; set; }
 
-    public string nextPosts
-    {
-      get
-      {
-        return "/page/" + (page - 1).ToString();
-      }
-    }
+    public string prev { get; set; }
   }
 }
