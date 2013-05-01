@@ -1036,7 +1036,14 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
         else
         {
           var list = document.querySelector('#blogComments ul');
+          var empty = id('noComments');
+          
           list.innerHTML = response.newComment + list.innerHTML;
+          
+          if(empty)
+          {
+            empty.parentNode.removeChild(empty);
+          }
         }
       }
     });
