@@ -73,6 +73,11 @@ form
     top: 29px;
   }
   
+  .commentBody
+  {
+    display: none !important;
+  }
+  
   @media #{$small}
   {
     fieldset

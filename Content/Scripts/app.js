@@ -996,16 +996,20 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
 {
   var link = id('blogNewComment').getAttribute('data-post');
   
+  
   // initial request for comment form
-  reqwest({
-    url: link,
-    type: 'html',
-    success: function(html)
-    {
-      id('blogNewComment').innerHTML = html;
-      document.querySelector('#blogNewComment .button').addEventListener('click', postComment, false);
-    }
-  });
+  setTimeout(function()
+  {
+    reqwest({
+      url: link,
+      type: 'html',
+      success: function(html)
+      {
+        id('blogNewComment').innerHTML = html;
+        document.querySelector('#blogNewComment .button').addEventListener('click', postComment, false);
+      }
+    });
+  }, 2000); // timeout to fuck off spam bots
   
   
   // posts a comment to server
@@ -1017,7 +1021,9 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
       Name: id('Name').value,
       Email: id('Email').value,
       Website: id('Website').value,
-      Comment: id('Comment').value
+      Comment: id('Comment').value,
+      Body: id('Body').value,
+      '__RequestVerificationToken': document.querySelector('[name="__RequestVerificationToken"]').value
     };
     
     reqwest({

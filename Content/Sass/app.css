@@ -1098,23 +1098,27 @@ form .input-validation-error + i.error {
   right: -11px;
   top: 29px;
 }
+/* line 77, Base/_forms.scss */
+form .commentBody {
+  display: none !important;
+}
 @media only screen and (min-width: 48em) {
-  /* line 79, Base/_forms.scss */
+  /* line 84, Base/_forms.scss */
   form fieldset {
     margin-bottom: 20px;
   }
-  /* line 84, Base/_forms.scss */
+  /* line 89, Base/_forms.scss */
   form label {
     display: inline-block;
     float: left;
     width: 20%;
   }
-  /* line 91, Base/_forms.scss */
+  /* line 96, Base/_forms.scss */
   form input[type="text"], form input[type="email"], form input[type="url"], form textarea {
     float: right;
     width: 80%;
   }
-  /* line 97, Base/_forms.scss */
+  /* line 102, Base/_forms.scss */
   form .input-validation-error + i.error {
     top: -11px;
   }
