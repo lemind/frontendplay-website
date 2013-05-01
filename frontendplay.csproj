@@ -220,6 +220,7 @@
     <Compile Include="Utilities\MarkdownSharp.cs" />
     <Compile Include="Utilities\OutputUtilities.cs" />
     <Compile Include="Utilities\UrlEncoder.cs" />
+    <Compile Include="ViewModels\CommentJsonViewModel.cs" />
     <Compile Include="ViewModels\DefaultViewModel.cs" />
     <Compile Include="ViewModels\LayoutViewModel.cs" />
     <Compile Include="ViewModels\PostsViewModel.cs" />

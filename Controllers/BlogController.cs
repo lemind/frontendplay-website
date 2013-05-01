@@ -14,12 +14,15 @@ namespace frontendplay.Controllers
   {
     BlogPostRepository repository = new BlogPostRepository();
 
-
-    // GET: /
-    public ActionResult Index()
-    {
-      PostsViewModel model = new PostsViewModel();
-      model.list = repository.List();
+     
+    // GET: /page/{page}
+    public ActionResult Index(int page = 1)
+    { 
+      PostsViewModel model = new PostsViewModel()
+      {
+        list = repository.List(1, page),
+        page = page
+      }; 
 
       return View(model);
     }
@@ -43,13 +46,13 @@ namespace frontendplay.Controllers
     public PartialViewResult Comment(int id)
     { 
       return PartialView(new CommentModel());
-    }
+    } 
 
 
     // POST: /comment/{id}
     //[ValidateAntiForgeryToken]
     [HttpPost]
-    public PartialViewResult Comment(CommentModel commentModel, int id)
+    public JsonResult Comment(CommentModel commentModel, int id)
     {
       if (ModelState.IsValid)
       {
@@ -57,13 +60,22 @@ namespace frontendplay.Controllers
 
         if (success)
         {
-          return PartialView("CommentSuccess", commentModel);
+          return Json(new CommentJsonViewModel()
+          {
+            success = true,
+            newComment = this.PartialViewToString("_Comment", commentModel),
+            output = this.PartialViewToString("CommentSuccess", commentModel)
+          });
         }
 
         ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
       }
 
-      return PartialView(commentModel);
+      return Json(new CommentJsonViewModel()
+      {
+        success = false,
+        output = this.PartialViewToString("Comment", commentModel)
+      });
     }
 
 

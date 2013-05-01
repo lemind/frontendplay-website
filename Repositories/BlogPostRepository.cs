@@ -16,13 +16,14 @@ namespace frontendplay.Repositories
 
 
     // finds all current posts
-    public IEnumerable<BlogPostModel> List(uint count = 10)
+    public IEnumerable<BlogPostModel> List(int count = 10, int page = 1)
     {
       IEnumerable<BlogPostModel> posts =
         db.BlogPostModels
           .ToList()
           .OrderByDescending(m => m.PublishDate)
-          .Take((int)count);
+          .Skip((page - 1) * count) 
+          .Take(count);
 
       return posts;
     }

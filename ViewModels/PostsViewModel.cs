@@ -12,11 +12,13 @@ namespace frontendplay.ViewModels
   {
     public IEnumerable<BlogPostModel> list { get; set; }
 
+    public int page { get; set; }
+
     public string previousPosts
     {
       get
       {
-        return "/previous";
+        return "/page/" + (page + 1).ToString();
       }
     }
 
@@ -24,7 +26,7 @@ namespace frontendplay.ViewModels
     {
       get
       {
-        return "/next";
+        return "/page/" + (page - 1).ToString();
       }
     }
   }

@@ -27,6 +27,12 @@ namespace frontendplay
       );
 
       routes.MapRoute(
+          name: "Pagination",
+          url: "page/{page}",
+          defaults: new { controller = "Blog", action = "Index", page = UrlParameter.Optional }
+      );
+
+      routes.MapRoute(
           name: "Default",
           url: "{action}/{id}",
           defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional }
