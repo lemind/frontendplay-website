@@ -3,7 +3,7 @@
 <li id="comment-@Model.ID">
   @if(!Model.Website.IsEmpty())
   { 
-    <a href="@Model.Website" target="_blank"><img src="@Model.Image" alt="@Model.Name" /></a> 
+    <a href="@Model.Website" target="_blank" rel="nofollow"><img src="@Model.Image" alt="@Model.Name" /></a> 
   } 
   else 
   { 
@@ -13,7 +13,7 @@
     <h4>
       @if(!Model.Website.IsEmpty())
       { 
-        <a href="@Model.Website" target="_blank">@Model.Name</a> 
+        <a href="@Model.Website" target="_blank" rel="nofollow">@Model.Name</a> 
       }
       else 
       { 
