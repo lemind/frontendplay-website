@@ -8,13 +8,12 @@
 @foreach (var item in Model.list)
 {
   var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID });
-
   <article>
     <h2>
       <a href="@url"> @Html.DisplayFor(_ => item.Title)</a>
     </h2>
     <div>
-      <time datetime="@item.MachineDate" pubdate>
+      <time datetime="@item.MachineDate">
         <span class="month entypo-clock">@item.Month</span>
         <span class="day">@item.Day</span>
       </time>
