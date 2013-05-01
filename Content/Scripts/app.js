@@ -1022,17 +1022,21 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
     
     reqwest({
       url: link,
-      type: 'html',
+      type: 'json',
       method: 'post',
       data: collection,
-      success: function(html)
+      success: function(response)
       {
-        var button = document.querySelector('#blogNewComment .button');
-        id('blogNewComment').innerHTML = html;
-        
-        if(button)
+        id('blogNewComment').innerHTML = response.output;
+
+        if(!response.success)
         {
-          button.addEventListener('click', postComment, false);
+          document.querySelector('#blogNewComment .button').addEventListener('click', postComment, false);
+        }
+        else
+        {
+          var list = document.querySelector('#blogComments ul');
+          list.innerHTML = response.newComment + list.innerHTML;
         }
       }
     });
