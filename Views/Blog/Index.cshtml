@@ -24,13 +24,13 @@
   </article>
 }
   <div class="navigation">
-    @if (!String.IsNullOrEmpty(ViewBag.relPrev))
+    @if (!String.IsNullOrEmpty(Model.prev))
     {
-    <a href="@Model.previousPosts" class="back"><i class="entypo-left-open"></i>show previous stories</a>
+    <a href="@Model.prev" class="back"><i class="entypo-left-open"></i>show previous stories</a>
     }
-    @if (!String.IsNullOrEmpty(ViewBag.relNext))
+    @if (!String.IsNullOrEmpty(Model.next))
     {
-    <a href="@Model.nextPosts" class="forward"><i class="entypo-right-open"></i></a>
+    <a href="@Model.next" class="forward"><i class="entypo-right-open"></i></a>
     }
   </div>
 </div>

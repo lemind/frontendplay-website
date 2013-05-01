@@ -3,6 +3,7 @@ using frontendplay.Repositories;
 using frontendplay.Utilities;
 using frontendplay.ViewModels;
 using System;
+using System.Collections.Specialized;
 using System.Configuration;
 using System.Data;
 using System.ServiceModel.Syndication;
@@ -14,15 +15,31 @@ namespace frontendplay.Controllers
   {
     BlogPostRepository repository = new BlogPostRepository();
 
+    protected int entriesPerPage = 5;
+
      
     // GET: /page/{page}
     public ActionResult Index(int page = 1)
-    { 
+    {
+      OrderedDictionary pages = repository.Pages(entriesPerPage, page);
+
+      // invalid page
+      if(!(bool)pages["valid"])
+      {
+        return Redirect("/");
+      }
+
       PostsViewModel model = new PostsViewModel()
       {
-        list = repository.List(1, page),
-        page = page
-      }; 
+        list = repository.List(entriesPerPage, page),
+        page = page,
+        prev = pages["prev"] != null ? Url.Action("Index", new { page = pages["prev"] }) : null,
+        next = pages["next"] != null ? Url.Action("Index", new { page = pages["next"] }) : null
+      };
+
+      // for meta tags
+      ViewBag.RelPrev = model.prev;
+      ViewBag.RelNext = model.next;
 
       return View(model);
     }

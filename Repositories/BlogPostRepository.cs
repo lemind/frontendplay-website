@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using frontendplay.Utilities;
 using System.Configuration;
 using System.Data;
+using System.Collections.Specialized;
 
 namespace frontendplay.Repositories
 {
@@ -33,6 +34,55 @@ namespace frontendplay.Repositories
     public BlogPostModel Retrieve(int id)
     {
       return db.BlogPostModels.FirstOrDefault<BlogPostModel>(m => m.ID == id);
+    }
+
+
+    // finds pagination links
+    public OrderedDictionary Pages(int count, int page)
+    {
+      OrderedDictionary links = new OrderedDictionary();
+      int countAll = db.BlogPostModels.ToList().Count();
+
+      links["valid"] = true;
+
+      // get page count
+      int countPages = (int)(countAll / count);
+      if(countAll % count != 0)
+      {
+        countPages += 1;
+      }
+
+      // invalid page count
+      if(page > countPages)
+      {
+        links["valid"] = false;
+        return links;
+      }
+
+      // no links in this case
+      if(countPages == 1)
+      {
+        links["next"] = null;
+        links["prev"] = null;
+      }
+      // got links!
+      else
+      {
+        links["next"] = page - 1;
+        links["prev"] = page + 1;
+
+        // edge cases
+        if(page == 1)
+        {
+          links["next"] = null;
+        }
+        if(page == countPages)
+        {
+          links["prev"] = null;
+        }
+      }
+
+      return links;
     }
 
 
