@@ -14,17 +14,5 @@
     <i class="note">written by @Model.Author</i>
   </article>
 </div>
-<div id="blogComments">
-  <h1><i class="entypo-comment"></i>Comments</h1>
-  @if (Model.Comments.Count == 0)
-  {
-    <em id="noComments">No comments yet :-(</em>
-  }
-  <ul>
-    @foreach(var comment in Model.Comments.OrderByDescending(m => m.CreatedDate))
-    {
-      @Html.Partial("_Comment", comment)
-    }
-  </ul>
-</div>
-<div id="blogNewComment" data-post="/comment/@Model.ID"></div>
+<div id="blogComments"></div>
+<div id="blogNewComment" data-post="@Model.ID"></div>

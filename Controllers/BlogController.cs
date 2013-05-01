@@ -60,6 +60,20 @@ namespace frontendplay.Controllers
     }
 
 
+    // GET: /comments/{id}
+    public ActionResult Comments(int id)
+    {
+      BlogPostModel blogpostmodel = repository.Retrieve(id);
+
+      if (blogpostmodel == null)
+      {
+        return HttpNotFound();
+      }
+
+      return PartialView(blogpostmodel.Comments);
+    }
+
+
     // GET: /comment/{id}
     public PartialViewResult Comment(int id)
     { 

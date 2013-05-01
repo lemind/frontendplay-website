@@ -994,18 +994,42 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
 
 (function()
 {
-  var link = id('blogNewComment').getAttribute('data-post');
+  var newCommentObj = id('blogNewComment');
   
+  if(newCommentObj === null)
+  {
+    return;
+  }
+  
+  var ID = newCommentObj.getAttribute('data-post');
+  var commentLink = '/comment/' + ID;
+  
+  
+  // get comment list
+  reqwest({
+    url: '/comments/' + ID,
+    type: 'html',
+    success: function(html)
+    {
+      id('blogComments').innerHTML = html;
+      if(location.hash.length > 1)
+      {
+        var hash = location.hash;
+        location.hash = '';
+        location.hash = hash;
+      }
+    }
+  });
   
   // initial request for comment form
   setTimeout(function()
   {
     reqwest({
-      url: link,
+      url: commentLink,
       type: 'html',
       success: function(html)
       {
-        id('blogNewComment').innerHTML = html;
+        newCommentObj.innerHTML = html;
         document.querySelector('#blogNewComment .button').addEventListener('click', postComment, false);
       }
     });
@@ -1027,13 +1051,13 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
     };
     
     reqwest({
-      url: link,
+      url: commentLink,
       type: 'json',
       method: 'post',
       data: collection,
       success: function(response)
       {
-        id('blogNewComment').innerHTML = response.output;
+        newCommentObj.innerHTML = response.output;
 
         if(!response.success)
         {
