@@ -13,6 +13,7 @@ namespace frontendplay
   {
     protected void Application_Start()
     {
+      MvcHandler.DisableMvcResponseHeader = true;
       // Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
 
       AreaRegistration.RegisterAllAreas();

@@ -128,7 +128,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /feed
-    [OutputCache(Duration = 60 * 10)]
+    [OutputCache(Duration = 60 * 60)]
     public ActionResult Feed()
     {
       var feed = new SyndicationFeed()
