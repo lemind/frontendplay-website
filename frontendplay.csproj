@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201304282025537_AddComments.Designer.cs">
       <DependentUpon>201304282025537_AddComments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305012212172_RemoveShortText.cs" />
+    <Compile Include="Migrations\201305012212172_RemoveShortText.Designer.cs">
+      <DependentUpon>201305012212172_RemoveShortText.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BlogPostModel.cs" />
@@ -392,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201304282025537_AddComments.resx">
       <DependentUpon>201304282025537_AddComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305012212172_RemoveShortText.resx">
+      <DependentUpon>201305012212172_RemoveShortText.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
+using System.Text.RegularExpressions;
 using System.Web.Mvc;
 
 namespace frontendplay.Models
@@ -21,9 +23,6 @@ namespace frontendplay.Models
     public string Text { get; set; }
 
     [Required]
-    public string ShortText { get; set; }
-
-    [Required]
     public string Author { get; set; }
 
     [Required]
@@ -39,6 +38,16 @@ namespace frontendplay.Models
     public MvcHtmlString HtmlText
     {
       get { return OutputUtilities.Markdown(Text); }
+    }
+
+    public MvcHtmlString ShortText
+    {
+      get 
+      {
+        var text = Regex.Replace(HtmlText.ToString(), @"<h2>[^</h2>]*</h2>", "");
+        text = Regex.Replace(text, @"<[^>]*>", "").Trim();
+        return OutputUtilities.Chop(text, int.Parse(ConfigurationManager.AppSettings["previewLength"])); 
+      }
     }
 
     public string Month

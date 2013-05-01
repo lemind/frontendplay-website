@@ -1419,9 +1419,9 @@ img {
 }
 /* line 17, Modules/_blog.scss */
 #blog article h2 {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   border-bottom: 1px solid #e2e5e7;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 /* line 25, Modules/_blog.scss */
 #blog time {
