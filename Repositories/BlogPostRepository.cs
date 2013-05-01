@@ -37,20 +37,28 @@ namespace frontendplay.Repositories
     }
 
 
+    // get page count
+    public int PageCount(int count)
+    {
+      int countAll = db.BlogPostModels.ToList().Count();
+
+      int countPages = (int)(countAll / count);
+      if (countAll % count != 0)
+      {
+        countPages += 1;
+      }
+
+      return countPages;
+    }
+
+
     // finds pagination links
     public OrderedDictionary Pages(int count, int page)
     {
       OrderedDictionary links = new OrderedDictionary();
-      int countAll = db.BlogPostModels.ToList().Count();
+      int countPages = PageCount(count);
 
       links["valid"] = true;
-
-      // get page count
-      int countPages = (int)(countAll / count);
-      if(countAll % count != 0)
-      {
-        countPages += 1;
-      }
 
       // invalid page count
       if(page > countPages)
