@@ -158,7 +158,7 @@ namespace frontendplay.Repositories
         SyndicationItem item = new SyndicationItem(post.Title, SyndicationContent.CreateHtmlContent(post.HtmlText.ToString()), new Uri(itemUrl), itemUrl, post.PublishDate)
         {
           PublishDate = post.PublishDate,
-          Summary = SyndicationContent.CreatePlaintextContent(post.ShortText),
+          Summary = SyndicationContent.CreatePlaintextContent(post.ShortText.ToString()),
           BaseUri = new Uri(urlHelper.Action("Index", "Blog", new {}, "http")),
         };
 
