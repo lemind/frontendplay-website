@@ -325,12 +325,6 @@
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
     <Content Include="robots.txt" />
-    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -426,24 +420,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Blog\_Honeypot.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mvc.sitemap" />
