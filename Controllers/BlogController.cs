@@ -5,7 +5,6 @@ using frontendplay.ViewModels;
 using System;
 using System.Collections.Specialized;
 using System.Configuration;
-using System.Data;
 using System.ServiceModel.Syndication;
 using System.Web.Mvc;
 
@@ -15,7 +14,7 @@ namespace frontendplay.Controllers
   {
     BlogPostRepository repository = new BlogPostRepository();
 
-    protected int entriesPerPage = 5;
+    public static int entriesPerPage = int.Parse(ConfigurationManager.AppSettings["entriesPerPage"]);
 
      
     // GET: /page/{page}
