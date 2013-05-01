@@ -826,7 +826,7 @@ select {
 
 /* line 36, Base/_typography.scss */
 a {
-  color: #1dad82;
+  color: #40b0c1;
   text-decoration: underline;
   outline: 1px dotted transparent;
 }
@@ -836,15 +836,15 @@ a:link, a:hover, a:visited {
 }
 /* line 47, Base/_typography.scss */
 a:hover {
-  color: #168161;
+  color: #328e9c;
 }
 /* line 51, Base/_typography.scss */
 a:visited {
-  color: #8ad9c2;
+  color: #9cc5cb;
 }
 /* line 55, Base/_typography.scss */
 a:focus {
-  outline-color: #8ad9c2;
+  outline-color: #bed8dc;
 }
 
 /* line 63, Base/_typography.scss */
@@ -901,12 +901,11 @@ strong, b {
   display: inline-block;
   height: 44px;
   line-height: 44px;
-  background: #1dad82;
+  background: #40b0c1;
   color: white;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  font-weight: 700;
   font-size: 14px;
   padding: 0 25px;
   -webkit-border-radius: 4px;
@@ -915,9 +914,9 @@ strong, b {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 19, Base/_buttons.scss */
+/* line 18, Base/_buttons.scss */
 .button:hover, .lightButton:hover, a.button:hover, a.lightButton:hover {
-  background: #21c392;
+  background: #53b8c7;
 }
 @media only screen and (min-width: 48em) {
   /* line 4, Base/_buttons.scss */
@@ -926,11 +925,11 @@ strong, b {
   }
 }
 
-/* line 31, Base/_buttons.scss */
+/* line 30, Base/_buttons.scss */
 .lightButton, a.lightButton {
   background: #c6ccd0;
 }
-/* line 36, Base/_buttons.scss */
+/* line 35, Base/_buttons.scss */
 .lightButton:hover, a.lightButton:hover {
   background: #b8bfc4;
 }
@@ -958,7 +957,7 @@ article h2 a:visited, article h3 a:visited {
 }
 /* line 26, Base/_article.scss */
 article h2 a:hover, article h2 a:visited:hover, article h3 a:hover, article h3 a:visited:hover {
-  color: #1dad82;
+  color: #40b0c1;
 }
 /* line 33, Base/_article.scss */
 article .button, article .lightButton, article .lightButton {
@@ -1031,7 +1030,7 @@ form input[type="text"], form input[type="email"], form input[type="url"], form 
 /* line 51, Base/_forms.scss */
 form input[type="text"]:focus, form input[type="email"]:focus, form input[type="url"]:focus, form textarea:focus {
   color: #3a3a3a;
-  border-color: #8ad9c2;
+  border-color: #bed8dc;
 }
 /* line 58, Base/_forms.scss */
 form .validation-summary-errors li {
@@ -1092,7 +1091,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #82878a;
-  background: #e2e5e7;
+  background: #e8eaec;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   -ms-touch-action: double-tap-zoom;
@@ -1127,7 +1126,7 @@ img {
   background: white;
   width: 170px;
   height: 50px;
-  color: #1dad82;
+  color: #40b0c1;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -1152,7 +1151,7 @@ img {
     width: 0;
     height: 0;
     border: solid 500px;
-    border-color: transparent #dce0e2 transparent transparent;
+    border-color: transparent #edeff0 transparent transparent;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -1242,7 +1241,7 @@ img {
 }
 /* line 73, Interface/_header.scss */
 #play > nav a:hover {
-  border-bottom-color: #1dad82;
+  border-bottom-color: #40b0c1;
 }
 /* line 77, Interface/_header.scss */
 #play > nav a:focus, #play > nav a:link, #play > nav a:hover, #play > nav a:visited {
@@ -1327,12 +1326,12 @@ img {
 }
 /* line 55, Interface/_footer.scss */
 #play > footer .stories a:hover {
-  color: #1dad82;
+  color: #40b0c1;
 }
 /* line 61, Interface/_footer.scss */
 #play > footer .stories i {
   margin-right: 10px;
-  color: #1dad82;
+  color: #40b0c1;
 }
 /* line 68, Interface/_footer.scss */
 #play > footer .social {
@@ -1347,7 +1346,7 @@ img {
   width: 36px;
   height: 36px;
   line-height: 36px;
-  background: #1dad82;
+  background: #40b0c1;
   margin-left: 5px;
   color: white;
   font-size: 18px;
@@ -1426,7 +1425,7 @@ img {
 }
 /* line 25, Modules/_blog.scss */
 #blog time {
-  color: #1dad82;
+  color: #40b0c1;
   display: block;
 }
 /* line 30, Modules/_blog.scss */
@@ -1522,7 +1521,7 @@ img {
 /* line 7, Modules/_blogPost.scss */
 #blogPost > h1 {
   color: white;
-  background: #1dad82;
+  background: #40b0c1;
   line-height: 1.2;
   font-size: 16px;
   padding: 10px 20px;
@@ -1610,12 +1609,12 @@ img {
 /* line 110, Modules/_blogPost.scss */
 #blogComments h4 {
   font-size: 16px;
-  color: #1dad82;
+  color: #40b0c1;
   padding-left: 50px;
 }
 /* line 116, Modules/_blogPost.scss */
 #blogComments h4 a {
-  color: #1dad82;
+  color: #40b0c1;
   text-decoration: none;
 }
 /* line 122, Modules/_blogPost.scss */
@@ -1677,7 +1676,7 @@ img {
 #archive .year > time {
   font-size: 24px;
   margin: 30px 0 30px 40px;
-  color: #1dad82;
+  color: #40b0c1;
   display: block;
 }
 /* line 30, Modules/_archive.scss */
@@ -1696,7 +1695,7 @@ img {
 #archive .year > div time {
   width: 55px;
   height: 55px;
-  background: #1dad82;
+  background: #40b0c1;
   -webkit-border-radius: 55px 0 55px 55px;
   -moz-border-radius: 55px 0 55px 55px;
   -ms-border-radius: 55px 0 55px 55px;
@@ -1765,7 +1764,7 @@ img {
 }
 /* line 125, Modules/_archive.scss */
 #archive h3 a:hover {
-  color: #1dad82;
+  color: #40b0c1;
 }
 @media only screen and (min-width: 48em) {
   /* line 4, Modules/_archive.scss */
@@ -1852,7 +1851,7 @@ img {
   font-size: 100px;
   font-weight: 500;
   line-height: 1;
-  color: #1dad82;
+  color: #40b0c1;
   position: absolute;
   left: -20px;
   top: 60px;

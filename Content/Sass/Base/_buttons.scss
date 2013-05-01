@@ -8,9 +8,8 @@
   background: $primaryColor;
   color: white;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(black, 0.2);
+  text-shadow: 1px 1px 0 rgba(black, 0.1);
   text-decoration: none;
-  font-weight: 700;
   font-size: 14px;
   padding: 0 25px;
   @include border-radius(4px);
