@@ -78,7 +78,7 @@
       width: 36px;
       height: 36px;
       line-height: 36px;
-      background: $primaryColor;
+      background: lighten($darkColor, 10%);
       margin-left: 5px;
       color: white;
       font-size: 18px;
@@ -91,10 +91,10 @@
         margin-left: 0;
       }
       
-      &.twitter { background: #00aced; }
-      &.rss { background: #ff6502; }
-      &.github { background: #211f1f; }
-      &.dribbble { background: #ea4c89; }
+      &.twitter:hover { background: #00aced; }
+      &.rss:hover { background: #ff6502; }
+      &.github:hover { background: #211f1f; }
+      &.dribbble:hover { background: #ea4c89; }
     }
   }
   
