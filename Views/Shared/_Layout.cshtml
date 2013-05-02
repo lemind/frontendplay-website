@@ -17,7 +17,7 @@
   }
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="@ViewBag.Description" />
-  <meta name="author" content="anaheimcore" />
+  <meta name="author" content="@app["appCreator"]" />
   <meta property="twitter:site" content="&#64;artistandsocial" />
   <meta property="twitter:creator" content="&#64;artistandsocial" />
   <meta property="og:title" content="@ViewBag.Title" />
@@ -67,7 +67,7 @@
         <a href="https://github.com/ceee" class="github" title="Tobias Klika on github"><i class="entypo-github"></i></a>
       </div>
       @Html.Partial("../Blog/_RecentPosts", new frontendplay.ViewModels.DefaultViewModel())
-      <div class="bottom">&copy; @DateTime.Now.Year @app["appName"], a blog by&nbsp;<a href="http://www.anaheimcore.com">anaheimcore</a>
+      <div class="bottom">&copy; @DateTime.Now.Year @app["appName"], a blog by&nbsp;<a href="http://www.anaheimcore.com">@app["appCreator"]</a>
       </div>
     </footer>
   </div>

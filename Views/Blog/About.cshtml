@@ -1,11 +1,12 @@
 ﻿@{
+  var creator = System.Configuration.ConfigurationManager.AppSettings["appCreator"];
   ViewBag.Title = "about - frontendplay";
-  ViewBag.Description = "frontendplay is the personal blog of web developer Tobias Klika from anaheimcore. I'm interested in Microsoft, PC's, overclocking, CSS/JS/HTML, ASP.NET, skateboarding and cats ;-)";
+  ViewBag.Description = "frontendplay is the personal blog of web developer Tobias Klika from " + creator + ". I'm interested in Microsoft, PC's, overclocking, CSS/JS/HTML, ASP.NET, skateboarding and cats ;-)";
 }
 
 <article id="about">
   <p>
-    <img src="Content/Images/avatar-tobias-klika-frontendplay-anaheimcore.png" alt="Avatar Tobias Klika - frontendplay and anaheimcore" />
-    <strong>frontendplay</strong> is the personal blog of web developer Tobias Klika. I studied Multi Media Technology (BA) on the University of Applied Sciences in Salzburg/Austria for 3 years. In Dec 2011 I started working for the web company <a href="http://www.pixelart.at">pixelart</a>.<br><br>Since 2013 I'm partially self-employed with <a href="http://www.anaheimcore.com">anaheimcore</a> and keep working at pixelart part-time.<br><br>I'm interested in <strong>Microsoft, PC's, overclocking, CSS/JS/HTML, ASP.NET, skateboarding and cats ;-)</strong>
+    <img src="Content/Images/avatar-tobias-klika-frontendplay-anaheimcore.png" alt="Avatar Tobias Klika - frontendplay and @creator" />
+    <strong>frontendplay</strong> is the personal blog of web developer Tobias Klika. I studied Multi Media Technology (BA) on the University of Applied Sciences in Salzburg/Austria for 3 years. In Dec 2011 I started working for the web company <a href="http://www.pixelart.at">pixelart</a>.<br><br>Since 2013 I'm partially self-employed with <a href="http://www.anaheimcore.com">@creator</a> and keep working at pixelart part-time.<br><br>I'm interested in <strong>Microsoft, PC's, overclocking, CSS/JS/HTML, ASP.NET, skateboarding and cats ;-)</strong>
   </p>
 </article>

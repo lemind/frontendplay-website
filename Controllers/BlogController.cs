@@ -151,7 +151,7 @@ namespace frontendplay.Controllers
         Title = SyndicationContent.CreatePlaintextContent("frontendplay"),
         Description = SyndicationContent.CreatePlaintextContent("frontendplay - stories about css, javascript, ASP.NET and PCs"),
         Copyright = SyndicationContent.CreatePlaintextContent("Copyright (C) " + DateTime.Now.Year + " by " + ConfigurationManager.AppSettings["appCreator"]),
-        BaseUri = new Uri(Url.Action("Index", "Blog", new {}, "http")),
+        BaseUri = new Uri(Request.Url.Scheme + "://" + Request.Url.Authority + "/"),
         LastUpdatedTime = repository.LastUpdate()
       };
 
