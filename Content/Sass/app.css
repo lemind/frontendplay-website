@@ -1346,7 +1346,7 @@ img {
   width: 36px;
   height: 36px;
   line-height: 36px;
-  background: #40b0c1;
+  background: #303335;
   margin-left: 5px;
   color: white;
   font-size: 18px;
@@ -1363,19 +1363,19 @@ img {
   margin-left: 0;
 }
 /* line 94, Interface/_footer.scss */
-#play > footer .social a.twitter {
+#play > footer .social a.twitter:hover {
   background: #00aced;
 }
 /* line 95, Interface/_footer.scss */
-#play > footer .social a.rss {
+#play > footer .social a.rss:hover {
   background: #ff6502;
 }
 /* line 96, Interface/_footer.scss */
-#play > footer .social a.github {
+#play > footer .social a.github:hover {
   background: #211f1f;
 }
 /* line 97, Interface/_footer.scss */
-#play > footer .social a.dribbble {
+#play > footer .social a.dribbble:hover {
   background: #ea4c89;
 }
 @media only screen and (min-width: 48em) {
