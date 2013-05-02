@@ -1,5 +1,6 @@
 ﻿using MvcSiteMapProvider.Web;
-using System.Web.Http;
+using System.Globalization;
+using System.Threading;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -15,22 +16,12 @@ namespace frontendplay
     protected void Application_Start()
     {
       MvcHandler.DisableMvcResponseHeader = true;
-      // Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
+      Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
       AreaRegistration.RegisterAllAreas();
-
       XmlSiteMapController.RegisterRoutes(RouteTable.Routes);
-
-      WebApiConfig.Register(GlobalConfiguration.Configuration);
-      FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
       RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
-      AuthConfig.RegisterAuth();
-
-      //ModelMetadataProviders.Current = new ConventionalModelMetadataProvider(
-      //  requireConventionAttribute: false,
-      //  defaultResourceType: typeof(Resources.Metadata)
-      //);
 
       WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
     }
