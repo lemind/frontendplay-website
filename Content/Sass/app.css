@@ -1596,34 +1596,38 @@ img {
   border-bottom: none;
 }
 /* line 97, Modules/_blogPost.scss */
+#blogComments p {
+  margin: 0;
+}
+/* line 102, Modules/_blogPost.scss */
 #blogComments img {
   width: 40px;
   position: absolute;
   left: 0;
   top: 6px;
 }
-/* line 105, Modules/_blogPost.scss */
+/* line 110, Modules/_blogPost.scss */
 #blogComments h1 {
   margin-bottom: 30px;
 }
-/* line 110, Modules/_blogPost.scss */
+/* line 115, Modules/_blogPost.scss */
 #blogComments h4 {
   font-size: 16px;
   color: #40b0c1;
   padding-left: 50px;
 }
-/* line 116, Modules/_blogPost.scss */
+/* line 121, Modules/_blogPost.scss */
 #blogComments h4 a {
   color: #40b0c1;
   text-decoration: none;
 }
-/* line 122, Modules/_blogPost.scss */
+/* line 127, Modules/_blogPost.scss */
 #blogComments h4 time, #blogComments h4 time a {
   font-size: 14px;
   color: #b7babb;
   display: block;
 }
-/* line 129, Modules/_blogPost.scss */
+/* line 134, Modules/_blogPost.scss */
 #blogComments h4 time a:hover {
   text-decoration: underline;
 }
@@ -1633,25 +1637,25 @@ img {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;
   }
-  /* line 140, Modules/_blogPost.scss */
+  /* line 145, Modules/_blogPost.scss */
   #blogComments li {
     border-bottom: none;
   }
-  /* line 144, Modules/_blogPost.scss */
+  /* line 149, Modules/_blogPost.scss */
   #blogComments li div {
     float: left;
     padding-left: 80px;
   }
-  /* line 151, Modules/_blogPost.scss */
+  /* line 156, Modules/_blogPost.scss */
   #blogComments img {
     width: 60px;
   }
-  /* line 156, Modules/_blogPost.scss */
+  /* line 161, Modules/_blogPost.scss */
   #blogComments h4 {
     font-size: 18px;
     padding-left: 0;
   }
-  /* line 161, Modules/_blogPost.scss */
+  /* line 166, Modules/_blogPost.scss */
   #blogComments h4 time {
     display: inline-block;
     margin-left: 10px;
