@@ -45,7 +45,7 @@ namespace frontendplay.Models
       get 
       { 
         var hash = OutputUtilities.GetMD5Hash(Email.Trim().ToLower()).ToLower();
-        var def = HttpUtility.UrlEncode("http://localhost:50122/Content/Images/default-avatar.png");
+        var def = HttpUtility.UrlEncode("http://www.frontendplay.com/Content/Images/default-avatar.png");
         return "http://www.gravatar.com/avatar/" + hash + "?size=60&default=" + def; 
       }
     }
