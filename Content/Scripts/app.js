@@ -528,8 +528,8 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
     , xmlHttpRequest = 'XMLHttpRequest'
     , noop = function () {}
 
-  var isArray = typeof Array.isArray == 'function' ? Array.isArray : function (a) {
-    return a instanceof Array
+  var isArray = typeof Array.isArray == 'function' ? Array.isArray : function (an) {
+    return an instanceof Array
   }
   var defaultHeaders = {
       contentType: 'application/x-www-form-urlencoded'
@@ -551,33 +551,33 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
       return new ActiveXObject('Microsoft.XMLHTTP')
     }
 
-  function handleReadyState(o, success, error) {
+  function handleReadyState(obj, success, error) {
     return function () {
-      if (o && o[readyState] == 4) {
-        o.onreadystatechange = noop;
-        if (twoHundo.test(o.status)) {
-          success(o)
+      if (obj&& obj[readyState] == 4) {
+        obj.onreadystatechange = noop;
+        if (twoHundo.test(obj.status)) {
+          success(obj)
         } else {
-          error(o)
+          error(obj)
         }
       }
     }
   }
 
-  function setHeaders(http, o) {
-    var headers = o.headers || {}, h
-    headers.Accept = headers.Accept || defaultHeaders.accept[o.type] || defaultHeaders.accept['*']
+  function setHeaders(http, obj) {
+    var headers = obj.headers || {}, h
+    headers.Accept = headers.Accept || defaultHeaders.accept[obj.type] || defaultHeaders.accept['*']
     // breaks cross-origin requests with legacy browsers
-    if (!o.crossOrigin && !headers[requestedWith]) headers[requestedWith] = defaultHeaders.requestedWith
-    if (!headers[contentType]) headers[contentType] = o.contentType || defaultHeaders.contentType
-    for (h in headers) {
-      headers.hasOwnProperty(h) && http.setRequestHeader(h, headers[h])
+    if (!obj.crossOrigin && !headers[requestedWith]) headers[requestedWith] = defaultHeaders.requestedWith
+    if (!headers[contentType]) headers[contentType] = obj.contentType || defaultHeaders.contentType
+    for (header in headers) {
+      headers.hasOwnProperty(header) && http.setRequestHeader(header, headers[header])
     }
   }
 
-  function setCredentials(http, o) {
-    if (typeof o.withCredentials !== "undefined" && typeof http.withCredentials !== "undefined") {
-      http.withCredentials = !!o.withCredentials
+  function setCredentials(http, obj) {
+    if (typeof obj.withCredentials !== "undefined" && typeof http.withCredentials !== "undefined") {
+      http.withCredentials = !!obj.withCredentials
     }
   }
 
@@ -585,8 +585,8 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
     lastValue = data
   }
 
-  function urlappend(url, s) {
-    return url + (/\?/.test(url) ? '&' : '?') + s
+  function urlappend(url, strg) {
+    return url + (/\?/.test(url) ? '&' : '?') + strg
   }
 
   function handleJsonp(o, fn, err, url) {
@@ -737,21 +737,21 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
     }
 
     function success(resp) {
-      var r = resp.responseText
-      if (r) {
+      var rtext = resp.responseText
+      if (rtext) {
         switch (type) {
         case 'json':
           try {
-            resp = win.JSON ? win.JSON.parse(r) : eval('(' + r + ')')
+            resp = win.JSON ? win.JSON.parse(rtext) : eval('(' + r + ')')
           } catch (err) {
             return error(resp, 'Could not parse JSON in response', err)
           }
           break;
         case 'js':
-          resp = eval(r)
+          resp = eval(rtext)
           break;
         case 'html':
-          resp = r
+          resp = rtext
           break;
         case 'xml':
           resp = resp.responseXML;
@@ -785,7 +785,7 @@ Prism.languages.insertBefore('coffeescript', 'keyword', {
 
   Reqwest.prototype = {
     abort: function () {
-      this.request.abort()
+      this.request.abort() 
     }
 
   , retry: function () {
