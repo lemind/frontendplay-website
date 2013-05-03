@@ -67,7 +67,7 @@
         <a href="https://github.com/ceee" class="github" title="Tobias Klika on github"><i class="entypo-github"></i></a>
       </div>
       @Html.Partial("../Blog/_RecentPosts", new frontendplay.ViewModels.DefaultViewModel())
-      <div class="bottom">&copy; @DateTime.Now.Year @app["appName"], a blog by&nbsp;<a href="http://www.anaheimcore.com">@app["appCreator"]</a>
+      <div class="bottom">&copy; @DateTime.Now.Year @app["appName"], a blog by&nbsp;<a href="@app["appCreatorLink"]">@app["appCreator"]</a>
       </div>
     </footer>
   </div>
