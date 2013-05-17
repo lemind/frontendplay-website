@@ -1,4 +1,5 @@
 ﻿using MvcSiteMapProvider.Web;
+using StackExchange.Profiling;
 using System.Globalization;
 using System.Threading;
 using System.Web.Mvc;
@@ -18,6 +19,8 @@ namespace frontendplay
       MvcHandler.DisableMvcResponseHeader = true;
       Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
+      //MiniProfilerEF.Initialize();
+
       AreaRegistration.RegisterAllAreas();
       XmlSiteMapController.RegisterRoutes(RouteTable.Routes);
       RouteConfig.RegisterRoutes(RouteTable.Routes);
@@ -25,5 +28,18 @@ namespace frontendplay
 
       WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
     }
+
+    //protected void Application_BeginRequest()
+    //{
+    //  if (Request.IsLocal)
+    //  {
+    //    MiniProfiler.Start();
+    //  }
+    //}
+
+    //protected void Application_EndRequest()
+    //{
+    //  MiniProfiler.Stop();
+    //}
   }
 }
