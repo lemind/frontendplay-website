@@ -8,7 +8,7 @@ article
     position: relative;
   }
   
-  h2, h3
+  h2, h3, h4, h5, h6
   {
     color: $headlineTextColor;
     
@@ -45,15 +45,19 @@ article
     display: block;
     color: lighten($textColor, 20%);
   }
+  
+  blockquote
+	{
+		margin: 0;
+		padding: 0 0 0 20px;
+		border-left: 3px solid $lightColor;
+		font-style: italic;
+		font-size: 13px;
+		line-height: 22px;
+	}
 
   @media #{$small}
   {
     padding-left: 80px;
-    
-    pre
-    {
-      margin-right: -50px !important;
-      border-right: none !important;
-    }
   }
 }

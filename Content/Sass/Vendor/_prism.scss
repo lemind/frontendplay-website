@@ -4,7 +4,7 @@
  * @author Lea Verou
  */
 
-code[class*="language-"],
+code,
 pre[class*="language-"] {
 	color: #3a3a3a;
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
@@ -33,21 +33,21 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 20px 15px;
+	padding: 10px 15px;
 	margin: .5em 0;
 	overflow: auto;	
 }
 
-:not(pre) > code[class*="language-"],
+:not(pre) > code,
 pre[class*="language-"] {
 	background: white;
-	border: 1px solid #f4f4f4;
+	border: 1px solid #e2e5e7;
 	/*border-left-width: 3px;*/
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
+:not(pre) > code {
+	padding: .1em .3em;
 	border-radius: .3em;
 }
 

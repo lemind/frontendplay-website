@@ -12,6 +12,18 @@
     padding: 10px 20px;
   }
   
+  h2
+	{
+		border-bottom: 1px solid $lightColor;
+		padding-bottom: 10px;
+  }
+  
+  h3
+	{
+  	font-weight: 500;
+  	font-size: 16px;
+  }
+  
   article
   {
     padding: 20px;
@@ -35,6 +47,11 @@
     {
       padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
     }
+    
+    h2
+		{
+			margin-left: -30px;
+		}
   }
 }
 

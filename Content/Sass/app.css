@@ -484,7 +484,7 @@ table {
  * @author Lea Verou
  */
 /* line 8, Vendor/_prism.scss */
-code[class*="language-"],
+code,
 pre[class*="language-"] {
   color: #3a3a3a;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
@@ -512,23 +512,23 @@ pre[class*="language-"] {
 /* Code blocks */
 /* line 35, Vendor/_prism.scss */
 pre[class*="language-"] {
-  padding: 20px 15px;
+  padding: 10px 15px;
   margin: .5em 0;
   overflow: auto;
 }
 
 /* line 42, Vendor/_prism.scss */
-:not(pre) > code[class*="language-"],
+:not(pre) > code,
 pre[class*="language-"] {
   background: white;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #e2e5e7;
   /*border-left-width: 3px;*/
 }
 
 /* Inline code */
 /* line 49, Vendor/_prism.scss */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
+:not(pre) > code {
+  padding: .1em .3em;
   border-radius: .3em;
 }
 
@@ -866,7 +866,7 @@ h1 {
 
 /* line 81, Base/_typography.scss */
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.2;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -879,17 +879,30 @@ h2:first-child, time + h2 {
 }
 
 /* line 96, Base/_typography.scss */
+h3 {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 25px;
+}
+
+/* line 103, Base/_typography.scss */
+h4 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* line 109, Base/_typography.scss */
 strong, b {
   font-weight: 500 !important;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 104, Base/_typography.scss */
+  /* line 117, Base/_typography.scss */
   h1 {
     font-size: 24px;
   }
 
-  /* line 109, Base/_typography.scss */
+  /* line 122, Base/_typography.scss */
   h2 {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -943,20 +956,20 @@ article > div {
   position: relative;
 }
 /* line 12, Base/_article.scss */
-article h2, article h3 {
+article h2, article h3, article h4, article h5, article h6 {
   color: #3a3a3a;
 }
 /* line 16, Base/_article.scss */
-article h2 a, article h3 a {
+article h2 a, article h3 a, article h4 a, article h5 a, article h6 a {
   color: #3a3a3a;
   text-decoration: none;
 }
 /* line 21, Base/_article.scss */
-article h2 a:visited, article h3 a:visited {
+article h2 a:visited, article h3 a:visited, article h4 a:visited, article h5 a:visited, article h6 a:visited {
   color: #3a3a3a;
 }
 /* line 26, Base/_article.scss */
-article h2 a:hover, article h2 a:visited:hover, article h3 a:hover, article h3 a:visited:hover {
+article h2 a:hover, article h2 a:visited:hover, article h3 a:hover, article h3 a:visited:hover, article h4 a:hover, article h4 a:visited:hover, article h5 a:hover, article h5 a:visited:hover, article h6 a:hover, article h6 a:visited:hover {
   color: #40b0c1;
 }
 /* line 33, Base/_article.scss */
@@ -973,15 +986,19 @@ article i.note {
   display: block;
   color: #b7babb;
 }
+/* line 50, Base/_article.scss */
+article blockquote {
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 3px solid #e2e5e7;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 22px;
+}
 @media only screen and (min-width: 48em) {
   /* line 3, Base/_article.scss */
   article {
     padding-left: 80px;
-  }
-  /* line 54, Base/_article.scss */
-  article pre {
-    margin-right: -50px !important;
-    border-right: none !important;
   }
 }
 
@@ -1527,60 +1544,74 @@ img {
   padding: 10px 20px;
 }
 /* line 16, Modules/_blogPost.scss */
+#blogPost h2 {
+  border-bottom: 1px solid #e2e5e7;
+  padding-bottom: 10px;
+}
+/* line 22, Modules/_blogPost.scss */
+#blogPost h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+/* line 28, Modules/_blogPost.scss */
 #blogPost article {
   padding: 20px;
 }
-/* line 21, Modules/_blogPost.scss */
+/* line 33, Modules/_blogPost.scss */
 #blogPost time {
   display: block;
   margin-top: 40px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 29, Modules/_blogPost.scss */
+  /* line 41, Modules/_blogPost.scss */
   #blogPost > h1 {
     font-size: 22px;
     padding: 20px 50px;
   }
-  /* line 35, Modules/_blogPost.scss */
+  /* line 47, Modules/_blogPost.scss */
   #blogPost article {
     padding: 60px 50px 60px 130px;
   }
+  /* line 52, Modules/_blogPost.scss */
+  #blogPost h2 {
+    margin-left: -30px;
+  }
 }
 
-/* line 43, Modules/_blogPost.scss */
+/* line 60, Modules/_blogPost.scss */
 #blogNewComment {
   background: white;
   margin-top: 1px;
   padding: 20px;
 }
-/* line 49, Modules/_blogPost.scss */
+/* line 66, Modules/_blogPost.scss */
 #blogNewComment .button, #blogNewComment .lightButton {
   margin-top: 20px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 43, Modules/_blogPost.scss */
+  /* line 60, Modules/_blogPost.scss */
   #blogNewComment {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;
   }
-  /* line 59, Modules/_blogPost.scss */
+  /* line 76, Modules/_blogPost.scss */
   #blogNewComment .button, #blogNewComment .lightButton {
     margin-top: 10px;
   }
 }
 
-/* line 67, Modules/_blogPost.scss */
+/* line 84, Modules/_blogPost.scss */
 #blogComments {
   background: white;
   margin-top: 1px;
   padding: 20px;
 }
-/* line 73, Modules/_blogPost.scss */
+/* line 90, Modules/_blogPost.scss */
 #blogComments ul {
   margin: 0;
   padding: 0;
 }
-/* line 79, Modules/_blogPost.scss */
+/* line 96, Modules/_blogPost.scss */
 #blogComments li {
   list-style: none;
   padding-bottom: 20px;
@@ -1589,73 +1620,73 @@ img {
   position: relative;
   min-height: 80px;
 }
-/* line 89, Modules/_blogPost.scss */
+/* line 106, Modules/_blogPost.scss */
 #blogComments li:last-child {
   padding-bottom: 0;
   margin-bottom: 0;
   border-bottom: none;
 }
-/* line 97, Modules/_blogPost.scss */
+/* line 114, Modules/_blogPost.scss */
 #blogComments p {
   margin: 0;
 }
-/* line 102, Modules/_blogPost.scss */
+/* line 119, Modules/_blogPost.scss */
 #blogComments img {
   width: 40px;
   position: absolute;
   left: 0;
   top: 6px;
 }
-/* line 110, Modules/_blogPost.scss */
+/* line 127, Modules/_blogPost.scss */
 #blogComments h1 {
   margin-bottom: 30px;
 }
-/* line 115, Modules/_blogPost.scss */
+/* line 132, Modules/_blogPost.scss */
 #blogComments h4 {
   font-size: 16px;
   color: #40b0c1;
   padding-left: 50px;
 }
-/* line 121, Modules/_blogPost.scss */
+/* line 138, Modules/_blogPost.scss */
 #blogComments h4 a {
   color: #40b0c1;
   text-decoration: none;
 }
-/* line 127, Modules/_blogPost.scss */
+/* line 144, Modules/_blogPost.scss */
 #blogComments h4 time, #blogComments h4 time a {
   font-size: 14px;
   color: #b7babb;
   display: block;
 }
-/* line 134, Modules/_blogPost.scss */
+/* line 151, Modules/_blogPost.scss */
 #blogComments h4 time a:hover {
   text-decoration: underline;
 }
 @media only screen and (min-width: 48em) {
-  /* line 67, Modules/_blogPost.scss */
+  /* line 84, Modules/_blogPost.scss */
   #blogComments {
     margin-top: 40px;
     padding: 60px 50px 60px 130px;
   }
-  /* line 145, Modules/_blogPost.scss */
+  /* line 162, Modules/_blogPost.scss */
   #blogComments li {
     border-bottom: none;
   }
-  /* line 149, Modules/_blogPost.scss */
+  /* line 166, Modules/_blogPost.scss */
   #blogComments li div {
     float: left;
     padding-left: 80px;
   }
-  /* line 156, Modules/_blogPost.scss */
+  /* line 173, Modules/_blogPost.scss */
   #blogComments img {
     width: 60px;
   }
-  /* line 161, Modules/_blogPost.scss */
+  /* line 178, Modules/_blogPost.scss */
   #blogComments h4 {
     font-size: 18px;
     padding-left: 0;
   }
-  /* line 166, Modules/_blogPost.scss */
+  /* line 183, Modules/_blogPost.scss */
   #blogComments h4 time {
     display: inline-block;
     margin-left: 10px;
