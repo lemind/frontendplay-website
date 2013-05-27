@@ -1,0 +1,13 @@
+﻿@model ICollection<frontendplay.Models.CommentModel>
+
+<h1><i class="entypo-comment"></i>Comments</h1>
+@if (Model.Count == 0)
+{
+  <em id="noComments">No comments yet :-(</em>
+}
+<ul>
+  @foreach(var comment in Model.OrderByDescending(m => m.CreatedDate))
+  {
+    @Html.Partial("_Comment", comment)
+  }
+</ul>

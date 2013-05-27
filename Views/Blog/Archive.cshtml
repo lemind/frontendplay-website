@@ -1,0 +1,36 @@
+﻿@model IEnumerable<IGrouping<int, frontendplay.Models.BlogPostModel>>
+@using frontendplay.Utilities
+@{
+    ViewBag.Title = "archive - frontendplay";
+    ViewBag.Description = "blog archive for frontendplay. Lists all written stories.";
+}
+
+<div id="archive">
+  @foreach(var group in Model)
+  {
+  <div class="year">
+    <time>@group.Key</time>
+    @foreach (var item in group)  
+    { 
+      var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID });
+      
+      <div>
+        <div class="timeline">
+          <time datetime="@item.MachineDate">
+            <a href="@url">
+              <span class="month entypo-clock">@item.Month</span>
+              <span class="day">@item.Day</span>
+            </a>
+          </time>
+        </div>
+        <div class="content">
+          <h3><a href="@url">@item.Title</a></h3>
+          <i>written by @item.Author</i>
+        </div>
+      </div>
+    }     
+    <span class="bottom entypo-record"></span>
+    <span class="top entypo-cd"></span>
+  </div>
+  }
+</div>
