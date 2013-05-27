@@ -5,11 +5,11 @@
   {
     font-family: quote($name);
     
-    src: font-url("#{$filename}.eot");
+    src: font-url("#{$filename}.eot#{$staticVersioning}");
     src: local('☺'), font-url("#{$filename}.eot?#iefix") format("embedded-opentype"),
-		 font-url("#{$filename}.ttf") format("truetype"),
-		 font-url("#{$filename}.woff") format("woff"),
-		 font-url('#{$filename}svg#fix') format('svg');
+		 font-url("#{$filename}.ttf#{$staticVersioning}") format("truetype"),
+		 font-url("#{$filename}.woff#{$staticVersioning}") format("woff"),
+		 font-url('#{$filename}svg#{$staticVersioning}#fix') format('svg');
 
     @if $weight
     {

@@ -18,7 +18,7 @@ namespace frontendplay.Controllers
 
      
     // GET: /page/{page}
-    //[OutputCache(Duration = 60 * 60, VaryByParam = "page")]
+    [OutputCache(Duration = 60 * 60, VaryByParam = "page")]
     public ActionResult Index(int page = 1)
     {
       OrderedDictionary pages = repository.Pages(entriesPerPage, page);
@@ -46,7 +46,7 @@ namespace frontendplay.Controllers
 
 
     // GET: /{post}-{id}
-    //[OutputCache(Duration = 60 * 60, VaryByParam = "id")]
+    [OutputCache(Duration = 60 * 60, VaryByParam = "id")]
     public ActionResult Post(string name, int id)
     {
       BlogPostModel blogpostmodel = repository.Retrieve(id);
