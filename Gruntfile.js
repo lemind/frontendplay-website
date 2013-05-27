@@ -15,9 +15,7 @@ module.exports = function(grunt)
     concat: {
       build: {
         src: [
-          'Content/Scripts/Vendor/prism/prism.js',
-          'Content/Scripts/Vendor/reqwest/reqwest.js',
-          'Content/Scripts/comment.js'
+          'Content/Scripts/Vendor/prism/prism.js'
         ],
         dest: 'Content/Scripts/app.js'
       }
