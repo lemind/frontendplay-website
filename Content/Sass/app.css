@@ -1815,14 +1815,15 @@ img {
 /* line 115, Modules/_archive.scss */
 #archive h3 {
   font-size: 14px;
-  padding-top: 20px;
+  padding-top: 30px;
+  margin-top: 0;
 }
-/* line 120, Modules/_archive.scss */
+/* line 121, Modules/_archive.scss */
 #archive h3 a {
   color: #3a3a3a;
   text-decoration: none;
 }
-/* line 125, Modules/_archive.scss */
+/* line 126, Modules/_archive.scss */
 #archive h3 a:hover {
   color: #40b0c1;
 }
@@ -1831,20 +1832,20 @@ img {
   #archive {
     padding: 60px 50px 60px 130px;
   }
-  /* line 138, Modules/_archive.scss */
+  /* line 139, Modules/_archive.scss */
   #archive .year .content {
     margin-left: 20px;
     float: left;
   }
-  /* line 144, Modules/_archive.scss */
+  /* line 145, Modules/_archive.scss */
   #archive .year i {
     display: inline-block;
   }
-  /* line 149, Modules/_archive.scss */
+  /* line 150, Modules/_archive.scss */
   #archive .year .timeline {
     margin-right: 67px;
   }
-  /* line 156, Modules/_archive.scss */
+  /* line 157, Modules/_archive.scss */
   #archive .year > div:nth-child(odd) time {
     -webkit-border-radius: 0 60px 60px 60px;
     -moz-border-radius: 0 60px 60px 60px;
@@ -1852,7 +1853,7 @@ img {
     -o-border-radius: 0 60px 60px 60px;
     border-radius: 0 60px 60px 60px;
   }
-  /* line 161, Modules/_archive.scss */
+  /* line 162, Modules/_archive.scss */
   #archive .year > div:nth-child(odd) .timeline {
     margin-right: 0;
     margin-left: 67px;
@@ -1860,7 +1861,7 @@ img {
     border-left: 3px solid #82878a;
     padding-left: 12px;
   }
-  /* line 170, Modules/_archive.scss */
+  /* line 171, Modules/_archive.scss */
   #archive .year > div:nth-child(odd) .content {
     margin-left: 20px;
   }
