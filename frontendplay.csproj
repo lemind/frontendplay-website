@@ -326,6 +326,10 @@
     <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
     <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
     <Content Include="Content\Fonts\entypo.svg" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.svg" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.svg" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.svg" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.svg" />
     <Content Include="Content\Images\avatar-tobias-klika-frontendplay-anaheimcore.png" />
     <Content Include="Content\Images\default-avatar.png" />
     <Content Include="Content\Images\frontendplay.ico" />
@@ -376,14 +380,8 @@
     <Content Include="Content\Fonts\entypo.eot" />
     <Content Include="Content\Fonts\entypo.ttf" />
     <Content Include="Content\Fonts\entypo.woff" />
-    <Content Include="Content\Fonts\SegoeUI-Bold-final.eot" />
-    <Content Include="Content\Fonts\SegoeUI-Bold-final.ttf" />
-    <Content Include="Content\Fonts\SegoeUI-BoldItalic-final.eot" />
-    <Content Include="Content\Fonts\SegoeUI-BoldItalic-final.ttf" />
     <Content Include="Content\Fonts\SegoeUI-Italic-final.eot" />
     <Content Include="Content\Fonts\SegoeUI-Italic-final.ttf" />
-    <Content Include="Content\Fonts\SegoeUI-Light-final.eot" />
-    <Content Include="Content\Fonts\SegoeUI-Light-final.ttf" />
     <Content Include="Content\Fonts\SegoeUI-Regular-final.eot" />
     <Content Include="Content\Fonts\SegoeUI-Regular-final.ttf" />
     <Content Include="Content\Fonts\SegoeUI-SemiBold-final.eot" />
@@ -447,6 +445,16 @@
   <ItemGroup>
     <Content Include="Views\Blog\Comments.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.otf" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.woff" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.otf" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.woff" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.otf" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.woff" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.otf" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.woff" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -488,7 +496,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
