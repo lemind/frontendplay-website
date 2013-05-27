@@ -18,6 +18,22 @@
       margin-bottom: 0; 
       border-bottom: 1px solid $lightColor;
       padding-bottom: 10px;
+      
+			a
+			{
+				color: $headlineTextColor;
+				text-decoration: none;
+				
+				&:visited
+				{
+					color: $headlineTextColor;
+				}
+				
+				&:hover, &:visited:hover
+				{
+					color: $primaryColor;
+				} 
+			}
     }
   }
   

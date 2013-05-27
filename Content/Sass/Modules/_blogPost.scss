@@ -8,7 +8,7 @@
     color: white;
     background: $primaryColor;
     line-height: 1.2;
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 20px;
   }
   
@@ -21,7 +21,7 @@
   h3
 	{
   	font-weight: 500;
-  	font-size: 16px;
+  	font-size: 17px;
   }
   
   article
@@ -47,11 +47,6 @@
     {
       padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
     }
-    
-    h2
-		{
-			margin-left: -30px;
-		}
   }
 }
 
@@ -107,7 +102,7 @@
       padding-bottom: 0;
       margin-bottom: 0;
       border-bottom: none;
-    }    
+    }
   }
   
   p
@@ -133,6 +128,7 @@
     font-size: 16px;
     color: $primaryColor;
     padding-left: 50px;
+    height: 50px;
     
     a
     {
@@ -164,7 +160,6 @@
       
       div
       {
-        float: left;
         padding-left: 80px;
       }
     }
@@ -178,6 +173,7 @@
     {
       font-size: 18px;
       padding-left: 0;
+      height: auto;
       
       time
       {

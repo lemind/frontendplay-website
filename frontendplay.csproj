@@ -332,6 +332,8 @@
     <Content Include="Content\Images\frontendplay.png" />
     <Content Include="Content\Sass\app.css" />
     <Content Include="Content\Scripts\app.js" />
+    <Content Include="Content\Store\microsoftcom-http-cache.png" />
+    <Content Include="Content\Store\opera-cache-settings.png" />
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
     <Content Include="robots.txt" />

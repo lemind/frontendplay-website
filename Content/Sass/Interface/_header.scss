@@ -36,7 +36,7 @@
     
     a
     {
-      color: lighten($lightColor, 2%);
+      color: white;
       height: 100px;
       line-height: 100px;
       text-decoration: none;
@@ -55,7 +55,7 @@
   // navigation
   > nav
   {
-    background: $darkColor;
+    background: darken($darkColor, 3%);
     height: 50px;
     line-height: 50px;
 
@@ -65,7 +65,7 @@
       height: 100%;
       padding: 0 20px;
       text-decoration: none;
-      color: lighten($lightColor, 2%);
+      color: white;
       float: left;
       border-bottom: 3px solid transparent;
       
@@ -77,6 +77,10 @@
       {
         outline-color: transparent;
       }
+      &.larger
+			{
+    		font-size: 18px;
+    	}
     }
   }
   

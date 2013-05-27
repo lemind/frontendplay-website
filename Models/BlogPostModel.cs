@@ -44,7 +44,7 @@ namespace frontendplay.Models
     {
       get 
       {
-        var text = Regex.Replace(HtmlText.ToString(), @"<h2>[^</h2>]*</h2>", "");
+        var text = Regex.Replace(HtmlText.ToString(), @"<h.>[^</h.>]*</h.>", "");
         text = Regex.Replace(text, @"<[^>]*>", "").Trim();
         return OutputUtilities.Chop(text, int.Parse(ConfigurationManager.AppSettings["previewLength"])); 
       }

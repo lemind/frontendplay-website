@@ -118,7 +118,7 @@ namespace frontendplay.Repositories
     }
 
 
-    // groups all posts by year
+    // groups all posts by month
     public IEnumerable<IGrouping<int, BlogPostModel>> Archive()
     {
       IEnumerable<IGrouping<int, BlogPostModel>> posts =

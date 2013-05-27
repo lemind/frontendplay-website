@@ -16,20 +16,20 @@
   
   
   // get comment list
-  reqwest({
-    url: '/comments/' + ID,
-    type: 'html',
-    success: function(html)
-    {
-      id('blogComments').innerHTML = html;
-      if(location.hash.length > 1)
-      {
-        var hash = location.hash;
-        location.hash = '';
-        location.hash = hash;
-      }
-    }
-  });
+  //reqwest({
+  //  url: '/comments/' + ID,
+  //  type: 'html',
+  //  success: function(html)
+  //  {
+  //    id('blogComments').innerHTML = html;
+  //    if(location.hash.length > 1)
+  //    {
+  //      var hash = location.hash;
+  //      location.hash = '';
+  //      location.hash = hash;
+  //    }
+  //  }
+  //});
   
   // initial request for comment form
   setTimeout(function()

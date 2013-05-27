@@ -6,7 +6,7 @@ article
   > div
   {
     position: relative;
-  }
+	}
   
   h2, h3, h4, h5, h6
   {
@@ -14,18 +14,7 @@ article
     
     a
     {
-      color: $headlineTextColor;
       text-decoration: none;
-      
-      &:visited
-      {
-        color: $headlineTextColor;
-      }
-      
-      &:hover, &:visited:hover
-      {
-        color: $primaryColor;
-      } 
     }
   }
   
