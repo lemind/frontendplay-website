@@ -779,7 +779,7 @@ select {
 @font-face {
   font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-SemiLight-final.eot');
-  src: url('/Content/Fonts/SegoeUI-SemiLight-final.ttf') format("truetype");
+  src: local("Ôÿ║"), url('/Content/Fonts/SegoeUI-SemiLight-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-SemiLight-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-SemiLight-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-SemiLight-finalsvg#fix') format("svg");
   font-weight: 300;
   font-style: normal;
 }
@@ -787,7 +787,7 @@ select {
 @font-face {
   font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-Regular-final.eot');
-  src: url('/Content/Fonts/SegoeUI-Regular-final.ttf') format("truetype");
+  src: local("Ôÿ║"), url('/Content/Fonts/SegoeUI-Regular-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-Regular-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-Regular-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-Regular-finalsvg#fix') format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -795,7 +795,7 @@ select {
 @font-face {
   font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-SemiBold-final.eot');
-  src: url('/Content/Fonts/SegoeUI-SemiBold-final.ttf') format("truetype");
+  src: local("Ôÿ║"), url('/Content/Fonts/SegoeUI-SemiBold-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-SemiBold-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-SemiBold-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-SemiBold-finalsvg#fix') format("svg");
   font-weight: 500;
   font-style: normal;
 }
@@ -803,7 +803,7 @@ select {
 @font-face {
   font-family: "SegoeUI";
   src: url('/Content/Fonts/SegoeUI-Italic-final.eot');
-  src: url('/Content/Fonts/SegoeUI-Italic-final.ttf') format("truetype");
+  src: local("Ôÿ║"), url('/Content/Fonts/SegoeUI-Italic-final.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/SegoeUI-Italic-final.ttf') format("truetype"), url('/Content/Fonts/SegoeUI-Italic-final.woff') format("woff"), url('/Content/Fonts/SegoeUI-Italic-finalsvg#fix') format("svg");
   font-weight: 400;
   font-style: italic;
 }
@@ -811,7 +811,7 @@ select {
 @font-face {
   font-family: "entypo";
   src: url('/Content/Fonts/entypo.eot');
-  src: url('/Content/Fonts/entypo.ttf') format("truetype");
+  src: local("Ôÿ║"), url('/Content/Fonts/entypo.eot?#iefix') format("embedded-opentype"), url('/Content/Fonts/entypo.ttf') format("truetype"), url('/Content/Fonts/entypo.woff') format("woff"), url('/Content/Fonts/entyposvg#fix') format("svg");
   font-weight: 400;
   font-style: normal;
 }
