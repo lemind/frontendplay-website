@@ -1,6 +1,6 @@
 ﻿using frontendplay.Models;
 using frontendplay.Utilities;
-using MvcSiteMapProvider.Extensibility;
+using MvcSiteMapProvider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +34,9 @@ namespace frontendplay.Repositories
     }
 
 
-    public override CacheDescription GetCacheDescription()
-    {
-      return new CacheDescription("BlogPostDynamicNodeProvider") { SlidingExpiration = TimeSpan.FromMinutes(10) };
-    } 
+    //public override CacheDescription GetCacheDescription()
+    //{
+    //  return new CacheDescription("BlogPostDynamicNodeProvider") { SlidingExpiration = TimeSpan.FromMinutes(10) };
+    //} 
   }
 }

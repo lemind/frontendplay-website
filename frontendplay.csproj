@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,19 +7,20 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0AF72937-6777-4FE0-A0C4-C7E875D643FF}</ProjectGuid>
-    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectGuid>{46FAB4E9-6DE2-4E46-AC06-EDACEE4D1C2B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>frontendplay</RootNamespace>
     <AssemblyName>frontendplay</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +30,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,158 +38,117 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
-    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetOpenAuth.AspNet, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.2.2.13055\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.Core, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetOpenAuth.Core.4.2.2.13055\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.2.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.2.2.13055\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageResizer">
-      <HintPath>..\packages\ImageResizer.3.3.3\lib\ImageResizer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Edm, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.Edm.5.4.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.Data.OData.5.4.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.1\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="MiniProfiler">
-      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
-    </Reference>
-    <Reference Include="MiniProfiler.EntityFramework">
-      <HintPath>..\packages\MiniProfiler.EF.2.1.0\lib\net40\MiniProfiler.EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="ModelMetadataExtensions">
       <HintPath>..\packages\ModelMetadataExtensionsWithBugfix.0.1.2\lib\net40\ModelMetadataExtensions.dll</HintPath>
     </Reference>
     <Reference Include="MvcSiteMapProvider">
-      <HintPath>..\packages\MvcSiteMapProvider.3.3.6.0\lib\net40\MvcSiteMapProvider.dll</HintPath>
+      <HintPath>..\packages\MvcSiteMapProvider.MVC4.Core.4.2.0\lib\net45\MvcSiteMapProvider.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Spatial, Version=5.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\System.Spatial.5.4.0\lib\net40\System.Spatial.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.1\lib\net40\System.Web.Http.OData.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http">
-    </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.WebRequest">
-    </Reference>
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0-beta1\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.0\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0-beta1\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0-beta1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
-    </Reference>
     <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
     </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\entypo.svg" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.svg" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.svg" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.svg" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.svg" />
+    <Content Include="Content\Images\avatar-tobias-klika-frontendplay-anaheimcore.png" />
+    <Content Include="Content\Images\default-avatar.png" />
+    <Content Include="Content\Images\frontendplay-200.png" />
+    <Content Include="Content\Images\frontendplay.ico" />
+    <Content Include="Content\Images\frontendplay.png" />
+    <Content Include="Content\Sass\app.css" />
+    <Content Include="Content\Scripts\app.js" />
+    <Content Include="Content\Store\microsoftcom-http-cache.png" />
+    <Content Include="Content\Store\opera-cache-settings.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.ascx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -225,8 +184,6 @@
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\StoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BlogPageDynamicNodeProvider.cs" />
-    <Compile Include="Repositories\BlogPostDynamicNodeProvider.cs" />
     <Compile Include="Repositories\BlogPostRepository.cs" />
     <Compile Include="Utilities\FeedResult.cs" />
     <Compile Include="Utilities\MarkdownSharp.cs" />
@@ -238,162 +195,59 @@
     <Compile Include="ViewModels\PostsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Antlr3.Runtime.dll" />
-    <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\de\System.Spatial.resources.dll" />
-    <Content Include="bin\DotNetOpenAuth.AspNet.dll" />
-    <Content Include="bin\DotNetOpenAuth.AspNet.xml" />
-    <Content Include="bin\DotNetOpenAuth.Core.dll" />
-    <Content Include="bin\DotNetOpenAuth.Core.xml" />
-    <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.dll" />
-    <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.xml" />
-    <Content Include="bin\DotNetOpenAuth.OAuth.dll" />
-    <Content Include="bin\DotNetOpenAuth.OAuth.xml" />
-    <Content Include="bin\DotNetOpenAuth.OpenId.dll" />
-    <Content Include="bin\DotNetOpenAuth.OpenId.RelyingParty.dll" />
-    <Content Include="bin\DotNetOpenAuth.OpenId.RelyingParty.xml" />
-    <Content Include="bin\DotNetOpenAuth.OpenId.xml" />
-    <Content Include="bin\EntityFramework.dll" />
-    <Content Include="bin\EntityFramework.xml" />
-    <Content Include="bin\es\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\es\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\es\System.Spatial.resources.dll" />
-    <Content Include="bin\fr\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\fr\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\fr\System.Spatial.resources.dll" />
-    <Content Include="bin\ImageResizer.dll" />
-    <Content Include="bin\ImageResizer.xml" />
-    <Content Include="bin\it\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\it\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\it\System.Spatial.resources.dll" />
-    <Content Include="bin\ja\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\ja\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\ja\System.Spatial.resources.dll" />
-    <Content Include="bin\ko\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\ko\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\ko\System.Spatial.resources.dll" />
-    <Content Include="bin\Microsoft.Data.Edm.dll" />
-    <Content Include="bin\Microsoft.Data.Edm.xml" />
-    <Content Include="bin\Microsoft.Data.OData.dll" />
-    <Content Include="bin\Microsoft.Data.OData.xml" />
-    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
-    <Content Include="bin\Microsoft.Web.Mvc.FixedDisplayModes.dll" />
-    <Content Include="bin\Microsoft.Web.WebPages.OAuth.dll" />
-    <Content Include="bin\Microsoft.Web.WebPages.OAuth.xml" />
-    <Content Include="bin\ModelMetadataExtensions.dll" />
-    <Content Include="bin\Mono.Math.dll" />
-    <Content Include="bin\Mono.Math.xml" />
-    <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\Newtonsoft.Json.xml" />
-    <Content Include="bin\Org.Mentalis.Security.Cryptography.dll" />
-    <Content Include="bin\Org.Mentalis.Security.Cryptography.xml" />
-    <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\ru\System.Spatial.resources.dll" />
-    <Content Include="bin\System.Net.Http.Formatting.dll" />
-    <Content Include="bin\System.Net.Http.Formatting.xml" />
-    <Content Include="bin\System.Spatial.dll" />
-    <Content Include="bin\System.Spatial.xml" />
-    <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Helpers.xml" />
-    <Content Include="bin\System.Web.Http.dll" />
-    <Content Include="bin\System.Web.Http.OData.dll" />
-    <Content Include="bin\System.Web.Http.OData.xml" />
-    <Content Include="bin\System.Web.Http.WebHost.dll" />
-    <Content Include="bin\System.Web.Http.WebHost.xml" />
-    <Content Include="bin\System.Web.Http.xml" />
-    <Content Include="bin\System.Web.Mvc.dll" />
-    <Content Include="bin\System.Web.Mvc.xml" />
-    <Content Include="bin\System.Web.Optimization.dll" />
-    <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.Razor.xml" />
-    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
-    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
-    <Content Include="bin\System.Web.WebPages.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.xml" />
-    <Content Include="bin\System.Web.WebPages.xml" />
-    <Content Include="bin\WebGrease.dll" />
-    <Content Include="bin\WebMatrix.Data.dll" />
-    <Content Include="bin\WebMatrix.Data.xml" />
-    <Content Include="bin\WebMatrix.WebData.dll" />
-    <Content Include="bin\WebMatrix.WebData.xml" />
-    <Content Include="bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\zh-Hans\System.Spatial.resources.dll" />
-    <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
-    <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
-    <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
-    <Content Include="Content\Fonts\entypo.svg" />
-    <Content Include="Content\Fonts\SegoeUI-Italic-final.svg" />
-    <Content Include="Content\Fonts\SegoeUI-Regular-final.svg" />
-    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.svg" />
-    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.svg" />
-    <Content Include="Content\Images\avatar-tobias-klika-frontendplay-anaheimcore.png" />
-    <Content Include="Content\Images\default-avatar.png" />
-    <Content Include="Content\Images\frontendplay.ico" />
-    <Content Include="Content\Images\frontendplay.png" />
-    <Content Include="Content\Sass\app.css" />
-    <Content Include="Content\Scripts\app.js" />
-    <Content Include="Content\Store\microsoftcom-http-cache.png" />
-    <Content Include="Content\Store\opera-cache-settings.png" />
-    <Content Include="Global.asax" />
-    <Content Include="humans.txt" />
-    <Content Include="robots.txt" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Mvc.sitemap" />
     <Content Include="Content\Fonts\entypo.eot" />
     <Content Include="Content\Fonts\entypo.ttf" />
     <Content Include="Content\Fonts\entypo.woff" />
     <Content Include="Content\Fonts\SegoeUI-Italic-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.otf" />
     <Content Include="Content\Fonts\SegoeUI-Italic-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-Italic-final.woff" />
     <Content Include="Content\Fonts\SegoeUI-Regular-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.otf" />
     <Content Include="Content\Fonts\SegoeUI-Regular-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-Regular-final.woff" />
     <Content Include="Content\Fonts\SegoeUI-SemiBold-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.otf" />
     <Content Include="Content\Fonts\SegoeUI-SemiBold-final.ttf" />
+    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.woff" />
     <Content Include="Content\Fonts\SegoeUI-SemiLight-final.eot" />
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.otf" />
     <Content Include="Content\Fonts\SegoeUI-SemiLight-final.ttf" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.woff" />
+    <Content Include="Content\Web.config" />
     <Content Include="Views\Blog\About.cshtml" />
+    <Content Include="Views\Blog\Archive.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Post.cshtml" />
+    <Content Include="Views\Blog\_RecentPosts.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <None Include="MvcSiteMapSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Archive.cshtml" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201304261927319_Initial.resx">
@@ -413,80 +267,24 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Post.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\_RecentPosts.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Error\NotFound.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Error\ServerError.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\Comment.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\CommentSuccess.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\_Comment.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\_Honeypot.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Mvc.sitemap" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Blog\Comments.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Fonts\SegoeUI-Italic-final.otf" />
-    <Content Include="Content\Fonts\SegoeUI-Italic-final.woff" />
-    <Content Include="Content\Fonts\SegoeUI-Regular-final.otf" />
-    <Content Include="Content\Fonts\SegoeUI-Regular-final.woff" />
-    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.otf" />
-    <Content Include="Content\Fonts\SegoeUI-SemiBold-final.woff" />
-    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.otf" />
-    <Content Include="Content\Fonts\SegoeUI-SemiLight-final.woff" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
-    <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
-    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
-  </Target>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56384</DevelopmentServerPort>
+          <DevelopmentServerPort>56473</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50122/</IISUrl>
+          <IISUrl>http://localhost:43922/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -496,10 +294,12 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
-  </Target> -->
+  </Target>
+  -->
 </Project>

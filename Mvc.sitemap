@@ -6,9 +6,9 @@
 
   <mvcSiteMapNode title="Home" url="/" changeFrequency="Always" updatePriority="High">
 
-    <mvcSiteMapNode title="Post" controller="Blog" action="post" dynamicNodeProvider="frontendplay.Repositories.BlogPostDynamicNodeProvider, frontendplay" />
+    <!--<mvcSiteMapNode title="Post" controller="Blog" action="post" dynamicNodeProvider="frontendplay.Repositories.BlogPostDynamicNodeProvider, frontendplay" />-->
 
-    <mvcSiteMapNode title="Page" controller="Blog" action="index" dynamicNodeProvider="frontendplay.Repositories.BlogPageDynamicNodeProvider, frontendplay" />
+    <!--<mvcSiteMapNode title="Page" controller="Blog" action="index" dynamicNodeProvider="frontendplay.Repositories.BlogPageDynamicNodeProvider, frontendplay" />-->
     
     <mvcSiteMapNode title="About" controller="Blog" action="about" />
     <mvcSiteMapNode title="Archive" controller="Blog" action="archive" />

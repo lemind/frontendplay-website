@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -658,7 +658,7 @@ a, form input[type="text"], form input[type="email"], form input[type="url"], fo
   outline: 1px dotted transparent;
 }
 
-/* line 4, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 264, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 *,
 *:before,
 *:after {
@@ -667,13 +667,13 @@ a, form input[type="text"], form input[type="email"], form input[type="url"], fo
   box-sizing: border-box;
 }
 
-/* line 9, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 269, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 html,
 body {
   font-size: 16px;
 }
 
-/* line 12, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 272, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 body {
   background: white;
   color: #222222;
@@ -684,14 +684,20 @@ body {
   font-style: normal;
   line-height: 1;
   position: relative;
+  cursor: default;
 }
 
-/* line 25, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 285, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+a:hover {
+  cursor: pointer;
+}
+
+/* line 288, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 a:focus {
   outline: none;
 }
 
-/* line 30, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 293, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 img,
 object,
 embed {
@@ -699,18 +705,18 @@ embed {
   height: auto;
 }
 
-/* line 33, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 296, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 object,
 embed {
   height: 100%;
 }
 
-/* line 34, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 297, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 40, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 303, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 #map_canvas img,
 #map_canvas embed,
 #map_canvas object,
@@ -720,58 +726,59 @@ img {
   max-width: none !important;
 }
 
-/* line 45, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 308, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .left {
   float: left !important;
 }
 
-/* line 46, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 309, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .right {
   float: right !important;
 }
 
-/* line 47, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 310, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 48, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 311, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 49, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 312, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 50, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 313, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .text-justify {
   text-align: justify !important;
 }
 
-/* line 51, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 314, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .hide {
   display: none;
 }
 
-/* line 57, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 320, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 .antialiased {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 60, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 323, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 img {
   display: inline-block;
+  vertical-align: middle;
 }
 
-/* line 67, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 333, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 textarea {
   height: auto;
   min-height: 50px;
 }
 
-/* line 70, C:/Ruby193/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.1.2/scss/foundation/components/_global.scss */
+/* line 336, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
 select {
   width: 100%;
 }
@@ -896,7 +903,7 @@ strong, b {
   font-weight: 500 !important;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 117, Base/_typography.scss */
   h1 {
     font-size: 24px;
@@ -931,7 +938,7 @@ strong, b {
 .button:hover, .lightButton:hover, a.button:hover, a.lightButton:hover {
   background: #53b8c7;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 4, Base/_buttons.scss */
   .button, .lightButton, a.lightButton, a.button, a.lightButton {
     font-weight: 500;
@@ -986,7 +993,7 @@ article blockquote {
   font-size: 13px;
   line-height: 22px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 3, Base/_article.scss */
   article {
     padding-left: 80px;
@@ -1065,7 +1072,7 @@ form .input-validation-error + i.error {
 form .commentBody {
   display: none !important;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 84, Base/_forms.scss */
   form fieldset {
     margin-bottom: 20px;
@@ -1171,15 +1178,16 @@ img {
   left: 0;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 82, Interface/_main.scss */
   body:before {
     content: "";
     display: block;
     width: 0;
     height: 0;
-    border: solid 500px;
+    border: inset 500px;
     border-color: transparent #22282a transparent transparent;
+    border-right-style: solid;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -1202,7 +1210,7 @@ img {
     width: 760px;
   }
 }
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 1280px) {
   /* line 109, Interface/_main.scss */
   #play {
     left: -10%;
@@ -1279,7 +1287,7 @@ img {
 #play > nav a.larger {
   font-size: 18px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 90, Interface/_header.scss */
   #play > header {
     padding: 0 50px;
@@ -1410,7 +1418,7 @@ img {
 #play > footer .social a.dribbble:hover {
   background: #ea4c89;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 104, Interface/_footer.scss */
   #play > footer div {
     padding: 0 50px;
@@ -1512,7 +1520,7 @@ img {
 #blog .navigation i.entypo-left-open {
   margin-right: 20px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 3, Modules/_blog.scss */
   #blog {
     padding: 60px 50px;
@@ -1590,7 +1598,7 @@ img {
   display: block;
   margin-top: 40px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 41, Modules/_blogPost.scss */
   #blogPost > h1 {
     font-size: 22px;
@@ -1612,7 +1620,7 @@ img {
 #blogNewComment .button, #blogNewComment .lightButton {
   margin-top: 20px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 55, Modules/_blogPost.scss */
   #blogNewComment {
     margin-top: 40px;
@@ -1687,7 +1695,7 @@ img {
 #blogComments h4 time a:hover {
   text-decoration: underline;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 79, Modules/_blogPost.scss */
   #blogComments {
     margin-top: 40px;
@@ -1827,7 +1835,7 @@ img {
 #archive h3 a:hover {
   color: #40b0c1;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 4, Modules/_archive.scss */
   #archive {
     padding: 60px 50px 60px 130px;
@@ -1878,7 +1886,7 @@ img {
   margin-left: -20px;
   width: 125px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 3, Modules/_about.scss */
   #about {
     padding: 60px 50px 60px 130px;
@@ -1917,7 +1925,7 @@ img {
   left: -20px;
   top: 60px;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 768px) {
   /* line 3, Modules/_error.scss */
   #error {
     padding: 60px 50px 60px 130px;

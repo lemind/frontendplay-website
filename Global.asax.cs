@@ -1,5 +1,4 @@
-﻿using MvcSiteMapProvider.Web;
-using StackExchange.Profiling;
+﻿using MvcSiteMapProvider.Web.Mvc;
 using System.Globalization;
 using System.Threading;
 using System.Web.Mvc;
@@ -9,9 +8,8 @@ using WebMatrix.WebData;
 
 namespace frontendplay
 {
-  // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-  // visit http://go.microsoft.com/?LinkId=9394801
-
+  // Note: For instructions on enabling IIS7 classic mode, 
+  // visit http://go.microsoft.com/fwlink/?LinkId=301868
   public class MvcApplication : System.Web.HttpApplication
   {
     protected void Application_Start()

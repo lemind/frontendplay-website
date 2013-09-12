@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("frontendplay")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("anaheimcore")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("frontendplay")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d4be8627-0355-4b45-9e92-d79c8dedcc75")]
+[assembly: Guid("81451bd3-efcf-4b25-8c6c-2e75c7c24b60")]
 
 // Version information for an assembly consists of the following four values:
 //
