@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using RouteMagic;
 
 namespace frontendplay
 {
@@ -19,11 +20,17 @@ namespace frontendplay
           defaults: new { controller = "Error", action = "NotFound" }
       );
 
-      routes.MapRoute(
+      var storyRoute = routes.MapRoute(
           name: "Post",
-          url: "story/{id}/{title}",
+          url: "{title}-{id}",
           defaults: new { controller = "Blog", action = "Post", title = string.Empty, id = UrlParameter.Optional }
       );
+
+      routes.Redirect(route => route.MapRoute(
+        name: "Post",
+        url: "story/{id}/{title}",
+        defaults: new { controller = "Blog", action = "Post", title = string.Empty, id = UrlParameter.Optional }
+      )).To(storyRoute);
 
       routes.MapRoute(
           name: "Pagination",

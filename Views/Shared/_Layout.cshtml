@@ -10,11 +10,11 @@
   <meta charset="utf-8" />
   @if (ViewBag.noRobot != null)
   {
-  <meta name="robots" content="noindex,nofollow" />
+    <meta name="robots" content="noindex,nofollow" />
   }
   else
   {
-  <meta name="robots" content="index,follow" />
+    <meta name="robots" content="index,follow" />
   }
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="@ViewBag.Description" />
@@ -35,16 +35,16 @@
   <link rel="image_src" href="~/Content/Images/frontendplay-200.png" />
   @if (!String.IsNullOrEmpty(ViewBag.RelPrev))
   {
-  <link rel="prev" href="@ViewBag.RelPrev">
+    <link rel="prev" href="@ViewBag.RelPrev">
   }
   @if (!String.IsNullOrEmpty(ViewBag.RelNext))
   {
-  <link rel="next" href="@ViewBag.RelNext">
+    <link rel="next" href="@ViewBag.RelNext">
   }
   @Styles.Render("~/bundles/stylesheet")
   @Scripts.Render("~/bundles/headjavascript")
 </head>
-  
+
 <body>
   <div id="play">
     <header>
@@ -70,11 +70,13 @@
         <a href="https://github.com/ceee" class="github" title="Tobias Klika on github"><i class="entypo-github"></i></a>
       </div>
       @Html.Partial("../Blog/_RecentPosts", new frontendplay.ViewModels.DefaultViewModel())
-      <div class="bottom">&copy; @DateTime.Now.Year @app["appName"], a blog by&nbsp;<a href="@app["appCreatorLink"]">@app["appCreator"]</a>
+      <div class="bottom">
+        &copy; @DateTime.Now.Year @app["appName"], a blog by&nbsp;<a href="@app["appCreatorLink"]">@app["appCreator"]</a>
       </div>
     </footer>
   </div>
-  <a href="#" id="backtotop">back to top
+  <a href="#" id="backtotop">
+    back to top
     <i class="entypo-up-open"></i>
   </a>
 

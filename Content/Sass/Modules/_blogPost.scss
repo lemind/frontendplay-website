@@ -1,0 +1,185 @@
+
+#blogPost
+{
+  background: white;
+  
+  > h1
+  {
+    color: white;
+    background: $primaryColor;
+    line-height: 1.2;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  
+  h2
+	{
+		border-bottom: 1px solid $lightColor;
+		padding-bottom: 10px;
+  }
+  
+  h3
+	{
+  	font-weight: 500;
+  	font-size: 17px;
+  }
+  
+  article
+  {
+    padding: 20px;
+  }
+  
+  time
+  {
+    display: block;
+    margin-top: 40px;
+  }
+  
+  @media #{$small}
+  {
+    > h1
+    {
+      font-size: 22px;
+      padding: 20px $gutterWidth;
+    }
+      
+    article
+    {
+      padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    }
+  }
+}
+
+
+#blogNewComment
+{
+  background: white;
+  margin-top: 1px;
+  padding: 20px;
+   
+  .button
+  {
+    margin-top: 20px;
+  }
+   
+  @media #{$small}
+  {
+    margin-top: 40px;
+    padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    
+    .button
+    {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+#blogComments
+{
+  background: white;
+  margin-top: 1px;
+  padding: 20px;
+  
+  ul
+  {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li
+  {
+    list-style: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lightColor;
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 80px;
+    @extend %clearfix;
+    
+    &:last-child
+    {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  
+  p
+  {
+    margin: 0;
+  }
+  
+  img
+  {
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+  }
+  
+  h1
+  {
+    margin-bottom: 30px;
+  }
+
+  h4
+  {
+    font-size: 16px;
+    color: $primaryColor;
+    padding-left: 50px;
+    height: 50px;
+    
+    a
+    {
+      color: $primaryColor;
+      text-decoration: none;
+    }
+    
+    time, time a
+    {
+      font-size: 14px;
+      color: lighten($textColor, 20%);
+      display: block;
+    }
+    
+    time a:hover
+    {
+      text-decoration: underline;
+    }
+  }
+  
+  @media #{$small}
+  {
+    margin-top: 40px;
+    padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    
+    li
+    {
+      border-bottom: none;
+      
+      div
+      {
+        padding-left: 80px;
+      }
+    }
+    
+    img
+    {
+      width: 60px;
+    }
+    
+    h4
+    {
+      font-size: 18px;
+      padding-left: 0;
+      height: auto;
+      
+      time
+      {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+}

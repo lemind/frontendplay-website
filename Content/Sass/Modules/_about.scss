@@ -1,0 +1,27 @@
+
+#about
+{
+  padding: 20px;
+  background: white;
+  @extend %clearfix;
+
+  
+  img
+  {
+    float: left;
+    margin-left: -20px;
+    width: 125px;
+  }
+
+  @media #{$small} 
+  {
+    padding: $gutterWidth + 10 $gutterWidth $gutterWidth + 10 80px + $gutterWidth;
+    
+    img
+    {
+      width: auto;
+      margin-left: -130px;
+      margin-top: -10px;
+    }
+  }
+}
