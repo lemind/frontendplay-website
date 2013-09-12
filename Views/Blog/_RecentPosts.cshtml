@@ -5,7 +5,7 @@
   <h4>Recent stories</h4>
   @foreach (var item in Model.recentPosts)
   {
-    var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID }); ;
+    var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID, year = item.Year, month = item.SMonth });
     
     <a href="@url">
       <i class="entypo-right-open"></i>

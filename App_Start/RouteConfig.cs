@@ -22,14 +22,14 @@ namespace frontendplay
 
       var storyRoute = routes.MapRoute(
           name: "Post",
-          url: "{title}-{id}",
-          defaults: new { controller = "Blog", action = "Post", title = string.Empty, id = UrlParameter.Optional }
+          url: "{year}/{month}/{title}-{id}",
+          defaults: new { controller = "Blog", action = "Post" }
       );
 
       routes.Redirect(route => route.MapRoute(
         name: "Post",
         url: "story/{id}/{title}",
-        defaults: new { controller = "Blog", action = "Post", title = string.Empty, id = UrlParameter.Optional }
+        defaults: new { controller = "Blog", action = "Post" }
       )).To(storyRoute);
 
       routes.MapRoute(

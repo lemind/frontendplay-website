@@ -8,7 +8,7 @@
 <div id="blog">
 @foreach (var item in Model.list)
 {
-  var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID });
+  var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID, year = item.Year, month = item.SMonth });
   <article>
     <h2>
       <a href="@url"> @Html.DisplayFor(_ => item.Title)</a>

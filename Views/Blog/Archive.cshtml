@@ -10,9 +10,9 @@
   {
   <div class="year">
     <time>@group.Key</time>
-    @foreach (var item in group)  
-    { 
-      var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID });
+    @foreach (var item in group)
+    {
+      var url = Url.Action("Post", new { title = UrlEncoder.ToFriendlyUrl(item.Title), id = item.ID, year = item.Year, month = item.SMonth });
       
       <div>
         <div class="timeline">

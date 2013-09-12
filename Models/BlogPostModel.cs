@@ -48,6 +48,16 @@ namespace frontendplay.Models
       }
     }
 
+    public string Year
+    {
+      get { return String.Format("{0:yyyy}", PublishDate); }
+    }
+
+    public string SMonth
+    {
+      get { return String.Format("{0:MM}", PublishDate); }
+    }
+
     public string Month
     {
       get { return String.Format("{0:MMM}", PublishDate); }
