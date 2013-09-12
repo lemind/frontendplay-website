@@ -33,8 +33,6 @@ namespace frontendplay.Models
       set { _date = value; }
     }
 
-    public virtual ICollection<CommentModel> Comments { get; set; }
-
     public MvcHtmlString HtmlText
     {
       get { return OutputUtilities.Markdown(Text); }

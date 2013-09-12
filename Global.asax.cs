@@ -1,6 +1,10 @@
-﻿using MvcSiteMapProvider.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
+using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -20,24 +24,11 @@ namespace frontendplay
       //MiniProfilerEF.Initialize();
 
       AreaRegistration.RegisterAllAreas();
-      XmlSiteMapController.RegisterRoutes(RouteTable.Routes);
+      //XmlSiteMapController.RegisterRoutes(RouteTable.Routes);
       RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
 
       WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
     }
-
-    //protected void Application_BeginRequest()
-    //{
-    //  if (Request.IsLocal)
-    //  {
-    //    MiniProfiler.Start();
-    //  }
-    //}
-
-    //protected void Application_EndRequest()
-    //{
-    //  MiniProfiler.Stop();
-    //}
   }
 }

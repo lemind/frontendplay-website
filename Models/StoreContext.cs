@@ -12,9 +12,5 @@ namespace frontendplay.Models
       : base("DefaultConnection") {}
 
     public DbSet<BlogPostModel> BlogPostModels { get; set; }
-
-    public DbSet<CommentModel> CommentModels { get; set; }
-
-    public DbSet<UserProfile> UserProfiles { get; set; }
   }
 }

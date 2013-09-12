@@ -94,30 +94,6 @@ namespace frontendplay.Repositories
     }
 
 
-    // gets a single blog post
-    public bool AddComment(int postId, CommentModel comment)
-    {
-      try
-      {
-        BlogPostModel blogpostmodel = Retrieve(postId);
-
-        if (blogpostmodel == null)
-        {
-          throw new DataException();
-        }
-
-        blogpostmodel.Comments.Add(comment);
-        db.SaveChanges();
-
-        return true;
-      }
-      catch(DataException)
-      {
-        return false;
-      }
-    }
-
-
     // groups all posts by month
     public IEnumerable<IGrouping<int, BlogPostModel>> Archive()
     {

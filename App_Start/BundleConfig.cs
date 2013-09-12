@@ -5,7 +5,7 @@ namespace frontendplay
 {
   public class BundleConfig
   {
-    // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
+    // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
     public static void RegisterBundles(BundleCollection bundles)
     {
       bundles.Add(new ScriptBundle("~/bundles/headjavascript").Include(
